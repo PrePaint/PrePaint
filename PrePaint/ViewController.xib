@@ -15,10 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PrePaint Launch Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-ro-0q2">
-                    <rect key="frame" x="134" y="280" width="333" height="40"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PrePaint Launching Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlT-ro-0q2">
+                    <rect key="frame" x="128" y="280" width="346" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="333" id="Gdt-aM-CMh"/>
+                        <constraint firstAttribute="width" constant="346" id="Gdt-aM-CMh"/>
                         <constraint firstAttribute="height" constant="40" id="jpx-Uc-RUS"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
@@ -28,7 +28,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="NlT-ro-0q2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LxS-V8-OUY"/>
+                <constraint firstItem="NlT-ro-0q2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="1" id="LxS-V8-OUY"/>
                 <constraint firstItem="NlT-ro-0q2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UjW-US-mfx"/>
             </constraints>
         </view>
