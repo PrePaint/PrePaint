@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		13890A411C8353EC00A8A0C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890A401C8353EC00A8A0C7 /* main.m */; };
 		13890A441C8353EC00A8A0C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890A431C8353EC00A8A0C7 /* AppDelegate.m */; };
-		13890A471C8353EC00A8A0C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890A461C8353EC00A8A0C7 /* ViewController.m */; };
 		13890A4C1C8353EC00A8A0C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13890A4B1C8353EC00A8A0C7 /* Assets.xcassets */; };
 		13890A5A1C8353EC00A8A0C7 /* PrePaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890A591C8353EC00A8A0C7 /* PrePaintTests.m */; };
 		13890A651C8353EC00A8A0C7 /* PrePaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890A641C8353EC00A8A0C7 /* PrePaintUITests.m */; };
-		13890AB21C835AB600A8A0C7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13890AB11C835AB600A8A0C7 /* ViewController.xib */; };
+		13890AB41C8D69A600A8A0C7 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13890AB31C8D69A600A8A0C7 /* Resources.xcassets */; };
+		13890AB81C8D854800A8A0C7 /* FourTreasuresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890AB61C8D854800A8A0C7 /* FourTreasuresViewController.m */; };
+		13890AB91C8D854800A8A0C7 /* FourTreasuresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13890AB71C8D854800A8A0C7 /* FourTreasuresViewController.xib */; };
+		13890ABD1C8D85CE00A8A0C7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ABB1C8D85CE00A8A0C7 /* BaseViewController.m */; };
+		13890ABE1C8D85CE00A8A0C7 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13890ABC1C8D85CE00A8A0C7 /* BaseViewController.xib */; };
+		13890AC21C8D941B00A8A0C7 /* PPNavigationOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890AC11C8D941B00A8A0C7 /* PPNavigationOptionsView.m */; };
+		13890AC71C8DB19F00A8A0C7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890AC51C8DB19F00A8A0C7 /* MainViewController.m */; };
+		13890AC81C8DB19F00A8A0C7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13890AC61C8DB19F00A8A0C7 /* MainViewController.xib */; };
+		13890ACB1C8DCFD000A8A0C7 /* PPFourTreasuresView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +45,6 @@
 		13890A401C8353EC00A8A0C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13890A421C8353EC00A8A0C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13890A431C8353EC00A8A0C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		13890A451C8353EC00A8A0C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		13890A461C8353EC00A8A0C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		13890A4B1C8353EC00A8A0C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13890A501C8353EC00A8A0C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13890A551C8353EC00A8A0C7 /* PrePaintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrePaintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +53,21 @@
 		13890A601C8353EC00A8A0C7 /* PrePaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrePaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13890A641C8353EC00A8A0C7 /* PrePaintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrePaintUITests.m; sourceTree = "<group>"; };
 		13890A661C8353EC00A8A0C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13890AB11C835AB600A8A0C7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		13890AB31C8D69A600A8A0C7 /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
+		13890AB51C8D854800A8A0C7 /* FourTreasuresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourTreasuresViewController.h; sourceTree = "<group>"; };
+		13890AB61C8D854800A8A0C7 /* FourTreasuresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourTreasuresViewController.m; sourceTree = "<group>"; };
+		13890AB71C8D854800A8A0C7 /* FourTreasuresViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourTreasuresViewController.xib; sourceTree = "<group>"; };
+		13890ABA1C8D85CE00A8A0C7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		13890ABB1C8D85CE00A8A0C7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		13890ABC1C8D85CE00A8A0C7 /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		13890AC01C8D941B00A8A0C7 /* PPNavigationOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNavigationOptionsView.h; sourceTree = "<group>"; };
+		13890AC11C8D941B00A8A0C7 /* PPNavigationOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNavigationOptionsView.m; sourceTree = "<group>"; };
+		13890AC31C8D945B00A8A0C7 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		13890AC41C8DB19F00A8A0C7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		13890AC51C8DB19F00A8A0C7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		13890AC61C8DB19F00A8A0C7 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		13890AC91C8DCFD000A8A0C7 /* PPFourTreasuresView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFourTreasuresView.h; sourceTree = "<group>"; };
+		13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFourTreasuresView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +98,7 @@
 		13890A331C8353EC00A8A0C7 = {
 			isa = PBXGroup;
 			children = (
+				13890AB31C8D69A600A8A0C7 /* Resources.xcassets */,
 				13890A3E1C8353EC00A8A0C7 /* PrePaint */,
 				13890A581C8353EC00A8A0C7 /* PrePaintTests */,
 				13890A631C8353EC00A8A0C7 /* PrePaintUITests */,
@@ -99,13 +119,21 @@
 		13890A3E1C8353EC00A8A0C7 /* PrePaint */ = {
 			isa = PBXGroup;
 			children = (
+				13890ABF1C8D93D700A8A0C7 /* customizedVUIView */,
+				13890A501C8353EC00A8A0C7 /* Info.plist */,
+				13890A4B1C8353EC00A8A0C7 /* Assets.xcassets */,
 				13890A421C8353EC00A8A0C7 /* AppDelegate.h */,
 				13890A431C8353EC00A8A0C7 /* AppDelegate.m */,
-				13890A451C8353EC00A8A0C7 /* ViewController.h */,
-				13890A461C8353EC00A8A0C7 /* ViewController.m */,
-				13890AB11C835AB600A8A0C7 /* ViewController.xib */,
-				13890A4B1C8353EC00A8A0C7 /* Assets.xcassets */,
-				13890A501C8353EC00A8A0C7 /* Info.plist */,
+				13890AC41C8DB19F00A8A0C7 /* MainViewController.h */,
+				13890AC51C8DB19F00A8A0C7 /* MainViewController.m */,
+				13890AC61C8DB19F00A8A0C7 /* MainViewController.xib */,
+				13890ABA1C8D85CE00A8A0C7 /* BaseViewController.h */,
+				13890ABB1C8D85CE00A8A0C7 /* BaseViewController.m */,
+				13890ABC1C8D85CE00A8A0C7 /* BaseViewController.xib */,
+				13890AB51C8D854800A8A0C7 /* FourTreasuresViewController.h */,
+				13890AB61C8D854800A8A0C7 /* FourTreasuresViewController.m */,
+				13890AB71C8D854800A8A0C7 /* FourTreasuresViewController.xib */,
+				13890AC31C8D945B00A8A0C7 /* AppConstants.h */,
 				13890A3F1C8353EC00A8A0C7 /* Supporting Files */,
 			);
 			path = PrePaint;
@@ -135,6 +163,17 @@
 				13890A661C8353EC00A8A0C7 /* Info.plist */,
 			);
 			path = PrePaintUITests;
+			sourceTree = "<group>";
+		};
+		13890ABF1C8D93D700A8A0C7 /* customizedVUIView */ = {
+			isa = PBXGroup;
+			children = (
+				13890AC01C8D941B00A8A0C7 /* PPNavigationOptionsView.h */,
+				13890AC11C8D941B00A8A0C7 /* PPNavigationOptionsView.m */,
+				13890AC91C8DCFD000A8A0C7 /* PPFourTreasuresView.h */,
+				13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */,
+			);
+			name = customizedVUIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +279,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13890AB21C835AB600A8A0C7 /* ViewController.xib in Resources */,
+				13890AB41C8D69A600A8A0C7 /* Resources.xcassets in Resources */,
+				13890ABE1C8D85CE00A8A0C7 /* BaseViewController.xib in Resources */,
+				13890AC81C8DB19F00A8A0C7 /* MainViewController.xib in Resources */,
+				13890AB91C8D854800A8A0C7 /* FourTreasuresViewController.xib in Resources */,
 				13890A4C1C8353EC00A8A0C7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,7 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13890A471C8353EC00A8A0C7 /* ViewController.m in Sources */,
+				13890ACB1C8DCFD000A8A0C7 /* PPFourTreasuresView.m in Sources */,
+				13890AC21C8D941B00A8A0C7 /* PPNavigationOptionsView.m in Sources */,
+				13890AC71C8DB19F00A8A0C7 /* MainViewController.m in Sources */,
+				13890ABD1C8D85CE00A8A0C7 /* BaseViewController.m in Sources */,
+				13890AB81C8D854800A8A0C7 /* FourTreasuresViewController.m in Sources */,
 				13890A441C8353EC00A8A0C7 /* AppDelegate.m in Sources */,
 				13890A411C8353EC00A8A0C7 /* main.m in Sources */,
 			);
