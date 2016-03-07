@@ -63,7 +63,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BRUSH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpY-v2-C8n">
                             <rect key="frame" x="0.0" y="390" width="209" height="30"/>
-                            <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.80302204457364346" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="7mA-K7-y5L"/>
                             </constraints>
@@ -104,7 +104,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COLOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-kD-RPm">
                             <rect key="frame" x="0.0" y="390" width="209" height="30"/>
-                            <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="yJN-BY-GzD"/>
                             </constraints>
@@ -164,7 +164,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAPER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfg-Ln-kZ7">
                             <rect key="frame" x="0.0" y="390" width="209" height="30"/>
-                            <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Ala-Pc-N5Q"/>
                             </constraints>
@@ -235,7 +235,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kF-0F-aqD">
                             <rect key="frame" x="0.0" y="390" width="209" height="30"/>
-                            <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.76000000000000001" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="fK3-gZ-4OO"/>
                             </constraints>
