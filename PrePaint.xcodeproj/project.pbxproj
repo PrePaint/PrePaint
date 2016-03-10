@@ -21,6 +21,7 @@
 		13890AC71C8DB19F00A8A0C7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890AC51C8DB19F00A8A0C7 /* MainViewController.m */; };
 		13890AC81C8DB19F00A8A0C7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13890AC61C8DB19F00A8A0C7 /* MainViewController.xib */; };
 		13890ACB1C8DCFD000A8A0C7 /* PPFourTreasuresView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */; };
+		13890ACE1C8FFDAC00A8A0C7 /* PPBrushesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ACD1C8FFDAC00A8A0C7 /* PPBrushesView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		13890AC61C8DB19F00A8A0C7 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		13890AC91C8DCFD000A8A0C7 /* PPFourTreasuresView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFourTreasuresView.h; sourceTree = "<group>"; };
 		13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFourTreasuresView.m; sourceTree = "<group>"; };
+		13890ACC1C8FFDAC00A8A0C7 /* PPBrushesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBrushesView.h; sourceTree = "<group>"; };
+		13890ACD1C8FFDAC00A8A0C7 /* PPBrushesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBrushesView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				13890AC11C8D941B00A8A0C7 /* PPNavigationOptionsView.m */,
 				13890AC91C8DCFD000A8A0C7 /* PPFourTreasuresView.h */,
 				13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */,
+				13890ACC1C8FFDAC00A8A0C7 /* PPBrushesView.h */,
+				13890ACD1C8FFDAC00A8A0C7 /* PPBrushesView.m */,
 			);
 			name = customizedVUIView;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13890ACB1C8DCFD000A8A0C7 /* PPFourTreasuresView.m in Sources */,
+				13890ACE1C8FFDAC00A8A0C7 /* PPBrushesView.m in Sources */,
 				13890AC21C8D941B00A8A0C7 /* PPNavigationOptionsView.m in Sources */,
 				13890AC71C8DB19F00A8A0C7 /* MainViewController.m in Sources */,
 				13890ABD1C8D85CE00A8A0C7 /* BaseViewController.m in Sources */,

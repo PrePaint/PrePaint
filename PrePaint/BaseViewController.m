@@ -26,21 +26,20 @@
 -(void)setupNavigationOptions
 {
     [self.toolsButton setResponseDelegate:self];
-    [self.toolsButton setIsSelected:YES];
     [self.toolsButton setButtonType:PPNavationOptionTypeTools];
+    [self.toolsButton setIsSelected:YES];
     
     [self.neededButton setResponseDelegate:self];
-    [self.neededButton setIsSelected:NO];
     [self.neededButton setButtonType:PPNavationOptionTypeNeeded];
+    [self.neededButton setIsSelected:NO];
     
     [self.getItButton setResponseDelegate:self];
-    [self.getItButton setIsSelected:NO];
     [self.getItButton setButtonType:PPNavationOptionTypeGetIt];
+    [self.getItButton setIsSelected:NO];
     
     [self.wishlistButton setResponseDelegate:self];
-    [self.wishlistButton setIsSelected:NO];
     [self.wishlistButton setButtonType:PPNavationOptionTypeWishList];
-    
+    [self.wishlistButton setIsSelected:NO];
     
 }
 

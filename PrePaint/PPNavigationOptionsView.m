@@ -7,6 +7,7 @@
 //
 
 #import "PPNavigationOptionsView.h"
+#import "BaseViewController.h"
 
 @implementation PPNavigationOptionsView
 
@@ -133,6 +134,10 @@
         [buttonAttrStr drawInRect:titleRect];
     }
     else{
+        NSDictionary *titleAttr = @{NSParagraphStyleAttributeName:style,
+                                    NSFontAttributeName:titleFont,
+                                    NSForegroundColorAttributeName:SelectedBlueColor
+                                    };
         CGRect titleRect = [buttonTitle boundingRectWithSize:CGSizeMake(100, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:titleAttr context:nil];
         titleRect.origin.x = CGRectGetMidX(rect)-titleRect.size.width/2.0;
         titleRect.origin.y = CGRectGetMidY(rect)+16.0;
@@ -142,14 +147,20 @@
 
 -(void)setIsSelected:(BOOL)isSelected
 {
-    if (isSelected) {
-        [self setBackgroundColor:[UIColor colorWithRed:243.0/255.0 green:243.0/255.0 blue:243.0/255.0 alpha:1.0]];
+    if (self.buttonType != PPNavationOptionTypeWishList) {
+        if (isSelected) {
+            [self setBackgroundColor:[UIColor colorWithRed:243.0/255.0 green:243.0/255.0 blue:243.0/255.0 alpha:1.0]];
+        }
+        else{
+            [self setBackgroundColor:[UIColor whiteColor]];
+        }
     }
     else{
-        [self setBackgroundColor:[UIColor whiteColor]];
+        [self setBackgroundColor:[UIColor blackColor]];
     }
     _isSelected = isSelected;
     [self setNeedsDisplay];
+
 }
 
 

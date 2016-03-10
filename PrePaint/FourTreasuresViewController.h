@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *inkTextView;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *PPTreasureViewHeightContraint;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomBarImageView;
 
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView;
 

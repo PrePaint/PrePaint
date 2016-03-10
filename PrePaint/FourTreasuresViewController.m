@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTreasureViews];
+    [self setupBottomBar];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -38,11 +39,24 @@
     [self.inkView setResponseDelegate:self];
 }
 
+-(void)setupBottomBar
+{
+    UIImage *barImage = [[UIImage imageNamed:@"bottomGradientBar"] stretchableImageWithLeftCapWidth:10.0 topCapHeight:0];
+    [self.bottomBarImageView setImage:barImage];
+}
+
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView
 {
     if (treasureView == self.selectedTreasure) {
+        if (treasureView.buttonType == PPTreasureTypeBrush || treasureView.buttonType == PPTreasureTypeHolder) {
+            [treasureView setBackgroundColor:[UIColor colorWithRed:242.0/255.0 green:242.0/255.0 blue:242.0/255.0 alpha:1.0]];
+        }
+        else{
+            [treasureView setBackgroundColor:[UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:1.0]];
+        }
+        
         [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            [self.PPTreasureViewHeightContraint setConstant:420];
+            [self.PPTreasureViewHeightContraint setConstant:443];
             [self.view layoutIfNeeded];
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:0.5 animations:^{
@@ -58,6 +72,7 @@
     }
     else{
         if (self.selectedTreasure == nil) {
+            [treasureView setBackgroundColor:SelectedBlueColor];
             [UIView animateWithDuration:0.5 animations:^{
                 [self.brushTextView setAlpha:0.0];
                 [self.paperTextView setAlpha:0.0];
@@ -74,9 +89,15 @@
 
         }
         else{
-            
+            if (self.selectedTreasure.buttonType == PPTreasureTypeBrush || self.selectedTreasure.buttonType == PPTreasureTypeHolder) {
+                [self.selectedTreasure setBackgroundColor:[UIColor colorWithRed:242.0/255.0 green:242.0/255.0 blue:242.0/255.0 alpha:1.0]];
+            }
+            else{
+                [self.selectedTreasure setBackgroundColor:[UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:1.0]];
+            }
+            [treasureView setBackgroundColor:SelectedBlueColor];
             [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                [self.PPTreasureViewHeightContraint setConstant:420];
+                [self.PPTreasureViewHeightContraint setConstant:443];
                 [self.view layoutIfNeeded];
             } completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{

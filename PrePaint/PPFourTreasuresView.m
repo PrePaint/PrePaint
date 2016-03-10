@@ -7,6 +7,7 @@
 //
 
 #import "PPFourTreasuresView.h"
+#import "FourTreasuresViewController.h"
 
 @implementation PPFourTreasuresView
 
