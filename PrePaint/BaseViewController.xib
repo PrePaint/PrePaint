@@ -11,6 +11,7 @@
                 <outlet property="getItButton" destination="Enl-Nn-hJQ" id="6cT-zt-hnp"/>
                 <outlet property="neededButton" destination="xLS-YV-cc3" id="NIA-TM-4as"/>
                 <outlet property="toolsButton" destination="hC0-0e-Kcj" id="ngR-lA-FqX"/>
+                <outlet property="topNavView" destination="kI1-fq-1MT" id="CDI-xL-xfU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="wishlistButton" destination="n0F-1T-D7t" id="XCt-lL-VAJ"/>
             </connections>

@@ -19,7 +19,14 @@
     [super viewDidLoad];
     [self setupNavigationOptions];
     [self loadInitialVC];
+    [self.view bringSubviewToFront:self.topNavView];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.paintingStyleVC animateEveryThingIntoScreen];
 }
 
 
@@ -45,11 +52,90 @@
 
 -(void)loadInitialVC
 {
-    FourTreasuresViewController *ftVC = [[FourTreasuresViewController alloc] init];
+    PPStyleViewController *styleVC = [[PPStyleViewController alloc] init];
+    CGRect frame = [self.contentView bounds];
+    [styleVC.view setFrame:frame];
+    [self.contentView addSubview:styleVC.view];
+    self.paintingStyleVC = styleVC;
+    [self addChildViewController:self.paintingStyleVC];
+    self.currentViewController = self.paintingStyleVC;
+/*    FourTreasuresViewController *ftVC = [[FourTreasuresViewController alloc] init];
     CGRect frame = [self.contentView bounds];
     [ftVC.view setFrame:frame];
     [self.contentView addSubview:ftVC.view];
     self.fourTreasuresVC = ftVC;
+ */
+}
+
+-(void)removeStyleVCAndloadFourTreasureVC
+{
+    if (self.currentViewController == self.paintingStyleVC) {
+        
+
+    FourTreasuresViewController *ftVC = [[FourTreasuresViewController alloc] init];
+    CGRect frame = [self.contentView bounds];
+    frame.origin.x = self.contentView.bounds.size.width;
+    [ftVC.view setFrame:frame];
+    [self.contentView addSubview:ftVC.view];
+    self.fourTreasuresVC = ftVC;
+    frame.origin.x = self.contentView.bounds.origin.x;
+    CGRect rect = self.paintingStyleVC.view.frame;
+    rect.origin.x = -rect.size.width;
+    [self addChildViewController:self.fourTreasuresVC];
+        [self.contentView bringSubviewToFront:ftVC.view];
+    [self.toolsButton setIsSelected:NO];
+    [self.neededButton setIsSelected:YES];
+    [self.getItButton setIsSelected:NO];
+    [self.wishlistButton setIsSelected:NO];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.paintingStyleVC.view setFrame:rect];
+        [self.fourTreasuresVC.view setFrame:frame];
+    } completion:^(BOOL finished) {
+        [self.paintingStyleVC removeFromParentViewController];
+        [self.paintingStyleVC.view removeFromSuperview];
+        self.paintingStyleVC = nil;
+        [self optionSelected:self.neededButton];
+        self.currentViewController = self.fourTreasuresVC;
+        
+
+    }];
+  }
+}
+
+-(void)removeFourTreasureVCAndloadStyleVC
+{
+    if (self.currentViewController == self.fourTreasuresVC) {
+        
+   
+    PPStyleViewController *styleVC = [[PPStyleViewController alloc] init];
+    CGRect frame = [self.contentView bounds];
+    frame.origin.x = -frame.size.width;
+    [styleVC.view setFrame:frame];
+    [self.contentView addSubview:styleVC.view];
+    self.paintingStyleVC = styleVC;
+    [self addChildViewController:self.paintingStyleVC];
+    [self.contentView bringSubviewToFront:styleVC.view];
+    CGRect rect = self.fourTreasuresVC.view.frame;
+    rect.origin.x = rect.size.width;
+    frame.origin.x = 0;
+    
+    [self.toolsButton setIsSelected:YES];
+    [self.neededButton setIsSelected:NO];
+    [self.getItButton setIsSelected:NO];
+    [self.wishlistButton setIsSelected:NO];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.paintingStyleVC.view setFrame:frame];
+        [self.fourTreasuresVC.view setFrame:rect];
+    } completion:^(BOOL finished) {
+        [self.fourTreasuresVC removeFromParentViewController];
+        [self.fourTreasuresVC.view removeFromSuperview];
+        self.fourTreasuresVC = nil;
+        self.currentViewController = self.paintingStyleVC;
+        [self.paintingStyleVC animateEveryThingIntoScreen];
+    }];
+   }
 }
 
 //options delegate
@@ -60,12 +146,14 @@
         [self.neededButton setIsSelected:NO];
         [self.getItButton setIsSelected:NO];
         [self.wishlistButton setIsSelected:NO];
+        [self removeFourTreasureVCAndloadStyleVC];
     }
     else if (optionView == self.neededButton) {
         [self.toolsButton setIsSelected:NO];
         [self.neededButton setIsSelected:YES];
         [self.getItButton setIsSelected:NO];
         [self.wishlistButton setIsSelected:NO];
+        [self removeStyleVCAndloadFourTreasureVC];
     }
     else if (optionView == self.getItButton) {
         [self.toolsButton setIsSelected:NO];

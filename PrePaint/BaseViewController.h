@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PPNavigationOptionsView.h"
 #import "FourTreasuresViewController.h"
+#import "PPStyleViewController.h"
 
 
 @interface BaseViewController : UIViewController
@@ -18,7 +19,12 @@
 @property (strong, nonatomic) IBOutlet PPNavigationOptionsView *wishlistButton;
 @property (strong, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) FourTreasuresViewController *fourTreasuresVC;
+@property (strong, nonatomic) PPStyleViewController *paintingStyleVC;
+@property (strong, nonatomic) IBOutlet UIView *topNavView;
+@property (strong, nonatomic) UIViewController *currentViewController;
 
 -(void)optionSelected:(PPNavigationOptionsView*)optionView;
+-(void)removeStyleVCAndloadFourTreasureVC;
+
 
 @end

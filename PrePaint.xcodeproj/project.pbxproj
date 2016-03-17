@@ -18,10 +18,13 @@
 		13890ABD1C8D85CE00A8A0C7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ABB1C8D85CE00A8A0C7 /* BaseViewController.m */; };
 		13890ABE1C8D85CE00A8A0C7 /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13890ABC1C8D85CE00A8A0C7 /* BaseViewController.xib */; };
 		13890AC21C8D941B00A8A0C7 /* PPNavigationOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890AC11C8D941B00A8A0C7 /* PPNavigationOptionsView.m */; };
-		13890AC71C8DB19F00A8A0C7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890AC51C8DB19F00A8A0C7 /* MainViewController.m */; };
 		13890AC81C8DB19F00A8A0C7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13890AC61C8DB19F00A8A0C7 /* MainViewController.xib */; };
 		13890ACB1C8DCFD000A8A0C7 /* PPFourTreasuresView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */; };
 		13890ACE1C8FFDAC00A8A0C7 /* PPBrushesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ACD1C8FFDAC00A8A0C7 /* PPBrushesView.m */; };
+		13890ACF1C933C0900A8A0C7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890AC51C8DB19F00A8A0C7 /* MainViewController.m */; };
+		13A81B2D1C99357A00309E17 /* PPStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A81B2C1C99357A00309E17 /* PPStyleViewController.m */; };
+		13A81B2F1C9935A800309E17 /* PPStyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A81B2E1C9935A800309E17 /* PPStyleViewController.xib */; };
+		13A81B321C99486B00309E17 /* PPIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A81B311C99486B00309E17 /* PPIntroductionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,11 @@
 		13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFourTreasuresView.m; sourceTree = "<group>"; };
 		13890ACC1C8FFDAC00A8A0C7 /* PPBrushesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBrushesView.h; sourceTree = "<group>"; };
 		13890ACD1C8FFDAC00A8A0C7 /* PPBrushesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBrushesView.m; sourceTree = "<group>"; };
+		13A81B2B1C99357A00309E17 /* PPStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPStyleViewController.h; sourceTree = "<group>"; };
+		13A81B2C1C99357A00309E17 /* PPStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPStyleViewController.m; sourceTree = "<group>"; };
+		13A81B2E1C9935A800309E17 /* PPStyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPStyleViewController.xib; sourceTree = "<group>"; };
+		13A81B301C99486B00309E17 /* PPIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPIntroductionView.h; sourceTree = "<group>"; };
+		13A81B311C99486B00309E17 /* PPIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPIntroductionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,9 @@
 				13890ABA1C8D85CE00A8A0C7 /* BaseViewController.h */,
 				13890ABB1C8D85CE00A8A0C7 /* BaseViewController.m */,
 				13890ABC1C8D85CE00A8A0C7 /* BaseViewController.xib */,
+				13A81B2B1C99357A00309E17 /* PPStyleViewController.h */,
+				13A81B2C1C99357A00309E17 /* PPStyleViewController.m */,
+				13A81B2E1C9935A800309E17 /* PPStyleViewController.xib */,
 				13890AB51C8D854800A8A0C7 /* FourTreasuresViewController.h */,
 				13890AB61C8D854800A8A0C7 /* FourTreasuresViewController.m */,
 				13890AB71C8D854800A8A0C7 /* FourTreasuresViewController.xib */,
@@ -177,6 +188,8 @@
 				13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */,
 				13890ACC1C8FFDAC00A8A0C7 /* PPBrushesView.h */,
 				13890ACD1C8FFDAC00A8A0C7 /* PPBrushesView.m */,
+				13A81B301C99486B00309E17 /* PPIntroductionView.h */,
+				13A81B311C99486B00309E17 /* PPIntroductionView.m */,
 			);
 			name = customizedVUIView;
 			sourceTree = "<group>";
@@ -248,6 +261,7 @@
 				TargetAttributes = {
 					13890A3B1C8353EC00A8A0C7 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 6CA4LHBVMU;
 					};
 					13890A541C8353EC00A8A0C7 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -286,6 +300,7 @@
 			files = (
 				13890AB41C8D69A600A8A0C7 /* Resources.xcassets in Resources */,
 				13890ABE1C8D85CE00A8A0C7 /* BaseViewController.xib in Resources */,
+				13A81B2F1C9935A800309E17 /* PPStyleViewController.xib in Resources */,
 				13890AC81C8DB19F00A8A0C7 /* MainViewController.xib in Resources */,
 				13890AB91C8D854800A8A0C7 /* FourTreasuresViewController.xib in Resources */,
 				13890A4C1C8353EC00A8A0C7 /* Assets.xcassets in Resources */,
@@ -313,11 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13890ACF1C933C0900A8A0C7 /* MainViewController.m in Sources */,
 				13890ACB1C8DCFD000A8A0C7 /* PPFourTreasuresView.m in Sources */,
 				13890ACE1C8FFDAC00A8A0C7 /* PPBrushesView.m in Sources */,
+				13A81B2D1C99357A00309E17 /* PPStyleViewController.m in Sources */,
 				13890AC21C8D941B00A8A0C7 /* PPNavigationOptionsView.m in Sources */,
-				13890AC71C8DB19F00A8A0C7 /* MainViewController.m in Sources */,
 				13890ABD1C8D85CE00A8A0C7 /* BaseViewController.m in Sources */,
+				13A81B321C99486B00309E17 /* PPIntroductionView.m in Sources */,
 				13890AB81C8D854800A8A0C7 /* FourTreasuresViewController.m in Sources */,
 				13890A441C8353EC00A8A0C7 /* AppDelegate.m in Sources */,
 				13890A411C8353EC00A8A0C7 /* main.m in Sources */,
@@ -442,10 +459,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PrePaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = project.PrePaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -453,10 +474,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PrePaint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = project.PrePaint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

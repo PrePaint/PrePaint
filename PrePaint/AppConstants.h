@@ -44,3 +44,11 @@ typedef enum {
     PPTreasureTypeInk
 }
 PPTreasureType;
+
+typedef enum {
+    PPPaintingStyleContour = 0,
+    PPPaintingStyleIdea = 1,
+    PPPaintingStyleCombination = 2,
+    PPPaintingStyleIForgot = 3
+    
+} PPPaintingStyle;
