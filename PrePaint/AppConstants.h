@@ -26,6 +26,12 @@
 #define kHelveticaNeueMediumItalics @"HelveticaNeue-MediumItalic"
 #define kHelveticaNeueBoldItalics @"HelveticaNeue-BoldItalic"
 
+#define kAvenirHeavy @"Avenir-Heavy"
+#define kAvenirLight @"Avenir-Light"
+#define kAvenirMedium @"Avenir-Medium"
+#define kAvenirBlack @"Avenir-Black"
+#define kAvenirRoman @"Avenir-Roman"
+
 
 /* ----------------------- type -------------------*/
 

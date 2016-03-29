@@ -22,8 +22,13 @@
 @property (strong, nonatomic) IBOutlet UIView *topPanel;
 @property (strong, nonatomic) IBOutlet UIView *bottomPanel;
 @property (strong, nonatomic) IBOutlet UIView *rightIntroPanel;
+@property (strong, nonatomic) NSMutableArray *styleButtonArray;
+@property (strong, nonatomic) IBOutlet UIImageView *bgImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomBGImageView;
 
 - (IBAction)tryToolButtonAction:(UIButton *)sender;
 
 -(void)animateEveryThingIntoScreen;
+-(void)selectFirstButton;
+-(void)setupRightPanelShadow;
 @end

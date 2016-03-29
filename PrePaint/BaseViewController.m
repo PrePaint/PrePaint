@@ -26,6 +26,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.paintingStyleVC selectFirstButton];
     [self.paintingStyleVC animateEveryThingIntoScreen];
 }
 
@@ -124,6 +125,7 @@
     [self.neededButton setIsSelected:NO];
     [self.getItButton setIsSelected:NO];
     [self.wishlistButton setIsSelected:NO];
+    [self.paintingStyleVC.rightIntroPanel setHidden:YES];
     
     [UIView animateWithDuration:0.5 animations:^{
         [self.paintingStyleVC.view setFrame:frame];
@@ -133,6 +135,8 @@
         [self.fourTreasuresVC.view removeFromSuperview];
         self.fourTreasuresVC = nil;
         self.currentViewController = self.paintingStyleVC;
+        [self.paintingStyleVC.rightIntroPanel setHidden:NO];
+        [self.paintingStyleVC selectFirstButton];
         [self.paintingStyleVC animateEveryThingIntoScreen];
     }];
    }

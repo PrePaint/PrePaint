@@ -97,13 +97,16 @@
             }
             [treasureView setBackgroundColor:SelectedBlueColor];
             [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                [self.PPTreasureViewHeightContraint setConstant:443];
+                //[self.PPTreasureViewHeightContraint setConstant:443];
+                [self.bottomBarTopConstraint setConstant:190];
                 [self.view layoutIfNeeded];
             } completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                    [self.PPTreasureViewHeightContraint setConstant:treasureView.frame.size.height-self.bottomSlideView.frame.size.height - 20.0];
+//                    [self.PPTreasureViewHeightContraint setConstant:treasureView.frame.size.height-self.bottomSlideView.frame.size.height - 20.0];
+                    [self.bottomBarTopConstraint setConstant:20];
                     [self.view layoutIfNeeded];
                 } completion:^(BOOL finished) {
+//                     [self.bottomBarTopConstraint setConstant:20];
                     self.selectedTreasure = treasureView;
                 }];
             }];

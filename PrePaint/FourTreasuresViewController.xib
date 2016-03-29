@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="PPTreasureViewHeightContraint" destination="InF-0c-JeQ" id="9HI-4F-iOy"/>
                 <outlet property="bottomBarImageView" destination="caj-zq-9d9" id="Fij-T9-mqw"/>
+                <outlet property="bottomBarTopConstraint" destination="nNb-tu-4cv" id="M8k-iz-i0S"/>
                 <outlet property="bottomSlideView" destination="hiA-Xc-Aef" id="zqz-di-C4W"/>
                 <outlet property="brushTextView" destination="WhT-1M-awE" id="V9U-ti-1mU"/>
                 <outlet property="brushView" destination="B3V-uL-5JG" id="t9x-0D-uBx"/>

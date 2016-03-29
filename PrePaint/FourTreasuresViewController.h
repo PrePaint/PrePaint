@@ -22,6 +22,7 @@
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *PPTreasureViewHeightContraint;
 @property (strong, nonatomic) IBOutlet UIImageView *bottomBarImageView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomBarTopConstraint;
 
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView;
 

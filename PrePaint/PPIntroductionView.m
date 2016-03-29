@@ -19,7 +19,7 @@
     //setup
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
-    UIFont *titleFont = [UIFont fontWithName:KHelveticaNeueRegular size:22.0];
+    UIFont *titleFont = [UIFont fontWithName:kAvenirRoman size:20.0];
    
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     [style setAlignment:NSTextAlignmentLeft];
@@ -28,14 +28,14 @@
                                //  NSForegroundColorAttributeName:fontColor
                                  };
     
-    CGFloat horizontalPadding = 20.0;
+    CGFloat horizontalPadding = 35.0;//20.0;
     
     
     //draw style title
     CGRect titleRect = [self.styleName boundingRectWithSize:CGSizeMake(rect.size.width-horizontalPadding*2.0, 45.0) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
     
     titleRect.origin.x = horizontalPadding;
-    titleRect.origin.y = horizontalPadding/2.0;
+    titleRect.origin.y = 30.0;//horizontalPadding/2.0;
     
     [self.styleName drawInRect:titleRect withAttributes:attr];
     
@@ -44,7 +44,7 @@
     CGContextSetStrokeColorWithColor(ctx, UnSelectedGreyColor.CGColor);
     CGContextStrokePath(ctx);
     
-    UIFont *introFont = [UIFont fontWithName:KHelveticaNeueLight size:14.0];
+    UIFont *introFont = [UIFont fontWithName:kAvenirLight size:12.0];
     
     attr = @{NSParagraphStyleAttributeName:style,
                            NSFontAttributeName:introFont
@@ -54,13 +54,13 @@
     CGRect introRect = [self.styleIntro boundingRectWithSize:CGSizeMake(rect.size.width-horizontalPadding*2.0, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
     
     introRect.origin.x = horizontalPadding;
-    introRect.origin.y = CGRectGetMaxY(titleRect)+20.0;
+    introRect.origin.y = CGRectGetMaxY(titleRect)+10.0+20.0;//CGRectGetMaxY(titleRect)+20.0;
     
     [self.styleIntro drawInRect:introRect withAttributes:attr];
     
-    CGFloat baseY = CGRectGetMaxY(introRect)+20.0;
+    CGFloat baseY = CGRectGetMaxY(introRect)+23.0;
     
-    UIFont *descriptionFont = [UIFont fontWithName:KHelveticaNeueLight size:14.0];
+    UIFont *descriptionFont = [UIFont fontWithName:kAvenirMedium size:13.0];
     
     attr = @{NSParagraphStyleAttributeName:style,
              NSFontAttributeName:descriptionFont
@@ -76,7 +76,7 @@
         currentRect.origin.x = CGRectGetMaxX(dotRect)+10.0;
         currentRect.origin.y = dotRect.origin.y-3.0;
         [detailIntro drawInRect:currentRect withAttributes:attr];
-        baseY += currentRect.size.height+20.0;
+        baseY += currentRect.size.height+15.0;
         
     }
 
