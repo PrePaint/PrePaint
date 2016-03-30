@@ -25,6 +25,8 @@
 		13A81B2D1C99357A00309E17 /* PPStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A81B2C1C99357A00309E17 /* PPStyleViewController.m */; };
 		13A81B2F1C9935A800309E17 /* PPStyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A81B2E1C9935A800309E17 /* PPStyleViewController.xib */; };
 		13A81B321C99486B00309E17 /* PPIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A81B311C99486B00309E17 /* PPIntroductionView.m */; };
+		13F91BAA1CAB80B600D411E4 /* ToolTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F91BA81CAB80B600D411E4 /* ToolTutorialViewController.m */; };
+		13F91BAB1CAB80B600D411E4 /* ToolTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13F91BA91CAB80B600D411E4 /* ToolTutorialViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,9 @@
 		13A81B2E1C9935A800309E17 /* PPStyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPStyleViewController.xib; sourceTree = "<group>"; };
 		13A81B301C99486B00309E17 /* PPIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPIntroductionView.h; sourceTree = "<group>"; };
 		13A81B311C99486B00309E17 /* PPIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPIntroductionView.m; sourceTree = "<group>"; };
+		13F91BA71CAB80B600D411E4 /* ToolTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolTutorialViewController.h; sourceTree = "<group>"; };
+		13F91BA81CAB80B600D411E4 /* ToolTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolTutorialViewController.m; sourceTree = "<group>"; };
+		13F91BA91CAB80B600D411E4 /* ToolTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolTutorialViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +152,9 @@
 				13890AB51C8D854800A8A0C7 /* FourTreasuresViewController.h */,
 				13890AB61C8D854800A8A0C7 /* FourTreasuresViewController.m */,
 				13890AB71C8D854800A8A0C7 /* FourTreasuresViewController.xib */,
+				13F91BA71CAB80B600D411E4 /* ToolTutorialViewController.h */,
+				13F91BA81CAB80B600D411E4 /* ToolTutorialViewController.m */,
+				13F91BA91CAB80B600D411E4 /* ToolTutorialViewController.xib */,
 				13890AC31C8D945B00A8A0C7 /* AppConstants.h */,
 				13890A3F1C8353EC00A8A0C7 /* Supporting Files */,
 			);
@@ -299,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13890AB41C8D69A600A8A0C7 /* Resources.xcassets in Resources */,
+				13F91BAB1CAB80B600D411E4 /* ToolTutorialViewController.xib in Resources */,
 				13890ABE1C8D85CE00A8A0C7 /* BaseViewController.xib in Resources */,
 				13A81B2F1C9935A800309E17 /* PPStyleViewController.xib in Resources */,
 				13890AC81C8DB19F00A8A0C7 /* MainViewController.xib in Resources */,
@@ -337,6 +346,7 @@
 				13A81B321C99486B00309E17 /* PPIntroductionView.m in Sources */,
 				13890AB81C8D854800A8A0C7 /* FourTreasuresViewController.m in Sources */,
 				13890A441C8353EC00A8A0C7 /* AppDelegate.m in Sources */,
+				13F91BAA1CAB80B600D411E4 /* ToolTutorialViewController.m in Sources */,
 				13890A411C8353EC00A8A0C7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -255,7 +255,9 @@
 {
     [self.rightPanelView.layer setShadowColor:[UIColor blackColor].CGColor];
     //[self.rightPanelView.layer setShadowOffset:CGSizeMake(-1.0, 0.0)];
-    self.rightPanelView.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.rightPanelView.bounds].CGPath;
+    CGRect shadowRect = self.rightPanelView.bounds;
+    shadowRect.size.width = 1.0;
+    self.rightPanelView.layer.shadowPath = [UIBezierPath bezierPathWithRect:shadowRect].CGPath;
     //[self.rightPanelView.layer setShadowRadius:10.0];
     [self.rightPanelView.layer setShadowOpacity:1.0];
 }
@@ -270,7 +272,7 @@
 }
 
 - (IBAction)tryToolButtonAction:(UIButton *)sender {
-//    [(BaseViewController*)self.parentViewController removeStyleVCAndloadFourTreasureVC];
+    [(BaseViewController*)self.parentViewController flipToToolTutorialPage];
 }
 
 -(void)didReceiveMemoryWarning

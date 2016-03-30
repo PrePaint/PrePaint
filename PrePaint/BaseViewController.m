@@ -174,6 +174,21 @@
 }
 
 
+-(void)flipToToolTutorialPage
+{
+    ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
+    [UIView transitionWithView:self.navigationController.view
+                      duration:0.75
+                       options:UIViewAnimationOptionTransitionFlipFromRight
+                    animations:^{
+                        [self.navigationController pushViewController:ttVC animated:NO];
+                    }
+                    completion:nil];
+
+  // [self.navigationController pushViewController:baseVC animated:YES];
+}
+
+
 -(void)dealloc
 {
     
