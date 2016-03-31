@@ -47,7 +47,7 @@
 
 -(void)animateEveryThingOutOfScreen
 {
-    [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:1.0 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         self.topPanelConstraint.constant = -317;
         self.bottomPanelConstraint.constant = -self.bottomPanel.frame.size.height;
@@ -62,7 +62,7 @@
 
 -(void)animateEveryThingIntoScreen
 {
-    [UIView animateWithDuration:0.5 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.75 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         self.topPanelConstraint.constant = 0;
         self.bottomPanelConstraint.constant = 0;
@@ -77,14 +77,14 @@
 
 -(void)animateRightPanel:(NSInteger)newPanelTag
 {
-    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.75 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         self.bottomPanelConstraint.constant = -self.bottomPanel.frame.size.height;
         self.rightPanelConstraint.constant = -self.rightIntroPanel.frame.size.width;
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         [self loadRightPanelDataBasedOnTag:newPanelTag];
-        [UIView animateWithDuration:0.5 delay:0.1 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:0.75 delay:0.1 options:UIViewAnimationOptionCurveEaseOut animations:^{
             
             self.bottomPanelConstraint.constant = 0;
             self.rightPanelConstraint.constant = 0;
@@ -226,7 +226,27 @@
             else{
                 [styleButton setSelected:YES];
                 NSString *bgFileName = [NSString stringWithFormat:@"style_bg%d",tag+1];
-                [self.bgImageView setImage:[UIImage imageNamed:bgFileName]];
+                
+                UIImage * toImage = [UIImage imageNamed:bgFileName];
+                [UIView transitionWithView:self.bgImageView
+                                  duration:1.5
+                                   options:UIViewAnimationOptionTransitionCrossDissolve|UIViewAnimationCurveEaseInOut
+                                animations:^{
+                                    self.bgImageView.image = toImage;
+                                } completion:nil];
+                
+//                [UIView animateWithDuration:0.5 animations:^{
+//                    [self.bgImageView setAlpha:0.0];
+//                } completion:^(BOOL finished) {
+//                    [self.bgImageView setImage:[UIImage imageNamed:bgFileName]];
+//                    [UIView animateWithDuration:0.5 animations:^{
+//                        [self.bgImageView setAlpha:1.0];
+//                    } completion:^(BOOL finished) {
+//                        
+//                    }];
+//                }];
+                
+//                [self.bgImageView setImage:[UIImage imageNamed:bgFileName]];
             }
         }
     }

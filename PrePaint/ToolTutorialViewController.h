@@ -8,9 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ToolTutorialViewController : UIViewController
+@interface ToolTutorialViewController : UIViewController<UIGestureRecognizerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UIView *stepView;
+@property (strong, nonatomic) IBOutlet UIImageView *xuanPaperImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *pencilImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *veinBrushImageView;
+@property (strong, nonatomic) IBOutlet UIView *stepBarView;
+
+
+
 - (IBAction)backButtonAction:(id)sender;
 
 @end

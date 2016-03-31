@@ -19,6 +19,7 @@
     [super viewDidLoad];
     [self setupNavigationOptions];
     [self loadInitialVC];
+    [self.paintingStyleVC selectFirstButton];
     [self.view bringSubviewToFront:self.topNavView];
     // Do any additional setup after loading the view from its nib.
 }
@@ -26,7 +27,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.paintingStyleVC selectFirstButton];
+   
     [self.paintingStyleVC animateEveryThingIntoScreen];
 }
 

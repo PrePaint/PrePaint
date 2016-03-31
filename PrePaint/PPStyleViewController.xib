@@ -140,7 +140,7 @@
                     </variation>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.23137254901960785" green="0.24313725490196078" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="dwo-bg-KQR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0qx-4M-Slo"/>
                 <constraint firstItem="zYK-N3-Y32" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1zf-0d-BEd"/>
