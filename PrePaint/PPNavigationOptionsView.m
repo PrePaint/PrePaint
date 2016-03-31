@@ -37,7 +37,7 @@
             }
             
             numberStr = @"1.";
-            buttonTitle = @" TOOLS";
+            buttonTitle = @" CHOOSE & TRY";
            
         }
             break;
@@ -51,7 +51,7 @@
             }
             
             numberStr = @"2.";
-            buttonTitle = @" NEEDED";
+            buttonTitle = @" LEARN TOOLS";
         }
             break;
         case PPNavationOptionTypeGetIt:
@@ -126,7 +126,7 @@
         
         [buttonAttrStr appendAttributedString:indicationAttrStr];
         
-        CGRect titleRect = [buttonAttrStr boundingRectWithSize:CGSizeMake(100.0, 100.0) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+        CGRect titleRect = [buttonAttrStr boundingRectWithSize:CGSizeMake(120.0, 100.0) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
         
         titleRect.origin.x = CGRectGetMidX(rect)-titleRect.size.width/2.0;
         titleRect.origin.y = CGRectGetMidY(rect)+10.0;
@@ -138,7 +138,7 @@
                                     NSFontAttributeName:titleFont,
                                     NSForegroundColorAttributeName:SelectedBlueColor
                                     };
-        CGRect titleRect = [buttonTitle boundingRectWithSize:CGSizeMake(100, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:titleAttr context:nil];
+        CGRect titleRect = [buttonTitle boundingRectWithSize:CGSizeMake(120, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:titleAttr context:nil];
         titleRect.origin.x = CGRectGetMidX(rect)-titleRect.size.width/2.0;
         titleRect.origin.y = CGRectGetMidY(rect)+16.0;
         [buttonTitle drawInRect:titleRect withAttributes:titleAttr];
