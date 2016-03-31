@@ -2,7 +2,7 @@
 //  ToolTutorialViewController.m
 //  PrePaint
 //
-//  Created by Xi Zhang on 3/29/16.
+//  Created by Jing Tang on 3/29/16.
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 

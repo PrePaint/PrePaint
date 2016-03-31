@@ -2,7 +2,7 @@
 //  PPIntroductionView.h
 //  PrePaint
 //
-//  Created by Xi Zhang on 3/16/16.
+//  Created by Jing Tang on 3/16/16.
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
