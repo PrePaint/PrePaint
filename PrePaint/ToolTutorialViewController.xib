@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToolTutorialViewController">
             <connections>
                 <outlet property="backButton" destination="tZt-Lf-Q1G" id="Ec3-Gc-juy"/>
+                <outlet property="nextButton" destination="WMd-Cg-iqO" id="5mw-w3-Rsu"/>
                 <outlet property="pencilImageView" destination="kKJ-dn-43Z" id="GlT-C8-uWz"/>
+                <outlet property="previousButton" destination="i40-2k-3I3" id="Lcr-Gd-Tla"/>
                 <outlet property="stepBarView" destination="2hc-9a-nmN" id="IXE-8H-lkz"/>
+                <outlet property="stepNumberLabel" destination="2ER-ci-soB" id="7gH-Au-hw9"/>
                 <outlet property="stepView" destination="dda-1V-fyX" id="QyU-Sp-cpr"/>
+                <outlet property="tutorialBgView" destination="tpm-zM-ksj" id="6Ke-za-YAI"/>
+                <outlet property="tutorialImageView" destination="icb-OQ-Qyi" id="iRk-XW-fCb"/>
                 <outlet property="veinBrushImageView" destination="Rrm-yU-Uks" id="pAn-Xx-84I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="xuanPaperImageView" destination="S8M-wo-atD" id="KXz-7X-7OP"/>
@@ -63,11 +68,17 @@
                             <rect key="frame" x="894" y="24" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="tool_prev"/>
+                            <connections>
+                                <action selector="previousButtonAction:" destination="-1" eventType="touchUpInside" id="xgq-pp-bbl"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WMd-Cg-iqO">
                             <rect key="frame" x="964" y="24" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="tool_next"/>
+                            <connections>
+                                <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="ICe-Pc-Ew9"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ER0-wC-CfK">
                             <rect key="frame" x="891" y="54" width="42" height="21"/>
@@ -147,6 +158,25 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
                 </view>
+                <view contentMode="scaleToFill" id="tpm-zM-ksj">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paint_tutorial" id="icb-OQ-Qyi">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QfC-Tj-PcV">
+                            <rect key="frame" x="388" y="642" width="249" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="paint_tutorial_gotit"/>
+                            <connections>
+                                <action selector="gotitButtonAction:" destination="-1" eventType="touchUpInside" id="usX-4P-AJX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -156,6 +186,8 @@
         </view>
     </objects>
     <resources>
+        <image name="paint_tutorial" width="1026" height="768"/>
+        <image name="paint_tutorial_gotit" width="249" height="46"/>
         <image name="tool_backbutton" width="64" height="60"/>
         <image name="tool_bg" width="1024" height="613"/>
         <image name="tool_brush_vein" width="327" height="18"/>
