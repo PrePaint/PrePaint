@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppConstants.h"
 
 @interface ToolTutorialViewController : UIViewController<UIGestureRecognizerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
@@ -20,7 +21,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *stepNumberLabel;
 @property (strong, nonatomic) IBOutlet UIView *tutorialBgView;
 @property (strong, nonatomic) IBOutlet UIImageView *tutorialImageView;
+@property (strong, nonatomic) IBOutlet UILabel *hintLabel;
 
+@property (strong, nonatomic) IBOutlet UIImageView *toolBgImageView;
 
 
 - (IBAction)backButtonAction:(id)sender;

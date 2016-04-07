@@ -58,3 +58,9 @@ typedef enum {
     PPPaintingStyleIForgot = 3
     
 } PPPaintingStyle;
+
+
+//text
+static NSString *kTTStep1Text = @"Place treated xuan paper on the table";
+static NSString *kTTStep2Text = @"Drag the pencil to the treated xuan paper";
+static NSString *kTTStep3Text = @"Drag the vein brush to the treated xuan paper";

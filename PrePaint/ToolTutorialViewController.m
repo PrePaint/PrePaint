@@ -13,6 +13,8 @@
     CGRect _initialFrameOfObject;
     UIImageView *_tempImageView;
     BOOL _isXuanPaperOnScreen;
+    CAShapeLayer *_firstLayer;
+    CAShapeLayer *_secondLayer;
 }
 @property (strong, nonatomic)UIImageView *fullPaperImageView;
 
@@ -31,6 +33,8 @@
     }
     
     [self resetFlags];
+    [self.previousButton setEnabled:NO];
+    [self.nextButton setEnabled:NO];
     [self.stepView.layer setCornerRadius:self.stepView.frame.size.height/2.0];
     [self addGestureRecognizersForImageView:self.xuanPaperImageView];
     [self addGestureRecognizersForImageView:self.pencilImageView];
@@ -115,9 +119,12 @@
         case UIGestureRecognizerStateEnded:
         {
             
+            
             if (gesture.view == self.xuanPaperImageView) {
                 [self.xuanPaperImageView setImage:[UIImage imageNamed:@"tool_xuan_fullsize"]];
                 _isXuanPaperOnScreen = YES;
+                [self.previousButton setEnabled:NO];
+                [self.nextButton setEnabled:NO];
                 [UIView animateWithDuration:0.3 animations:^{
                     [gesture.view setAlpha:1.0];
                     
@@ -131,7 +138,9 @@
                         self.fullPaperImageView = self.xuanPaperImageView;
                         self.xuanPaperImageView = _tempImageView;
                         _tempImageView = nil;
-                        
+                        [self.previousButton setEnabled:YES];
+                        [self.nextButton setEnabled:YES];
+                        [self nextButtonAction:nil];
                     }];
                     
                 }];
@@ -144,9 +153,10 @@
                     [gesture.view setAlpha:1.0];
                     
                 } completion:^(BOOL finished) {
+                    [self.previousButton setEnabled:NO];
+                    [self.nextButton setEnabled:NO];
                     [self drawPencilPath];
-                    self.pencilImageView = _tempImageView;
-                    _tempImageView = nil;
+                  
                 }];
             }
             else{
@@ -154,9 +164,11 @@
                     [gesture.view setAlpha:1.0];
                     
                 } completion:^(BOOL finished) {
+                    [self.previousButton setEnabled:NO];
+                    [self.nextButton setEnabled:NO];
                     [self drawVeinBrushPath];
-                    self.veinBrushImageView = _tempImageView;
-                    _tempImageView = nil;
+//                    self.veinBrushImageView = _tempImageView;
+//                    _tempImageView = nil;
                 }];
             }
 
@@ -239,8 +251,9 @@
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
+    _firstLayer = myShapeLayer;
   //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
-    [self.pencilImageView.layer addAnimation:anim forKey:@"draw"];
+    [self.pencilImageView.layer addAnimation:anim forKey:@"pencil"];
 }
 
 
@@ -292,8 +305,9 @@
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
+    _secondLayer = myShapeLayer;
     //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
-    [self.veinBrushImageView.layer addAnimation:anim forKey:@"draw"];
+    [self.veinBrushImageView.layer addAnimation:anim forKey:@"vein"];
 }
 
 
@@ -301,8 +315,23 @@
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
+   
     if (flag) {
-        
+       
+        if (anim == [[self.pencilImageView layer] animationForKey:@"pencil"]) {
+            [self.pencilImageView removeFromSuperview];
+            self.pencilImageView = _tempImageView;
+            _tempImageView = nil;
+            [self nextButtonAction:nil];
+        }
+        else if (anim == [[self.veinBrushImageView layer] animationForKey:@"vein"]) {
+            [self.veinBrushImageView removeFromSuperview];
+            self.veinBrushImageView = _tempImageView;
+            _tempImageView = nil;
+             [self nextButtonAction:nil];
+        }
+        [self.previousButton setEnabled:YES];
+        [self.nextButton setEnabled:YES];
     }
 }
 
@@ -363,21 +392,54 @@
 
 -(void)changeStepText
 {
-
+  
 }
 
 - (IBAction)previousButtonAction:(id)sender {
     NSInteger step = [self.stepNumberLabel.text integerValue];
+    if (step == 1) {
+        _isXuanPaperOnScreen = NO;
+        [self.fullPaperImageView removeFromSuperview];
+        [self.hintLabel setText:kTTStep1Text];
+        
+    }
+    else if (step == 2) {
+        [_firstLayer removeFromSuperlayer];
+        [self.hintLabel setText:kTTStep2Text];
+    }
+    else if (step == 3){
+        [_secondLayer removeFromSuperlayer];
+        [self.hintLabel setText:kTTStep3Text];
+    }
     if (step > 1) {
          [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
     }
-   
+    
 }
 
 - (IBAction)nextButtonAction:(id)sender {
     NSInteger step = [self.stepNumberLabel.text integerValue];
-//    if (step > 1) {
+    if (step == 1) {
+        if (self.fullPaperImageView) {
+            [self.view addSubview:self.fullPaperImageView];
+            [self.fullPaperImageView setFrame:CGRectMake(27, CGRectGetMaxY(self.stepBarView.frame)+75, 854, 635)];
+        }
+        [self.hintLabel setText:kTTStep2Text];
+    }
+    else if (step == 2) {
+        if (_firstLayer) {
+            [self.fullPaperImageView.layer addSublayer:_firstLayer];
+        }
+        [self.hintLabel setText:kTTStep3Text];
+    }
+    else if (step == 3){
+        if (_secondLayer) {
+            [self.fullPaperImageView.layer addSublayer:_secondLayer];
+        }
+
+    }
+    if (step <3) {
         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];
-//    }
+    }
 }
 @end
