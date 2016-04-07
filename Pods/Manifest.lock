@@ -1,0 +1,10 @@
+PODS:
+  - PocketSVG (0.7)
+
+DEPENDENCIES:
+  - PocketSVG (~> 0.7)
+
+SPEC CHECKSUMS:
+  PocketSVG: e05e6b008c6232d7b6410bb1ff34db71957b776d
+
+COCOAPODS: 0.39.0

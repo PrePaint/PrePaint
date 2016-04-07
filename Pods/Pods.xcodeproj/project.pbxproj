@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25357C19764F0171ED0CF0969C537F7B /* PocketSVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F94A90CE2E2C2DCCB0034B688143094 /* PocketSVG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DA88E9F33A4F96BCC90BAB910B526DA /* Pods-PrePaint-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5364B16CCAD298B933CEBA18545407C2 /* Pods-PrePaint-dummy.m */; };
+		8990F922392B60919E6E794FD8A99F54 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */; };
+		90FC3F56176C6345A1D9117EF85E12CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		9BA0353838615B3EB40A552413A58288 /* PocketSVG-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0091038283FFAD6E3F737E79C336E2D7 /* PocketSVG-dummy.m */; };
+		CE2885FF165EAFA70472FA192B61D40F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */; };
+		E933BA65DA9188537E1B29E0A2608E92 /* PocketSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A9D3E911B25BC87656CCE813D4C6E8 /* PocketSVG.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF89B092B13B95A165333EC2F0F5D693 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC246FDA4A18021764639F3A1EADFAF;
+			remoteInfo = PocketSVG;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0091038283FFAD6E3F737E79C336E2D7 /* PocketSVG-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PocketSVG-dummy.m"; sourceTree = "<group>"; };
+		06A46F3DC7BCD6AB5DD1A1D1CAFF173D /* Pods-PrePaint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrePaint.release.xcconfig"; sourceTree = "<group>"; };
+		1F94A90CE2E2C2DCCB0034B688143094 /* PocketSVG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PocketSVG.h; sourceTree = "<group>"; };
+		258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		29255AB08807E5797823D70EB84AA7F3 /* Pods-PrePaint-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrePaint-resources.sh"; sourceTree = "<group>"; };
+		29A9D3E911B25BC87656CCE813D4C6E8 /* PocketSVG.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PocketSVG.m; sourceTree = "<group>"; };
+		3016494E4C130FBF39082DDD5834BC7F /* PocketSVG-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PocketSVG-prefix.pch"; sourceTree = "<group>"; };
+		5364B16CCAD298B933CEBA18545407C2 /* Pods-PrePaint-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrePaint-dummy.m"; sourceTree = "<group>"; };
+		7C9E26C795DF59CC7C20036A9B8D81DB /* libPocketSVG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPocketSVG.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ACC6BD3736261E654D35F4CD78B52C4 /* Pods-PrePaint-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrePaint-acknowledgements.plist"; sourceTree = "<group>"; };
+		B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		B2313A0B84FD1EA0CA8BFE5E6562430D /* Pods-PrePaint-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrePaint-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C394C54C342282A94622670B00B4E1BA /* PocketSVG.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PocketSVG.xcconfig; sourceTree = "<group>"; };
+		C697DA0C27512A88E1DE54D7CF994574 /* Pods-PrePaint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrePaint.debug.xcconfig"; sourceTree = "<group>"; };
+		F9FB372E202465A4CE9377E39BDD9EC0 /* libPods-PrePaint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrePaint.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE4977EEBFEBFC179FBDAAD5A4AFB12 /* Pods-PrePaint-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrePaint-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37B24D2FCF2E990968B8DC1E79D35D38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90FC3F56176C6345A1D9117EF85E12CE /* Foundation.framework in Frameworks */,
+				8990F922392B60919E6E794FD8A99F54 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E49A150BB16BA68E54BC4C862F896CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2885FF165EAFA70472FA192B61D40F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3926C638AD0708942C88C2BC89261735 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				258B0C8029B3982F03A30ED9FB271283 /* Foundation.framework */,
+				B18F24645AA4D651DFC7B69A3A0833DB /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3F9E9189E5DA4677BBE571C81A84748C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B20F6336EBF0337628F021FD2AD04D6 /* PocketSVG */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3926C638AD0708942C88C2BC89261735 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B20F6336EBF0337628F021FD2AD04D6 /* PocketSVG */ = {
+			isa = PBXGroup;
+			children = (
+				1F94A90CE2E2C2DCCB0034B688143094 /* PocketSVG.h */,
+				29A9D3E911B25BC87656CCE813D4C6E8 /* PocketSVG.m */,
+				D97520E438BD07D2A508C7E463D07505 /* Support Files */,
+			);
+			path = PocketSVG;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				3F9E9189E5DA4677BBE571C81A84748C /* Pods */,
+				9C838714F02B57336078766B99E02433 /* Products */,
+				7F97D68C8F0E2C4ABAA9E30411EC4624 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7F97D68C8F0E2C4ABAA9E30411EC4624 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA0C328A2F75E7624EABBC0A2F159C5F /* Pods-PrePaint */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9C838714F02B57336078766B99E02433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C9E26C795DF59CC7C20036A9B8D81DB /* libPocketSVG.a */,
+				F9FB372E202465A4CE9377E39BDD9EC0 /* libPods-PrePaint.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA0C328A2F75E7624EABBC0A2F159C5F /* Pods-PrePaint */ = {
+			isa = PBXGroup;
+			children = (
+				B2313A0B84FD1EA0CA8BFE5E6562430D /* Pods-PrePaint-acknowledgements.markdown */,
+				9ACC6BD3736261E654D35F4CD78B52C4 /* Pods-PrePaint-acknowledgements.plist */,
+				5364B16CCAD298B933CEBA18545407C2 /* Pods-PrePaint-dummy.m */,
+				FBE4977EEBFEBFC179FBDAAD5A4AFB12 /* Pods-PrePaint-frameworks.sh */,
+				29255AB08807E5797823D70EB84AA7F3 /* Pods-PrePaint-resources.sh */,
+				C697DA0C27512A88E1DE54D7CF994574 /* Pods-PrePaint.debug.xcconfig */,
+				06A46F3DC7BCD6AB5DD1A1D1CAFF173D /* Pods-PrePaint.release.xcconfig */,
+			);
+			name = "Pods-PrePaint";
+			path = "Target Support Files/Pods-PrePaint";
+			sourceTree = "<group>";
+		};
+		D97520E438BD07D2A508C7E463D07505 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C394C54C342282A94622670B00B4E1BA /* PocketSVG.xcconfig */,
+				0091038283FFAD6E3F737E79C336E2D7 /* PocketSVG-dummy.m */,
+				3016494E4C130FBF39082DDD5834BC7F /* PocketSVG-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PocketSVG";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9EFE6842868FCE7C2B90F4C8810DCA37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25357C19764F0171ED0CF0969C537F7B /* PocketSVG.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC246FDA4A18021764639F3A1EADFAF /* PocketSVG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C566D0835A2606D184F73EC850EAEE5 /* Build configuration list for PBXNativeTarget "PocketSVG" */;
+			buildPhases = (
+				D4B55120A54C80E1C74E47B63476EF9D /* Sources */,
+				37B24D2FCF2E990968B8DC1E79D35D38 /* Frameworks */,
+				9EFE6842868FCE7C2B90F4C8810DCA37 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketSVG;
+			productName = PocketSVG;
+			productReference = 7C9E26C795DF59CC7C20036A9B8D81DB /* libPocketSVG.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FB773865BCCC597A6A48080673CFF369 /* Pods-PrePaint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DC314580C31FC31C706F16CEFA4F70 /* Build configuration list for PBXNativeTarget "Pods-PrePaint" */;
+			buildPhases = (
+				134350A83E105933C4DF54823B0E3689 /* Sources */,
+				7E49A150BB16BA68E54BC4C862F896CD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BADB1DA7D040AE56464EFC1E54A3C062 /* PBXTargetDependency */,
+			);
+			name = "Pods-PrePaint";
+			productName = "Pods-PrePaint";
+			productReference = F9FB372E202465A4CE9377E39BDD9EC0 /* libPods-PrePaint.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9C838714F02B57336078766B99E02433 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC246FDA4A18021764639F3A1EADFAF /* PocketSVG */,
+				FB773865BCCC597A6A48080673CFF369 /* Pods-PrePaint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		134350A83E105933C4DF54823B0E3689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DA88E9F33A4F96BCC90BAB910B526DA /* Pods-PrePaint-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B55120A54C80E1C74E47B63476EF9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA0353838615B3EB40A552413A58288 /* PocketSVG-dummy.m in Sources */,
+				E933BA65DA9188537E1B29E0A2608E92 /* PocketSVG.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BADB1DA7D040AE56464EFC1E54A3C062 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PocketSVG;
+			target = 8DC246FDA4A18021764639F3A1EADFAF /* PocketSVG */;
+			targetProxy = DF89B092B13B95A165333EC2F0F5D693 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		20AF7698481F81F5602952EFEE3AD86B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C394C54C342282A94622670B00B4E1BA /* PocketSVG.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PocketSVG/PocketSVG-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2156B1DAA6FC400828317083A443E5B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06A46F3DC7BCD6AB5DD1A1D1CAFF173D /* Pods-PrePaint.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		49FCA734D27142CD8FF76C0B4AFA422F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C697DA0C27512A88E1DE54D7CF994574 /* Pods-PrePaint.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		93D257B39F43619ABDE96F0196AA61E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C394C54C342282A94622670B00B4E1BA /* PocketSVG.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PocketSVG/PocketSVG-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1534490D941DCA47C62AC4314182AF /* Debug */,
+				C5A18280E9321A9268D1C80B7DA43967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C566D0835A2606D184F73EC850EAEE5 /* Build configuration list for PBXNativeTarget "PocketSVG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20AF7698481F81F5602952EFEE3AD86B /* Debug */,
+				93D257B39F43619ABDE96F0196AA61E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92DC314580C31FC31C706F16CEFA4F70 /* Build configuration list for PBXNativeTarget "Pods-PrePaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49FCA734D27142CD8FF76C0B4AFA422F /* Debug */,
+				2156B1DAA6FC400828317083A443E5B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
