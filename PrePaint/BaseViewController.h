@@ -11,6 +11,9 @@
 #import "FourTreasuresViewController.h"
 #import "PPStyleViewController.h"
 #import "ToolTutorialViewController.h"
+#import "DetailTutorialViewController.h"
+#import "IdeaTutorialViewController.h"
+#import "CombinationTutorialViewController.h"
 
 
 @interface BaseViewController : UIViewController
@@ -26,6 +29,6 @@
 
 -(void)optionSelected:(PPNavigationOptionsView*)optionView;
 -(void)removeStyleVCAndloadFourTreasureVC;
--(void)flipToToolTutorialPage;
+-(void)flipToToolTutorialPage:(NSInteger)tutorialTag;
 
 @end

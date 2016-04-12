@@ -175,18 +175,49 @@
 }
 
 
--(void)flipToToolTutorialPage
+-(void)flipToToolTutorialPage:(NSInteger)tutorialTag
 {
-    ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
+    UIViewController *vc;
+    switch (tutorialTag) {
+        case 0:
+        {
+          ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
+                vc = ttVC;
+        }
+            break;
+        case 1:
+        {
+            DetailTutorialViewController *ttVC = [[DetailTutorialViewController alloc] init];
+            vc = ttVC;
+        }
+            break;
+        case 2:
+        {
+            ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
+            vc = ttVC;
+        }
+            break;
+        case 3:
+        {
+            ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
+            vc = ttVC;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+  
     [UIView transitionWithView:self.navigationController.view
                       duration:0.75
                        options:UIViewAnimationOptionTransitionFlipFromRight
                     animations:^{
-                        [self.navigationController pushViewController:ttVC animated:NO];
+                        [self.navigationController pushViewController:vc animated:NO];
                     }
                     completion:nil];
 
-  // [self.navigationController pushViewController:baseVC animated:YES];
+ 
 }
 
 

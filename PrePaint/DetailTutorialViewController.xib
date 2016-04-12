@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,94 +10,95 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToolTutorialViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailTutorialViewController">
             <connections>
-                <outlet property="backButton" destination="tZt-Lf-Q1G" id="Ec3-Gc-juy"/>
-                <outlet property="hintLabel" destination="kDY-2N-Hwn" id="C5I-HM-JOG"/>
-                <outlet property="nextButton" destination="WMd-Cg-iqO" id="5mw-w3-Rsu"/>
-                <outlet property="pencilImageView" destination="kKJ-dn-43Z" id="GlT-C8-uWz"/>
-                <outlet property="previousButton" destination="i40-2k-3I3" id="Lcr-Gd-Tla"/>
-                <outlet property="rightPanel" destination="IKy-Ks-MjX" id="2JC-Ru-TVm"/>
-                <outlet property="stepBarView" destination="2hc-9a-nmN" id="IXE-8H-lkz"/>
-                <outlet property="stepNumberLabel" destination="2ER-ci-soB" id="7gH-Au-hw9"/>
-                <outlet property="stepView" destination="dda-1V-fyX" id="QyU-Sp-cpr"/>
-                <outlet property="titleFlowerLabel" destination="MAK-WA-JYU" id="ESD-e0-Tjw"/>
-                <outlet property="titleStyleLabel" destination="VGc-QS-8J7" id="NhY-Dj-HvM"/>
-                <outlet property="toolBgImageView" destination="ORE-93-qqr" id="q7R-GU-3Wy"/>
-                <outlet property="tutorialBgView" destination="tpm-zM-ksj" id="6Ke-za-YAI"/>
-                <outlet property="tutorialImageView" destination="icb-OQ-Qyi" id="iRk-XW-fCb"/>
-                <outlet property="veinBrushImageView" destination="Rrm-yU-Uks" id="pAn-Xx-84I"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="xuanPaperImageView" destination="S8M-wo-atD" id="KXz-7X-7OP"/>
+                <outlet property="backButton" destination="BHK-aY-vPo" id="wGC-Qz-WQH"/>
+                <outlet property="goatBrushImageView" destination="8kZ-mZ-22D" id="262-be-tzW"/>
+                <outlet property="hintLabel" destination="lV0-a3-FMi" id="ViM-dX-c9d"/>
+                <outlet property="nextButton" destination="uZ3-X3-QbN" id="8u3-ne-Mom"/>
+                <outlet property="pencilImageView" destination="m75-8U-H6R" id="VJh-iy-ghQ"/>
+                <outlet property="previousButton" destination="EOs-tU-DpB" id="mUY-2I-xz3"/>
+                <outlet property="rightPannel" destination="gqq-De-Ivi" id="gXf-bH-F7v"/>
+                <outlet property="stepBarView" destination="0lc-mg-hEb" id="90X-dj-BFx"/>
+                <outlet property="stepNumberLabel" destination="TpC-RE-YJX" id="tqx-Hd-Lbq"/>
+                <outlet property="stepView" destination="Our-nd-xj4" id="u2I-jH-c98"/>
+                <outlet property="titleFlowerLabel" destination="NrF-Ca-Dmi" id="pNB-zd-c4n"/>
+                <outlet property="titleStyleLabel" destination="RL9-0v-nRe" id="tAb-k8-s9E"/>
+                <outlet property="toolBgImageView" destination="b6H-8Y-fr2" id="MWb-ET-WYG"/>
+                <outlet property="tutorialBgView" destination="QT9-20-SnF" id="OjM-4l-xnq"/>
+                <outlet property="tutorialImageView" destination="Yo5-k7-FRa" id="Nb0-jU-xPD"/>
+                <outlet property="veinBrushImageView" destination="euK-0t-Vsk" id="Gxf-gg-RMN"/>
+                <outlet property="view" destination="WUh-aE-39R" id="gMq-RZ-CCo"/>
+                <outlet property="xuanPaperImageView" destination="6hC-1e-jOr" id="Y3Q-80-kdI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="WUh-aE-39R">
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tZt-Lf-Q1G">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BHK-aY-vPo">
                     <rect key="frame" x="0.0" y="0.0" width="64" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.37254901960784315" green="0.61176470588235299" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.37254901959999998" green="0.61176470589999998" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                     <state key="normal" image="tool_backbutton"/>
                     <connections>
-                        <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="C45-PB-KG9"/>
+                        <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="0l0-LE-dhJ"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" id="2hc-9a-nmN">
+                <view contentMode="scaleToFill" id="0lc-mg-hEb">
                     <rect key="frame" x="0.0" y="60" width="1024" height="95"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" id="dda-1V-fyX">
+                        <view contentMode="scaleToFill" id="Our-nd-xj4">
                             <rect key="frame" x="60" y="24" width="810" height="48"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place treated xuan paper on the table" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kDY-2N-Hwn">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place treated xuan paper on the table" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lV0-a3-FMi">
                                     <rect key="frame" x="39" y="14" width="733" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                    <color key="textColor" red="0.56862745098039214" green="0.87450980392156863" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.56862745100000001" green="0.87450980389999999" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14000000000000001" colorSpace="calibratedRGB"/>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_circle" id="09c-du-7Pq">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_circle" id="3XG-rW-D38">
                             <rect key="frame" x="37" y="21" width="54" height="54"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ER-ci-soB">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TpC-RE-YJX">
                             <rect key="frame" x="50" y="39" width="28" height="18"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="i40-2k-3I3">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EOs-tU-DpB">
                             <rect key="frame" x="894" y="24" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="tool_prev"/>
                             <connections>
-                                <action selector="previousButtonAction:" destination="-1" eventType="touchUpInside" id="xgq-pp-bbl"/>
+                                <action selector="previousButtonAction:" destination="-1" eventType="touchUpInside" id="QcH-t0-ahP"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WMd-Cg-iqO">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uZ3-X3-QbN">
                             <rect key="frame" x="964" y="24" width="35" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="tool_next"/>
                             <connections>
-                                <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="ICe-Pc-Ew9"/>
+                                <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="XcZ-fg-zBI"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ER0-wC-CfK">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UjK-gn-zbm">
                             <rect key="frame" x="891" y="54" width="42" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ba-jk-CbT">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pnv-B4-YJ8">
                             <rect key="frame" x="970" y="54" width="23.5" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
@@ -105,25 +106,25 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.17647058823529413" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" id="19T-h7-on8">
+                <view contentMode="scaleToFill" id="VPL-Bu-Gjv">
                     <rect key="frame" x="63" y="0.0" width="961" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMBINATION STYLE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VGc-QS-8J7">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMBINATION STYLE" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RL9-0v-nRe">
                             <rect key="frame" x="155" y="20" width="313" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" id="6eT-eW-Tbn">
+                        <view contentMode="scaleToFill" id="Ph2-qp-brB">
                             <rect key="frame" x="479" y="26" width="2" height="15"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common Peony" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MAK-WA-JYU">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Common Peony" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NrF-Ca-Dmi">
                             <rect key="frame" x="494" y="23" width="272" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
@@ -131,57 +132,65 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.074509803920000006" green="0.074509803920000006" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_bg" id="ORE-93-qqr">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_bg" id="b6H-8Y-fr2">
                     <rect key="frame" x="0.0" y="155" width="1024" height="613"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <view clipsSubviews="YES" contentMode="scaleToFill" id="IKy-Ks-MjX">
+                <view clipsSubviews="YES" contentMode="scaleToFill" id="gqq-De-Ivi">
                     <rect key="frame" x="904" y="155" width="120" height="613"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_xuan" id="S8M-wo-atD">
-                            <rect key="frame" x="22" y="124" width="114" height="85"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_xuan" id="6hC-1e-jOr">
+                            <rect key="frame" x="22" y="50" width="114" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_pencil" id="kKJ-dn-43Z">
-                            <rect key="frame" x="22" y="300" width="280" height="44"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_pencil" id="m75-8U-H6R">
+                            <rect key="frame" x="22" y="226" width="280" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_brush_vein" id="Rrm-yU-Uks">
-                            <rect key="frame" x="22" y="423" width="280" height="44"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_brush_vein" id="euK-0t-Vsk">
+                            <rect key="frame" x="22" y="349" width="280" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_paper_text" id="Z4a-N9-N1n">
-                            <rect key="frame" x="15" y="219" width="95" height="46"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_goatBrush" id="8kZ-mZ-22D">
+                            <rect key="frame" x="22" y="472" width="280" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_pencil_text" id="U4K-2x-Td9">
-                            <rect key="frame" x="15" y="342" width="95" height="46"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_paper_text" id="yNl-U6-jj9">
+                            <rect key="frame" x="15" y="145" width="95" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_veinbrush_text" id="F0I-fM-B6R">
-                            <rect key="frame" x="15" y="463" width="95" height="46"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_pencil_text" id="3Yc-he-988">
+                            <rect key="frame" x="15" y="268" width="95" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_veinbrush_text" id="EFE-dr-3ZC">
+                            <rect key="frame" x="15" y="390" width="95" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tool_goatbrush_text" id="efV-tw-3WO">
+                            <rect key="frame" x="22" y="513" width="95" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="calibratedRGB"/>
                 </view>
-                <view contentMode="scaleToFill" id="tpm-zM-ksj">
+                <view contentMode="scaleToFill" id="QT9-20-SnF">
                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paint_tutorial" id="icb-OQ-Qyi">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paint_tutorial" id="Yo5-k7-FRa">
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QfC-Tj-PcV">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lDh-4L-bgE">
                             <rect key="frame" x="388" y="642" width="249" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="paint_tutorial_gotit"/>
                             <connections>
-                                <action selector="gotitButtonAction:" destination="-1" eventType="touchUpInside" id="usX-4P-AJX"/>
+                                <action selector="gotitButtonAction:" destination="-1" eventType="touchUpInside" id="WGS-Jt-wcP"/>
                             </connections>
                         </button>
                     </subviews>
@@ -191,7 +200,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
             <point key="canvasLocation" x="348" y="43"/>
         </view>
     </objects>
@@ -202,6 +211,8 @@
         <image name="tool_bg" width="1024" height="613"/>
         <image name="tool_brush_vein" width="327" height="18"/>
         <image name="tool_circle" width="54" height="54"/>
+        <image name="tool_goatBrush" width="249" height="28"/>
+        <image name="tool_goatbrush_text" width="95" height="46"/>
         <image name="tool_next" width="40" height="41"/>
         <image name="tool_paper_text" width="95" height="46"/>
         <image name="tool_pencil" width="280" height="20"/>

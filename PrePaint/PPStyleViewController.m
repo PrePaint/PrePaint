@@ -12,7 +12,7 @@
 #define kNumberOfSlides 4
 
 @interface PPStyleViewController ()
-
+@property (assign,nonatomic)NSInteger selectedTag;
 @end
 
 @implementation PPStyleViewController
@@ -218,6 +218,8 @@
    
     if (!button.isSelected) {
         NSInteger tag = button.tag;
+        self.selectedTag = tag;
+        
         [self animateRightPanel:tag];
         for (UIButton *styleButton in self.styleButtonArray) {
             if (styleButton != button) {
@@ -292,7 +294,8 @@
 }
 
 - (IBAction)tryToolButtonAction:(UIButton *)sender {
-    [(BaseViewController*)self.parentViewController flipToToolTutorialPage];
+    
+    [(BaseViewController*)self.parentViewController flipToToolTutorialPage:self.selectedTag];
 }
 
 -(void)didReceiveMemoryWarning

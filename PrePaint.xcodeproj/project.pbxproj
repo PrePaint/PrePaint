@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		133CC7211CAE5EAF00FCD1E6 /* BezierCurve1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC71D1CAE5EAF00FCD1E6 /* BezierCurve1.svg */; };
-		133CC7231CAE5EAF00FCD1E6 /* BezierCurve3.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC71F1CAE5EAF00FCD1E6 /* BezierCurve3.svg */; };
-		133CC7241CAE5EAF00FCD1E6 /* BezierCurve4.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7201CAE5EAF00FCD1E6 /* BezierCurve4.svg */; };
-		133CC72A1CAE6D9C00FCD1E6 /* bezierCurve2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7291CAE6D9C00FCD1E6 /* bezierCurve2.svg */; };
-		133CC72E1CB218C200FCD1E6 /* flower.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC72D1CB218C200FCD1E6 /* flower.svg */; };
-		133CC7301CB2218000FCD1E6 /* leaf.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC72F1CB2218000FCD1E6 /* leaf.svg */; };
+		1318FB581CBB640B002BF442 /* DetailTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1318FB561CBB640B002BF442 /* DetailTutorialViewController.m */; };
+		1318FB591CBB640B002BF442 /* DetailTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB571CBB640B002BF442 /* DetailTutorialViewController.xib */; };
+		1318FB5D1CBB641F002BF442 /* IdeaTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1318FB5B1CBB641F002BF442 /* IdeaTutorialViewController.m */; };
+		1318FB5E1CBB641F002BF442 /* IdeaTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB5C1CBB641F002BF442 /* IdeaTutorialViewController.xib */; };
+		1318FB621CBB6431002BF442 /* CombinationTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1318FB601CBB6431002BF442 /* CombinationTutorialViewController.m */; };
+		1318FB631CBB6431002BF442 /* CombinationTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB611CBB6431002BF442 /* CombinationTutorialViewController.xib */; };
+		1318FB651CBB6D70002BF442 /* leafPath.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB641CBB6D70002BF442 /* leafPath.svg */; };
+		1318FB671CBB7FEF002BF442 /* pathGuide.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB661CBB7FEF002BF442 /* pathGuide.svg */; };
 		133CC7331CB22A6000FCD1E6 /* flowerBaby.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7321CB22A6000FCD1E6 /* flowerBaby.svg */; };
 		133CC7351CB22FD300FCD1E6 /* flowerBaby2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7341CB22FD300FCD1E6 /* flowerBaby2.svg */; };
 		133CC7371CB2365C00FCD1E6 /* bigFlower.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7361CB2365C00FCD1E6 /* bigFlower.svg */; };
@@ -31,6 +33,7 @@
 		13890ACB1C8DCFD000A8A0C7 /* PPFourTreasuresView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */; };
 		13890ACE1C8FFDAC00A8A0C7 /* PPBrushesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890ACD1C8FFDAC00A8A0C7 /* PPBrushesView.m */; };
 		13890ACF1C933C0900A8A0C7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890AC51C8DB19F00A8A0C7 /* MainViewController.m */; };
+		139269EE1CB73895003953DD /* test2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 139269ED1CB73895003953DD /* test2.gif */; };
 		13A81B2D1C99357A00309E17 /* PPStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A81B2C1C99357A00309E17 /* PPStyleViewController.m */; };
 		13A81B2F1C9935A800309E17 /* PPStyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A81B2E1C9935A800309E17 /* PPStyleViewController.xib */; };
 		13A81B321C99486B00309E17 /* PPIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A81B311C99486B00309E17 /* PPIntroductionView.m */; };
@@ -57,12 +60,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		133CC71D1CAE5EAF00FCD1E6 /* BezierCurve1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BezierCurve1.svg; sourceTree = "<group>"; };
-		133CC71F1CAE5EAF00FCD1E6 /* BezierCurve3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BezierCurve3.svg; sourceTree = "<group>"; };
-		133CC7201CAE5EAF00FCD1E6 /* BezierCurve4.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BezierCurve4.svg; sourceTree = "<group>"; };
-		133CC7291CAE6D9C00FCD1E6 /* bezierCurve2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bezierCurve2.svg; sourceTree = "<group>"; };
-		133CC72D1CB218C200FCD1E6 /* flower.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = flower.svg; sourceTree = "<group>"; };
-		133CC72F1CB2218000FCD1E6 /* leaf.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = leaf.svg; sourceTree = "<group>"; };
+		1318FB551CBB640B002BF442 /* DetailTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTutorialViewController.h; sourceTree = "<group>"; };
+		1318FB561CBB640B002BF442 /* DetailTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTutorialViewController.m; sourceTree = "<group>"; };
+		1318FB571CBB640B002BF442 /* DetailTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailTutorialViewController.xib; sourceTree = "<group>"; };
+		1318FB5A1CBB641F002BF442 /* IdeaTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaTutorialViewController.h; sourceTree = "<group>"; };
+		1318FB5B1CBB641F002BF442 /* IdeaTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaTutorialViewController.m; sourceTree = "<group>"; };
+		1318FB5C1CBB641F002BF442 /* IdeaTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IdeaTutorialViewController.xib; sourceTree = "<group>"; };
+		1318FB5F1CBB6431002BF442 /* CombinationTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombinationTutorialViewController.h; sourceTree = "<group>"; };
+		1318FB601CBB6431002BF442 /* CombinationTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CombinationTutorialViewController.m; sourceTree = "<group>"; };
+		1318FB611CBB6431002BF442 /* CombinationTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CombinationTutorialViewController.xib; sourceTree = "<group>"; };
+		1318FB641CBB6D70002BF442 /* leafPath.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = leafPath.svg; sourceTree = "<group>"; };
+		1318FB661CBB7FEF002BF442 /* pathGuide.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pathGuide.svg; sourceTree = "<group>"; };
 		133CC7321CB22A6000FCD1E6 /* flowerBaby.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = flowerBaby.svg; sourceTree = "<group>"; };
 		133CC7341CB22FD300FCD1E6 /* flowerBaby2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = flowerBaby2.svg; sourceTree = "<group>"; };
 		133CC7361CB2365C00FCD1E6 /* bigFlower.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bigFlower.svg; sourceTree = "<group>"; };
@@ -95,6 +103,7 @@
 		13890ACA1C8DCFD000A8A0C7 /* PPFourTreasuresView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFourTreasuresView.m; sourceTree = "<group>"; };
 		13890ACC1C8FFDAC00A8A0C7 /* PPBrushesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBrushesView.h; sourceTree = "<group>"; };
 		13890ACD1C8FFDAC00A8A0C7 /* PPBrushesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBrushesView.m; sourceTree = "<group>"; };
+		139269ED1CB73895003953DD /* test2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test2.gif; sourceTree = "<group>"; };
 		13A81B2B1C99357A00309E17 /* PPStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPStyleViewController.h; sourceTree = "<group>"; };
 		13A81B2C1C99357A00309E17 /* PPStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPStyleViewController.m; sourceTree = "<group>"; };
 		13A81B2E1C9935A800309E17 /* PPStyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPStyleViewController.xib; sourceTree = "<group>"; };
@@ -190,6 +199,15 @@
 				13F91BA71CAB80B600D411E4 /* ToolTutorialViewController.h */,
 				13F91BA81CAB80B600D411E4 /* ToolTutorialViewController.m */,
 				13F91BA91CAB80B600D411E4 /* ToolTutorialViewController.xib */,
+				1318FB551CBB640B002BF442 /* DetailTutorialViewController.h */,
+				1318FB561CBB640B002BF442 /* DetailTutorialViewController.m */,
+				1318FB571CBB640B002BF442 /* DetailTutorialViewController.xib */,
+				1318FB5A1CBB641F002BF442 /* IdeaTutorialViewController.h */,
+				1318FB5B1CBB641F002BF442 /* IdeaTutorialViewController.m */,
+				1318FB5C1CBB641F002BF442 /* IdeaTutorialViewController.xib */,
+				1318FB5F1CBB6431002BF442 /* CombinationTutorialViewController.h */,
+				1318FB601CBB6431002BF442 /* CombinationTutorialViewController.m */,
+				1318FB611CBB6431002BF442 /* CombinationTutorialViewController.xib */,
 				13890AC31C8D945B00A8A0C7 /* AppConstants.h */,
 				13890A3F1C8353EC00A8A0C7 /* Supporting Files */,
 			);
@@ -241,14 +259,11 @@
 			isa = PBXGroup;
 			children = (
 				133CC7321CB22A6000FCD1E6 /* flowerBaby.svg */,
-				133CC72F1CB2218000FCD1E6 /* leaf.svg */,
-				133CC72D1CB218C200FCD1E6 /* flower.svg */,
-				133CC7291CAE6D9C00FCD1E6 /* bezierCurve2.svg */,
 				133CC7361CB2365C00FCD1E6 /* bigFlower.svg */,
+				1318FB641CBB6D70002BF442 /* leafPath.svg */,
+				1318FB661CBB7FEF002BF442 /* pathGuide.svg */,
+				139269ED1CB73895003953DD /* test2.gif */,
 				133CC7341CB22FD300FCD1E6 /* flowerBaby2.svg */,
-				133CC71D1CAE5EAF00FCD1E6 /* BezierCurve1.svg */,
-				133CC71F1CAE5EAF00FCD1E6 /* BezierCurve3.svg */,
-				133CC7201CAE5EAF00FCD1E6 /* BezierCurve4.svg */,
 			);
 			name = SVG;
 			sourceTree = "<group>";
@@ -370,19 +385,19 @@
 			files = (
 				133CC7351CB22FD300FCD1E6 /* flowerBaby2.svg in Resources */,
 				13890AB41C8D69A600A8A0C7 /* Resources.xcassets in Resources */,
+				1318FB591CBB640B002BF442 /* DetailTutorialViewController.xib in Resources */,
 				13F91BAB1CAB80B600D411E4 /* ToolTutorialViewController.xib in Resources */,
-				133CC7301CB2218000FCD1E6 /* leaf.svg in Resources */,
+				139269EE1CB73895003953DD /* test2.gif in Resources */,
 				13890ABE1C8D85CE00A8A0C7 /* BaseViewController.xib in Resources */,
+				1318FB671CBB7FEF002BF442 /* pathGuide.svg in Resources */,
+				1318FB631CBB6431002BF442 /* CombinationTutorialViewController.xib in Resources */,
 				13A81B2F1C9935A800309E17 /* PPStyleViewController.xib in Resources */,
 				13890AC81C8DB19F00A8A0C7 /* MainViewController.xib in Resources */,
-				133CC7241CAE5EAF00FCD1E6 /* BezierCurve4.svg in Resources */,
-				133CC7211CAE5EAF00FCD1E6 /* BezierCurve1.svg in Resources */,
-				133CC7231CAE5EAF00FCD1E6 /* BezierCurve3.svg in Resources */,
+				1318FB651CBB6D70002BF442 /* leafPath.svg in Resources */,
+				1318FB5E1CBB641F002BF442 /* IdeaTutorialViewController.xib in Resources */,
 				13890AB91C8D854800A8A0C7 /* FourTreasuresViewController.xib in Resources */,
-				133CC72A1CAE6D9C00FCD1E6 /* bezierCurve2.svg in Resources */,
 				133CC7371CB2365C00FCD1E6 /* bigFlower.svg in Resources */,
 				13890A4C1C8353EC00A8A0C7 /* Assets.xcassets in Resources */,
-				133CC72E1CB218C200FCD1E6 /* flower.svg in Resources */,
 				133CC7331CB22A6000FCD1E6 /* flowerBaby.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,11 +477,14 @@
 				13A81B2D1C99357A00309E17 /* PPStyleViewController.m in Sources */,
 				13890AC21C8D941B00A8A0C7 /* PPNavigationOptionsView.m in Sources */,
 				13890ABD1C8D85CE00A8A0C7 /* BaseViewController.m in Sources */,
+				1318FB621CBB6431002BF442 /* CombinationTutorialViewController.m in Sources */,
 				13A81B321C99486B00309E17 /* PPIntroductionView.m in Sources */,
 				13890AB81C8D854800A8A0C7 /* FourTreasuresViewController.m in Sources */,
+				1318FB5D1CBB641F002BF442 /* IdeaTutorialViewController.m in Sources */,
 				13890A441C8353EC00A8A0C7 /* AppDelegate.m in Sources */,
 				13F91BAA1CAB80B600D411E4 /* ToolTutorialViewController.m in Sources */,
 				13890A411C8353EC00A8A0C7 /* main.m in Sources */,
+				1318FB581CBB640B002BF442 /* DetailTutorialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
