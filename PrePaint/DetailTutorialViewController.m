@@ -569,16 +569,20 @@
     if (step == 1) {
         _isXuanPaperOnScreen = NO;
         [self.fullPaperImageView removeFromSuperview];
-        [self.hintLabel setText:kTTStep1Text];
+        [self.hintLabel setText:kDTStep1Text];
         
     }
     else if (step == 2) {
         [_firstLayer removeFromSuperlayer];
-        [self.hintLabel setText:kTTStep2Text];
+        [self.hintLabel setText:kDTStep2Text];
     }
     else if (step == 3){
         [_secondLayer removeFromSuperlayer];
-        [self.hintLabel setText:kTTStep3Text];
+        [self.hintLabel setText:kDTStep3Text];
+    }
+    else if (step == 4){
+        [_secondLayer removeFromSuperlayer];
+        [self.hintLabel setText:kDTStep3Text];
     }
     if (step > 1) {
         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
@@ -593,13 +597,13 @@
             [self.view addSubview:self.fullPaperImageView];
             [self.fullPaperImageView setFrame:CGRectMake(27, CGRectGetMaxY(self.stepBarView.frame)+75, 854, 635)];
         }
-        [self.hintLabel setText:kTTStep2Text];
+        [self.hintLabel setText:kDTStep2Text];
     }
     else if (step == 2) {
         if (_firstLayer) {
             [self.fullPaperImageView.layer addSublayer:_firstLayer];
         }
-        [self.hintLabel setText:kTTStep3Text];
+        [self.hintLabel setText:kDTStep3Text];
     }
     else if (step == 3){
         if (_secondLayer) {
@@ -607,7 +611,13 @@
         }
         
     }
-    if (step <3) {
+    else if (step == 4){
+//        if (_secondLayer) {
+//            [self.fullPaperImageView.layer addSublayer:_secondLayer];
+//        }
+        
+    }
+    if (step <4) {
         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];
     }
 }

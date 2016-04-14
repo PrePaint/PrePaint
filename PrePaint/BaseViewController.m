@@ -193,13 +193,13 @@
             break;
         case 2:
         {
-            ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
+            IdeaTutorialViewController *ttVC = [[IdeaTutorialViewController alloc] init];
             vc = ttVC;
         }
             break;
         case 3:
         {
-            ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
+            CombinationTutorialViewController *ttVC = [[CombinationTutorialViewController alloc] init];
             vc = ttVC;
         }
             break;

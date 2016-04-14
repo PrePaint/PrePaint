@@ -77,6 +77,41 @@
 
 -(void)animateRightPanel:(NSInteger)newPanelTag
 {
+    
+    UIImage *bottomImage;
+    
+    switch (newPanelTag) {
+        case 0:
+        {
+            bottomImage = [UIImage imageNamed:@"style_bottom_bg"];
+        }
+            break;
+        case 1:
+        {
+            bottomImage = [UIImage imageNamed:@"style_bottom_bg_detail"];
+        }
+            break;
+        case 2:
+        {
+            bottomImage = [UIImage imageNamed:@"style_bottom_bg_idea"];
+        }
+            break;
+        case 3:
+        {
+            bottomImage = [UIImage imageNamed:@"style_bottom_bg_combination"];
+        }
+            break;
+            
+        default:
+        {
+            bottomImage = [UIImage imageNamed:@"style_bottom_bg"];
+
+        }
+            break;
+    }
+    
+    
+    
     [UIView animateWithDuration:0.75 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         self.bottomPanelConstraint.constant = -self.bottomPanel.frame.size.height;
@@ -84,6 +119,7 @@
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         [self loadRightPanelDataBasedOnTag:newPanelTag];
+        [self.bottomBGImageView setImage:bottomImage];
         [UIView animateWithDuration:0.75 delay:0.1 options:UIViewAnimationOptionCurveEaseOut animations:^{
             
             self.bottomPanelConstraint.constant = 0;

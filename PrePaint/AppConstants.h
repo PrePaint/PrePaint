@@ -64,3 +64,25 @@ typedef enum {
 static NSString *kTTStep1Text = @"Place treated xuan paper on the table";
 static NSString *kTTStep2Text = @"Drag the pencil to the treated xuan paper";
 static NSString *kTTStep3Text = @"Drag the vein brush to the treated xuan paper";
+
+static NSString *kDTStep1Text = @"Place treated xuan paper on the table";
+static NSString *kDTStep2Text = @"Drag the pencil to the treated xuan paper";
+static NSString *kDTStep3Text = @"Drag the goat brush to the treated xuan paper";
+static NSString *kDTStep4Text = @"Drag the vein brush to the treated xuan paper";
+
+
+static NSString *kITStep1Text = @"Place untreated xuan paper on the table";
+static NSString *kITStep2Text = @"Drag the goat brush to the untreated xuan paper";
+static NSString *kITStep3Text = @"Drag the vein brush to the untreated xuan paper";
+static NSString *kITStep4Text = @"Drag the wolf brush to the untreated xuan paper";
+
+static NSString *kCTStep1Text = @"Place untreated xuan paper on the table";
+static NSString *kCTStep2Text = @"Drag the pencil to the untreated xuan paper";
+static NSString *kCTStep3Text = @"Drag the goat brush to the untreated xuan paper";
+static NSString *kCTStep4Text = @"Drag the vein brush to the untreated xuan paper";
+static NSString *kCTStep5Text = @"Drag the wolf brush to the untreated xuan paper";
+
+
+
+
+
