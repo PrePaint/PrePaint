@@ -7,6 +7,7 @@
 //
 
 #import "FourTreasuresViewController.h"
+#import "BaseViewController.h"
 
 @interface FourTreasuresViewController (){
 
@@ -21,6 +22,7 @@
     [super viewDidLoad];
     [self setupTreasureViews];
     [self setupBottomBar];
+    [self addTapGestureForBrushViews];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -114,6 +116,22 @@
     }
 }
 
+-(void)addTapGestureForBrushViews
+{
+    
+    for (PPBrushesView *brushView in self.brushViews) {
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOnBrushView:)];
+        [brushView setTag:[self.brushViews indexOfObject:brushView]];
+        [brushView addGestureRecognizer:tapGesture];
+    }
+ 
+}
+
+
+-(void)handleTapOnBrushView:(UITapGestureRecognizer*)gesture
+{
+    [(BaseViewController*)self.baseVC brushViewSelected:gesture.view.tag];
+}
 
 -(void)dealloc
 {

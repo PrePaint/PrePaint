@@ -428,7 +428,7 @@
         [self.hintLabel setText:kTTStep3Text];
     }
     if (step > 1) {
-         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
+         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step-1]];
     }
     
 }
@@ -455,7 +455,7 @@
 
     }
     if (step <3) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];
+        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step+1]];
     }
 }
 @end

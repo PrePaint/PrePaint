@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GMCPagingScrollView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PocketSVG.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09039536A7EE41B1283D1AD18F67026A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1A79BA86DB198181905CBBFC1F1E6701</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7366DF4DBD37665B3B801CB7C662C825</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8DC246FDA4A18021764639F3A1EADFAF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C739069E68C904ED678117690EBEDFB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

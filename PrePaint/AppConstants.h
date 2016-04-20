@@ -82,6 +82,9 @@ static NSString *kCTStep3Text = @"Drag the goat brush to the untreated xuan pape
 static NSString *kCTStep4Text = @"Drag the vein brush to the untreated xuan paper";
 static NSString *kCTStep5Text = @"Drag the wolf brush to the untreated xuan paper";
 
+//------------------------- size -------------------------/
+#define kSlideShowViewHeight 624.0
+
 
 
 

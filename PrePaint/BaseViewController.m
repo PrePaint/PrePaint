@@ -75,6 +75,7 @@
         
 
     FourTreasuresViewController *ftVC = [[FourTreasuresViewController alloc] init];
+    [ftVC setBaseVC:self];
     CGRect frame = [self.contentView bounds];
     frame.origin.x = self.contentView.bounds.size.width;
     [ftVC.view setFrame:frame];
@@ -218,6 +219,43 @@
                     completion:nil];
 
  
+}
+
+
+-(void)brushViewSelected:(int)tag
+{
+    if (!self.slideShowVC) {
+        SlideShowViewController *slideVC = [[SlideShowViewController alloc] init];
+        self.slideShowVC = slideVC;
+        [self.slideShowVC setResponseDelegate:self];
+        CGRect rect = CGRectMake(0, -kSlideShowViewHeight, self.view.bounds.size.width, kSlideShowViewHeight);
+        CGRect targetRect = CGRectMake(0, 0, self.view.bounds.size.width, kSlideShowViewHeight);
+        [slideVC.view setFrame:rect];
+        [self.view addSubview:slideVC.view];
+        [slideVC setSelectedTag:tag];
+        [self.view bringSubviewToFront:slideVC.view];
+        [UIView animateWithDuration:0.5 animations:^{
+            [slideVC.view setFrame:targetRect];
+        } completion:^(BOOL finished) {
+       
+        }];
+    }
+
+}
+
+-(void)closeSlideView
+{
+    if (self.slideShowVC) {
+        CGRect rect = self.slideShowVC.view.frame;
+        rect.origin.y = -self.slideShowVC.view.frame.size.height;
+        [UIView animateWithDuration:0.5 animations:^{
+            [self.slideShowVC.view setFrame:rect];
+        } completion:^(BOOL finished) {
+            [self.slideShowVC.view removeFromSuperview];
+            self.slideShowVC = nil;
+        }];
+    }
+   
 }
 
 

@@ -762,7 +762,7 @@
         [self.hintLabel setText:kCTStep5Text];
     }
     if (step > 1) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
+        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step-1]];
     }
     
 }
@@ -801,7 +801,7 @@
          [self.fullPaperImageView.layer addSublayer:fifthColorLayer];
     }
     if (step <5) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];
+        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step+1]];
     }
 }
 @end

@@ -168,6 +168,6 @@
     </objects>
     <resources>
         <image name="style_bg1" width="1024" height="674"/>
-        <image name="style_bottom_bg" width="729" height="104"/>
+        <image name="style_bottom_bg" width="1024" height="103"/>
     </resources>
 </document>

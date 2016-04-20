@@ -1,13 +1,16 @@
 PODS:
   - FLAnimatedImage (1.0.12)
+  - GMCPagingScrollView (1.0.3)
   - PocketSVG (0.7)
 
 DEPENDENCIES:
   - FLAnimatedImage (~> 1.0)
+  - GMCPagingScrollView (~> 1.0)
   - PocketSVG (~> 0.7)
 
 SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  GMCPagingScrollView: 32285a8e2c0162a4709dfcb4fefb0b9896f87db2
   PocketSVG: e05e6b008c6232d7b6410bb1ff34db71957b776d
 
 COCOAPODS: 0.39.0

@@ -263,7 +263,7 @@
             }
             else{
                 [styleButton setSelected:YES];
-                NSString *bgFileName = [NSString stringWithFormat:@"style_bg%d",tag+1];
+                NSString *bgFileName = [NSString stringWithFormat:@"style_bg%ld",tag+1];
                 
                 UIImage * toImage = [UIImage imageNamed:bgFileName];
                 [UIView transitionWithView:self.bgImageView

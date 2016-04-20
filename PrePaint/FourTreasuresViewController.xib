@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FourTreasuresViewController">
             <connections>
@@ -20,6 +28,11 @@
                 <outlet property="paperTextView" destination="ijc-bF-SqA" id="YuX-bS-9P5"/>
                 <outlet property="paperView" destination="dJ0-z3-fTT" id="2Lz-bW-g6c"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="brushViews" destination="XoA-A9-mqH" id="nNg-FP-QxU"/>
+                <outletCollection property="brushViews" destination="TXd-lm-Rmb" id="0UX-yR-qEd"/>
+                <outletCollection property="brushViews" destination="MAH-bO-JR1" id="nli-Tf-P9R"/>
+                <outletCollection property="brushViews" destination="log-V6-AWs" id="3lw-2w-Uq6"/>
+                <outletCollection property="brushViews" destination="LTn-8h-GoU" id="GOT-cK-BME"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -279,7 +292,7 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottom_combinationBrush_text" translatesAutoresizingMaskIntoConstraints="NO" id="khi-H6-drb">
                                     <rect key="frame" x="18" y="40" width="80" height="57"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brush" translatesAutoresizingMaskIntoConstraints="NO" id="k0k-aR-H8G">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="combinationbrush" translatesAutoresizingMaskIntoConstraints="NO" id="k0k-aR-H8G">
                                     <rect key="frame" x="106" y="28" width="34" height="82"/>
                                 </imageView>
                             </subviews>
@@ -291,7 +304,7 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottom_wolfBrush_text" translatesAutoresizingMaskIntoConstraints="NO" id="s9f-ki-V7R">
                                     <rect key="frame" x="18" y="40" width="80" height="57"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brush" translatesAutoresizingMaskIntoConstraints="NO" id="LOW-Tr-nbP">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wolfbrush" translatesAutoresizingMaskIntoConstraints="NO" id="LOW-Tr-nbP">
                                     <rect key="frame" x="106" y="28" width="34" height="82"/>
                                 </imageView>
                             </subviews>
@@ -303,7 +316,7 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottom_veinBrush_text" translatesAutoresizingMaskIntoConstraints="NO" id="XdY-Cb-tVA">
                                     <rect key="frame" x="18" y="40" width="80" height="57"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brush" translatesAutoresizingMaskIntoConstraints="NO" id="KSv-Cf-b9t">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="veinbrush" translatesAutoresizingMaskIntoConstraints="NO" id="KSv-Cf-b9t">
                                     <rect key="frame" x="106" y="28" width="34" height="82"/>
                                 </imageView>
                             </subviews>
@@ -371,7 +384,7 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottom_lanscapeBrush_text" translatesAutoresizingMaskIntoConstraints="NO" id="VrV-eB-Psl">
                                     <rect key="frame" x="18" y="40" width="80" height="57"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brush" translatesAutoresizingMaskIntoConstraints="NO" id="rQh-aW-enr">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landscapebrush" translatesAutoresizingMaskIntoConstraints="NO" id="rQh-aW-enr">
                                     <rect key="frame" x="106" y="28" width="34" height="82"/>
                                 </imageView>
                             </subviews>
@@ -507,6 +520,7 @@
         <image name="bottom_wolfBrush_text" width="62" height="50"/>
         <image name="bottomdotline" width="2" height="80"/>
         <image name="brush" width="34" height="82"/>
+        <image name="combinationbrush" width="34" height="82"/>
         <image name="fourtreasures_brush" width="208" height="250"/>
         <image name="fourtreasures_brush_text" width="25" height="60"/>
         <image name="fourtreasures_holder" width="208" height="250"/>
@@ -515,5 +529,8 @@
         <image name="fourtreasures_ink_text" width="24" height="60"/>
         <image name="fourtreasures_paper" width="208" height="250"/>
         <image name="fourtreasures_paper_text" width="25" height="60"/>
+        <image name="landscapebrush" width="34" height="82"/>
+        <image name="veinbrush" width="34" height="82"/>
+        <image name="wolfbrush" width="34" height="82"/>
     </resources>
 </document>

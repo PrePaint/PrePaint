@@ -14,6 +14,8 @@
 #import "DetailTutorialViewController.h"
 #import "IdeaTutorialViewController.h"
 #import "CombinationTutorialViewController.h"
+#import "SlideShowViewController.h"
+#import "AppConstants.h"
 
 
 @interface BaseViewController : UIViewController
@@ -26,9 +28,11 @@
 @property (strong, nonatomic) PPStyleViewController *paintingStyleVC;
 @property (strong, nonatomic) IBOutlet UIView *topNavView;
 @property (strong, nonatomic) UIViewController *currentViewController;
+@property (strong, nonatomic) SlideShowViewController *slideShowVC;
 
 -(void)optionSelected:(PPNavigationOptionsView*)optionView;
 -(void)removeStyleVCAndloadFourTreasureVC;
 -(void)flipToToolTutorialPage:(NSInteger)tutorialTag;
-
+-(void)brushViewSelected:(int)tag;
+-(void)closeSlideView;
 @end
