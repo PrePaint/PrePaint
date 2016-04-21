@@ -422,6 +422,23 @@
             [alert addAction:defaultAction];
             [alert addAction:cancelAction];
             [self presentViewController:alert animated:YES completion:nil];
+            
+//            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Tutorial Completed!"
+//                                                                           message:@"Awesome, you have finished this tutorial, would you like to go back?"
+//                                                                    preferredStyle:UIAlertControllerStyleAlert];
+//            
+//            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault
+//                                                                  handler:^(UIAlertAction * action) {
+//                                                                      [self backButtonAction:nil];
+//                                                                  }];
+//            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+//                                                                 handler:^(UIAlertAction * action) {
+//                                                                     
+//                                                                 }];
+//            
+//            [alert addAction:defaultAction];
+//            [alert addAction:cancelAction];
+//            [self presentViewController:alert animated:YES completion:nil];
         }
         [self.previousButton setEnabled:YES];
         [self.nextButton setEnabled:YES];

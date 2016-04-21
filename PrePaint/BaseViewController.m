@@ -73,7 +73,7 @@
 
 -(void)removeStyleVCAndloadFourTreasureVC
 {
-    if (self.currentViewController == self.paintingStyleVC) {
+    if (self.currentViewController == self.paintingStyleVC&&self.fourTreasuresVC==nil) {
         
         
         FourTreasuresViewController *ftVC = [[FourTreasuresViewController alloc] init];
@@ -110,7 +110,7 @@
 
 -(void)removeFourTreasureVCAndloadStyleVC
 {
-    if (self.currentViewController == self.fourTreasuresVC) {
+    if (self.currentViewController == self.fourTreasuresVC&&self.paintingStyleVC == nil) {
         
         
         PPStyleViewController *styleVC = [[PPStyleViewController alloc] init];
