@@ -14,12 +14,13 @@
 @property (strong, nonatomic) IBOutlet UIButton *rightButton;
 @property (strong, nonatomic) IBOutlet UIButton *cancelButton;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
-@property (strong, nonatomic) IBOutlet GMCPagingScrollView *pagingScrollView;
+@property (strong, nonatomic) GMCPagingScrollView *pagingScrollView;
 @property (assign, nonatomic) NSInteger selectedTag;
 @property (weak, nonatomic) id responseDelegate;
 - (IBAction)leftButtonAction:(id)sender;
 - (IBAction)rightButtonAction:(id)sender;
 - (IBAction)cancelButtonAction:(id)sender;
-
+- (IBAction)pageDidSelected:(UIPageControl *)sender;
+-(void)selectedBrush:(NSInteger)brushTag;
 
 @end

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "wolfBrush.png",
+      "filename" : "wolf.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "wolfBrush@2x.png",
+      "filename" : "wolf@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "wolfBrush@3x.png",
+      "filename" : "wolf@3x.png",
       "scale" : "3x"
     }
   ],

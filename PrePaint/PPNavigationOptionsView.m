@@ -36,7 +36,7 @@
                 buttonImage = [UIImage imageNamed:@"navi_brush_unselected"];
             }
             
-            numberStr = @"1.";
+            numberStr = @"2.";
             buttonTitle = @" CHOOSE & TRY";
            
         }
@@ -50,7 +50,7 @@
                 buttonImage = [UIImage imageNamed:@"navi_heart_unselected"];
             }
             
-            numberStr = @"2.";
+            numberStr = @"1.";
             buttonTitle = @" LEARN TOOLS";
         }
             break;

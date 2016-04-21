@@ -25,6 +25,8 @@
 		1318FB8B1CBF86BF002BF442 /* orangePath5.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB8A1CBF86BF002BF442 /* orangePath5.svg */; };
 		1318FB8F1CC4BA3C002BF442 /* SlideShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1318FB8D1CC4BA3C002BF442 /* SlideShowViewController.m */; };
 		1318FB901CC4BA3C002BF442 /* SlideShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB8E1CC4BA3C002BF442 /* SlideShowViewController.xib */; };
+		133606AA1CC8CB9C00E8A966 /* DoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133606A81CC8CB9C00E8A966 /* DoneViewController.m */; };
+		133606AB1CC8CB9C00E8A966 /* DoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133606A91CC8CB9C00E8A966 /* DoneViewController.xib */; };
 		133CC7331CB22A6000FCD1E6 /* flowerBaby.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7321CB22A6000FCD1E6 /* flowerBaby.svg */; };
 		133CC7351CB22FD300FCD1E6 /* flowerBaby2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7341CB22FD300FCD1E6 /* flowerBaby2.svg */; };
 		133CC7371CB2365C00FCD1E6 /* bigFlower.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7361CB2365C00FCD1E6 /* bigFlower.svg */; };
@@ -92,6 +94,9 @@
 		1318FB8C1CC4BA3C002BF442 /* SlideShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideShowViewController.h; sourceTree = "<group>"; };
 		1318FB8D1CC4BA3C002BF442 /* SlideShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideShowViewController.m; sourceTree = "<group>"; };
 		1318FB8E1CC4BA3C002BF442 /* SlideShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideShowViewController.xib; sourceTree = "<group>"; };
+		133606A71CC8CB9C00E8A966 /* DoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneViewController.h; sourceTree = "<group>"; };
+		133606A81CC8CB9C00E8A966 /* DoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneViewController.m; sourceTree = "<group>"; };
+		133606A91CC8CB9C00E8A966 /* DoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoneViewController.xib; sourceTree = "<group>"; };
 		133CC7321CB22A6000FCD1E6 /* flowerBaby.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = flowerBaby.svg; sourceTree = "<group>"; };
 		133CC7341CB22FD300FCD1E6 /* flowerBaby2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = flowerBaby2.svg; sourceTree = "<group>"; };
 		133CC7361CB2365C00FCD1E6 /* bigFlower.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bigFlower.svg; sourceTree = "<group>"; };
@@ -232,6 +237,9 @@
 				1318FB8C1CC4BA3C002BF442 /* SlideShowViewController.h */,
 				1318FB8D1CC4BA3C002BF442 /* SlideShowViewController.m */,
 				1318FB8E1CC4BA3C002BF442 /* SlideShowViewController.xib */,
+				133606A71CC8CB9C00E8A966 /* DoneViewController.h */,
+				133606A81CC8CB9C00E8A966 /* DoneViewController.m */,
+				133606A91CC8CB9C00E8A966 /* DoneViewController.xib */,
 				13890AC31C8D945B00A8A0C7 /* AppConstants.h */,
 				13890A3F1C8353EC00A8A0C7 /* Supporting Files */,
 			);
@@ -431,6 +439,7 @@
 				1318FB651CBB6D70002BF442 /* leafPath.svg in Resources */,
 				1318FB5E1CBB641F002BF442 /* IdeaTutorialViewController.xib in Resources */,
 				1318FB871CBF6CC8002BF442 /* orangePath2.svg in Resources */,
+				133606AB1CC8CB9C00E8A966 /* DoneViewController.xib in Resources */,
 				1318FB7F1CBF4DCE002BF442 /* plumPath1.svg in Resources */,
 				1318FB881CBF6CC8002BF442 /* orangePath3.svg in Resources */,
 				13890AB91C8D854800A8A0C7 /* FourTreasuresViewController.xib in Resources */,
@@ -516,6 +525,7 @@
 				13890ACB1C8DCFD000A8A0C7 /* PPFourTreasuresView.m in Sources */,
 				13890ACE1C8FFDAC00A8A0C7 /* PPBrushesView.m in Sources */,
 				13A81B2D1C99357A00309E17 /* PPStyleViewController.m in Sources */,
+				133606AA1CC8CB9C00E8A966 /* DoneViewController.m in Sources */,
 				13890AC21C8D941B00A8A0C7 /* PPNavigationOptionsView.m in Sources */,
 				13890ABD1C8D85CE00A8A0C7 /* BaseViewController.m in Sources */,
 				1318FB8F1CC4BA3C002BF442 /* SlideShowViewController.m in Sources */,

@@ -26,6 +26,21 @@
     BOOL _isDragging;
     NSUInteger _currentStep;
     id _draggedItem;
+    
+    UIImage *_xuan;
+    UIImage *_xuanDisabled;
+    
+    UIImage *_pencil;
+    UIImage *_pencilDisabled;
+    
+    UIImage *_vein;
+    UIImage *_veinDisabled;
+    
+    UIImage *_goat;
+    UIImage *_goatDisabled;
+    
+    UIImage *_wolf;
+    UIImage *_wolfDisabled;
 }
 @property (strong, nonatomic)UIImageView *fullPaperImageView;
 
@@ -56,6 +71,8 @@
     [self addGestureRecognizersForImageView:self.veinBrushImageView];
     [self addGestureRecognizersForImageView:self.goatBrushImageView];
     [self addGestureRecognizersForImageView:self.pencilImageView];
+    [self setupMaskImages];
+    [self enableImageView:self.xuanPaperImageView];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -189,6 +206,7 @@
                             [self.previousButton setEnabled:YES];
                             [self.nextButton setEnabled:YES];
                             [self nextButtonAction:nil];
+                            [self enableImageView:self.pencilImageView];
                             _isDragging = NO;
                             _draggedItem = nil;
                             _currentStep = 1;
@@ -631,6 +649,23 @@
             _isDragging = NO;
             _draggedItem = nil;
             _currentStep = 5;
+            [self enableImageView:nil];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Tutorial Completed!"
+                                                                           message:@"Awesome, you have finished this tutorial, would you like to go back?"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {
+                                                                      [self backButtonAction:nil];
+                                                                  }];
+            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                                 handler:^(UIAlertAction * action) {
+                                                                     
+                                                                 }];
+            
+            [alert addAction:defaultAction];
+            [alert addAction:cancelAction];
+            [self presentViewController:alert animated:YES completion:nil];
         }
         else if (anim == [[self.veinBrushImageView layer] animationForKey:@"vein"]) {
             [self.veinBrushImageView removeFromSuperview];
@@ -640,6 +675,7 @@
             _isDragging = NO;
             _draggedItem = nil;
             _currentStep = 4;
+            [self enableImageView:self.wolfImageView];
         }
         else if (anim == [[self.goatBrushImageView layer] animationForKey:@"goat"]) {
             [self.goatBrushImageView removeFromSuperview];
@@ -649,6 +685,7 @@
             _isDragging = NO;
             _draggedItem = nil;
             _currentStep = 3;
+            [self enableImageView:self.veinBrushImageView];
         }
         else if (anim == [[self.pencilImageView layer] animationForKey:@"pencil"]) {
             [self.pencilImageView removeFromSuperview];
@@ -658,6 +695,7 @@
             _isDragging = NO;
             _draggedItem = nil;
             _currentStep = 2;
+            [self enableImageView:self.goatBrushImageView];
         }
         else if (anim == [firstColorLayer animationForKey:@"orangeLeaf"]){
             [self applyColorAnimation2];
@@ -804,6 +842,123 @@
         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step+1]];
     }
 }
+
+
+-(void)setupMaskImages
+{
+    UIImage *xuanImage = self.xuanPaperImageView.image;
+    UIImage *xuanImage_disabled = [self colorizeImage:xuanImage withColor:kDisabledImageMaskColor];
+    
+    UIImage *pencilImage = self.pencilImageView.image;
+    UIImage *pencilImage_disabled = [self colorizeImage:pencilImage withColor:kDisabledImageMaskColor];
+    
+    UIImage *veinImage = self.veinBrushImageView.image;
+    UIImage *veinImage_disabled = [self colorizeImage:veinImage withColor:kDisabledImageMaskColor];
+    
+    UIImage *goatImage = self.goatBrushImageView.image;
+    UIImage *goatImage_disabled = [self colorizeImage:goatImage withColor:kDisabledImageMaskColor];
+    
+    UIImage *wolfImage = self.wolfImageView.image;
+    UIImage *wolfImage_disabled = [self colorizeImage:wolfImage withColor:kDisabledImageMaskColor];
+    
+    
+    _xuan = xuanImage;
+    _xuanDisabled =xuanImage_disabled;
+    
+    _pencil = pencilImage;
+    _pencilDisabled = pencilImage_disabled;
+    
+    _vein = veinImage;
+    _veinDisabled = veinImage_disabled;
+    
+    _goat = goatImage;
+    _goatDisabled = goatImage_disabled;
+    
+    _wolf = wolfImage;
+    _wolfDisabled = wolfImage_disabled;
+}
+
+-(void)enableImageView:(UIImageView*)imageView
+{
+    if (imageView == self.xuanPaperImageView) {
+        [self.xuanPaperImageView setImage:_xuan];
+        [self.pencilImageView setImage:_pencilDisabled];
+        [self.veinBrushImageView setImage:_veinDisabled];
+        [self.goatBrushImageView setImage:_goatDisabled];
+        [self.wolfImageView setImage:_wolfDisabled];
+        
+    }
+    else if (imageView == self.pencilImageView) {
+        [self.xuanPaperImageView setImage:_xuanDisabled];
+        [self.pencilImageView setImage:_pencil];
+        [self.veinBrushImageView setImage:_veinDisabled];
+        [self.goatBrushImageView setImage:_goatDisabled];
+        [self.wolfImageView setImage:_wolfDisabled];
+    }
+    else if (imageView == self.veinBrushImageView) {
+        [self.xuanPaperImageView setImage:_xuanDisabled];
+        [self.pencilImageView setImage:_pencilDisabled];
+        [self.veinBrushImageView setImage:_vein];
+        [self.goatBrushImageView setImage:_goatDisabled];
+        [self.wolfImageView setImage:_wolfDisabled];
+    }
+    else if (imageView == self.goatBrushImageView) {
+        [self.xuanPaperImageView setImage:_xuanDisabled];
+        [self.pencilImageView setImage:_pencilDisabled];
+        [self.veinBrushImageView setImage:_veinDisabled];
+        [self.goatBrushImageView setImage:_goat];
+        [self.wolfImageView setImage:_wolfDisabled];
+    }
+    else if (imageView == self.wolfImageView) {
+        [self.xuanPaperImageView setImage:_xuanDisabled];
+        [self.pencilImageView setImage:_pencilDisabled];
+        [self.veinBrushImageView setImage:_veinDisabled];
+        [self.goatBrushImageView setImage:_goatDisabled];
+        [self.wolfImageView setImage:_wolf];
+    }
+    else{
+        [self.xuanPaperImageView setImage:_xuanDisabled];
+        [self.pencilImageView setImage:_pencilDisabled];
+        [self.veinBrushImageView setImage:_veinDisabled];
+        [self.goatBrushImageView setImage:_goatDisabled];
+        [self.wolfImageView setImage:_wolfDisabled];
+    }
+}
+
+-(void)enableAllImage
+{
+    [self.xuanPaperImageView setImage:_xuan];
+    [self.pencilImageView setImage:_pencil];
+    [self.veinBrushImageView setImage:_vein];
+    [self.goatBrushImageView setImage:_goat];
+    [self.wolfImageView setImage:_wolf];
+    
+    _isXuanPaperOnScreen = NO;
+    [self.fullPaperImageView removeFromSuperview];
+    [_firstLayer removeFromSuperlayer];
+    [_secondLayer removeFromSuperlayer];
+    [thirdColorLayer removeFromSuperlayer];
+    [fourthColorLayer removeFromSuperlayer];
+    [fifthColorLayer removeFromSuperlayer];
+    _currentStep = 0;
+    [self.hintLabel setText:kCTStep1Text];
+}
+
+
+
+- (UIImage *)colorizeImage:(UIImage *)image withColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, image.scale);
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    [image drawInRect:rect];
+    CGContextSetFillColorWithColor(c, [color CGColor]);
+    CGContextSetBlendMode(c, kCGBlendModeSourceAtop);
+    CGContextFillRect(c, rect);
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return result;
+}
+
 @end
 
 

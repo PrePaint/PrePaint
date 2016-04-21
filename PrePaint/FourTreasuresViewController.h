@@ -28,5 +28,6 @@
 @property (strong, nonatomic) IBOutletCollection(PPBrushesView) NSArray *brushViews;
 
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView;
-
+-(void)scrollDidMoveToTag:(NSInteger)tag;
+-(void)removeSelection;
 @end

@@ -286,7 +286,7 @@
                                 <constraint firstAttribute="height" constant="110" id="bhw-Rh-V1G"/>
                             </constraints>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXd-lm-Rmb" customClass="PPBrushesView">
+                        <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXd-lm-Rmb" customClass="PPBrushesView">
                             <rect key="frame" x="594" y="40" width="160" height="110"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottom_combinationBrush_text" translatesAutoresizingMaskIntoConstraints="NO" id="khi-H6-drb">
@@ -298,7 +298,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoA-A9-mqH" customClass="PPBrushesView">
+                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoA-A9-mqH" customClass="PPBrushesView">
                             <rect key="frame" x="432" y="40" width="160" height="110"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottom_wolfBrush_text" translatesAutoresizingMaskIntoConstraints="NO" id="s9f-ki-V7R">
@@ -310,7 +310,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAH-bO-JR1" customClass="PPBrushesView">
+                        <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAH-bO-JR1" customClass="PPBrushesView">
                             <rect key="frame" x="270" y="40" width="160" height="110"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottom_veinBrush_text" translatesAutoresizingMaskIntoConstraints="NO" id="XdY-Cb-tVA">
@@ -363,7 +363,7 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="log-V6-AWs" customClass="PPBrushesView">
+                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="log-V6-AWs" customClass="PPBrushesView">
                             <rect key="frame" x="108" y="40" width="160" height="110"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brush" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-4A-iaH">
@@ -378,7 +378,7 @@
                                 <constraint firstAttribute="width" constant="160" id="Hv4-4M-lKR"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-8h-GoU" customClass="PPBrushesView">
+                        <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-8h-GoU" customClass="PPBrushesView">
                             <rect key="frame" x="756" y="40" width="160" height="110"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottom_lanscapeBrush_text" translatesAutoresizingMaskIntoConstraints="NO" id="VrV-eB-Psl">

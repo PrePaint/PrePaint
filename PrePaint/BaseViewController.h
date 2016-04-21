@@ -35,4 +35,5 @@
 -(void)flipToToolTutorialPage:(NSInteger)tutorialTag;
 -(void)brushViewSelected:(int)tag;
 -(void)closeSlideView;
+-(void)didScrollToBrush:(NSInteger)tag;
 @end

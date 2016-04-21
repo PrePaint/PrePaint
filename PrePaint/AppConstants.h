@@ -15,6 +15,7 @@
 /* ----------------------- color -------------------*/
 #define SelectedBlueColor [UIColor colorWithRed:111.0/255.0 green:189.0/255.0 blue:177.0/255.0 alpha:1.0]
 #define UnSelectedGreyColor [UIColor colorWithRed:110.0/255.0 green:113.0/255.0 blue:122.0/255.0 alpha:1.0]
+#define kDisabledImageMaskColor [[UIColor blackColor] colorWithAlphaComponent:0.6]
 
 /* ----------------------- font -------------------*/
 #define KHelveticaNeueRegular @"HelveticaNeue"

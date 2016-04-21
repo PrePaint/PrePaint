@@ -10,7 +10,7 @@
 #import "BaseViewController.h"
 
 @interface FourTreasuresViewController (){
-
+    UIImageView *_selectionView;
 }
 @property (strong, nonatomic) PPFourTreasuresView *selectedTreasure;
 
@@ -121,7 +121,7 @@
     
     for (PPBrushesView *brushView in self.brushViews) {
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOnBrushView:)];
-        [brushView setTag:[self.brushViews indexOfObject:brushView]];
+//        [brushView setTag:[self.brushViews indexOfObject:brushView]];
         [brushView addGestureRecognizer:tapGesture];
     }
  
@@ -131,6 +131,53 @@
 -(void)handleTapOnBrushView:(UITapGestureRecognizer*)gesture
 {
     [(BaseViewController*)self.baseVC brushViewSelected:gesture.view.tag];
+    [self moveSelection:gesture.view];
+}
+
+-(void)scrollDidMoveToTag:(NSInteger)tag
+{
+    UIView *view;
+    for (PPBrushesView *brushView in self.brushViews) {
+        if (brushView.tag == tag) {
+            view = brushView;
+            break;
+        }
+    }
+    [self moveSelection:view];
+}
+
+-(void)moveSelection:(UIView*)view
+{
+    if (_selectionView == nil) {
+        CGRect rect = view.bounds;
+        rect.origin.x+=10;
+        rect.size.width-=20;
+        rect.size.height-=25;
+        rect.origin.y+=25;
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:rect];
+        _selectionView = imageView;
+        [imageView setImage:[UIImage imageNamed:@"toolselection"]];
+        [view addSubview:imageView];
+        [view sendSubviewToBack:imageView];
+    }
+    else{
+        [_selectionView removeFromSuperview];
+        CGRect rect = view.bounds;
+        rect.origin.x+=10;
+        rect.size.width-=20;
+        rect.size.height-=25;
+        rect.origin.y+=25;
+        [_selectionView setFrame:rect];
+        [view addSubview:_selectionView];
+        [view sendSubviewToBack:_selectionView];
+    }
+
+}
+
+-(void)removeSelection
+{
+    [_selectionView removeFromSuperview];
+    _selectionView = nil;
 }
 
 -(void)dealloc

@@ -10,7 +10,7 @@
 
 #import "AppConstants.h"
 
-@interface CombinationTutorialViewController : UIViewController<UIGestureRecognizerDelegate>
+@interface CombinationTutorialViewController : UIViewController<UIGestureRecognizerDelegate,UIAlertViewDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UIView *stepView;
 @property (strong, nonatomic) IBOutlet UIImageView *xuanPaperImageView;

@@ -45,7 +45,7 @@
                             </variation>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hC0-0e-Kcj" customClass="PPNavigationOptionsView">
-                            <rect key="frame" x="518" y="0.0" width="141" height="90"/>
+                            <rect key="frame" x="660" y="0.0" width="141" height="90"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="LpY-fR-qaQ"/>
@@ -123,7 +123,7 @@
                             </variation>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLS-YV-cc3" customClass="PPNavigationOptionsView">
-                            <rect key="frame" x="660" y="0.0" width="141" height="90"/>
+                            <rect key="frame" x="518" y="0.0" width="141" height="90"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="JKC-8k-nka"/>
@@ -155,16 +155,16 @@
                         <constraint firstItem="hC0-0e-Kcj" firstAttribute="leading" secondItem="VeH-gK-lW2" secondAttribute="trailing" id="HuK-Ec-LwD"/>
                         <constraint firstItem="xLS-YV-cc3" firstAttribute="height" secondItem="kI1-fq-1MT" secondAttribute="height" id="J2M-Rx-jtG"/>
                         <constraint firstItem="2Ob-Iu-YMO" firstAttribute="leading" secondItem="Enl-Nn-hJQ" secondAttribute="trailing" id="JMv-Zc-3RC"/>
-                        <constraint firstItem="Dcf-Re-EM6" firstAttribute="leading" secondItem="xLS-YV-cc3" secondAttribute="trailing" id="Mda-hw-Pmp"/>
+                        <constraint firstItem="Dcf-Re-EM6" firstAttribute="leading" secondItem="xLS-YV-cc3" secondAttribute="trailing" constant="142" id="Mda-hw-Pmp"/>
                         <constraint firstItem="1kH-QA-HvS" firstAttribute="top" secondItem="kI1-fq-1MT" secondAttribute="top" constant="15" id="QId-4w-hN3"/>
                         <constraint firstItem="Dcf-Re-EM6" firstAttribute="top" secondItem="kI1-fq-1MT" secondAttribute="top" id="Spz-t4-r1n"/>
                         <constraint firstItem="hC0-0e-Kcj" firstAttribute="top" secondItem="kI1-fq-1MT" secondAttribute="top" id="T53-Q6-L2x"/>
-                        <constraint firstItem="hC0-0e-Kcj" firstAttribute="leading" secondItem="VeH-gK-lW2" secondAttribute="trailing" id="UEO-x8-rc4"/>
+                        <constraint firstItem="hC0-0e-Kcj" firstAttribute="leading" secondItem="VeH-gK-lW2" secondAttribute="trailing" constant="142" id="UEO-x8-rc4"/>
                         <constraint firstAttribute="bottom" secondItem="Dcf-Re-EM6" secondAttribute="bottom" id="Vfg-in-BIZ"/>
                         <constraint firstItem="1kH-QA-HvS" firstAttribute="leading" secondItem="kI1-fq-1MT" secondAttribute="leading" constant="20" id="Vtg-IK-gpe"/>
                         <constraint firstItem="Dcf-Re-EM6" firstAttribute="height" secondItem="kI1-fq-1MT" secondAttribute="height" id="bDh-x3-Xmt"/>
                         <constraint firstItem="Qx6-3t-lmu" firstAttribute="height" secondItem="kI1-fq-1MT" secondAttribute="height" id="c89-uO-GuM"/>
-                        <constraint firstItem="Qx6-3t-lmu" firstAttribute="leading" secondItem="hC0-0e-Kcj" secondAttribute="trailing" id="he7-T4-15z"/>
+                        <constraint firstItem="Qx6-3t-lmu" firstAttribute="leading" secondItem="hC0-0e-Kcj" secondAttribute="trailing" constant="-142" id="he7-T4-15z"/>
                         <constraint firstItem="2Ob-Iu-YMO" firstAttribute="height" secondItem="kI1-fq-1MT" secondAttribute="height" id="kDu-vb-Jue"/>
                         <constraint firstAttribute="bottom" secondItem="hC0-0e-Kcj" secondAttribute="bottom" id="mlx-JG-rpA"/>
                         <constraint firstAttribute="trailing" secondItem="n0F-1T-D7t" secondAttribute="trailing" id="ng1-nx-SzO"/>
@@ -174,7 +174,7 @@
                         <constraint firstAttribute="bottom" secondItem="Enl-Nn-hJQ" secondAttribute="bottom" id="rUe-H5-cDT"/>
                         <constraint firstItem="Enl-Nn-hJQ" firstAttribute="top" secondItem="kI1-fq-1MT" secondAttribute="top" id="sm0-Lu-y6z"/>
                         <constraint firstItem="xLS-YV-cc3" firstAttribute="top" secondItem="kI1-fq-1MT" secondAttribute="top" id="vKd-8o-Lti"/>
-                        <constraint firstItem="xLS-YV-cc3" firstAttribute="leading" secondItem="Qx6-3t-lmu" secondAttribute="trailing" id="xhz-PE-LnT"/>
+                        <constraint firstItem="xLS-YV-cc3" firstAttribute="leading" secondItem="Qx6-3t-lmu" secondAttribute="trailing" constant="-142" id="xhz-PE-LnT"/>
                         <constraint firstItem="Qx6-3t-lmu" firstAttribute="top" secondItem="kI1-fq-1MT" secondAttribute="top" id="zU5-bt-uHy"/>
                     </constraints>
                     <variation key="default">
