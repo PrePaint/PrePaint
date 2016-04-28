@@ -116,6 +116,7 @@
                     <exclude reference="WiY-IQ-tM1"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="-324" y="218"/>
         </view>
     </objects>
     <resources>

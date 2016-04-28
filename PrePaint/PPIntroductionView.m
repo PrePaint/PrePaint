@@ -35,7 +35,7 @@
     CGRect titleRect = [self.styleName boundingRectWithSize:CGSizeMake(rect.size.width-horizontalPadding*2.0, 45.0) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
     
     titleRect.origin.x = horizontalPadding;
-    titleRect.origin.y = 30.0;//horizontalPadding/2.0;
+    titleRect.origin.y = 20.0;//horizontalPadding/2.0;
     
     [self.styleName drawInRect:titleRect withAttributes:attr];
     
@@ -44,7 +44,7 @@
     CGContextSetStrokeColorWithColor(ctx, UnSelectedGreyColor.CGColor);
     CGContextStrokePath(ctx);
     
-    UIFont *introFont = [UIFont fontWithName:kAvenirLight size:12.0];
+    UIFont *introFont = [UIFont fontWithName:kAvenirLight size:14.0];
     
     attr = @{NSParagraphStyleAttributeName:style,
                            NSFontAttributeName:introFont
@@ -54,11 +54,11 @@
     CGRect introRect = [self.styleIntro boundingRectWithSize:CGSizeMake(rect.size.width-horizontalPadding*2.0, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
     
     introRect.origin.x = horizontalPadding;
-    introRect.origin.y = CGRectGetMaxY(titleRect)+10.0+20.0;//CGRectGetMaxY(titleRect)+20.0;
+    introRect.origin.y = CGRectGetMaxY(titleRect)+10.0+15.0;//CGRectGetMaxY(titleRect)+20.0;
     
     [self.styleIntro drawInRect:introRect withAttributes:attr];
     
-    CGFloat baseY = CGRectGetMaxY(introRect)+23.0;
+    CGFloat baseY = CGRectGetMaxY(introRect)+18.0;
     
     UIFont *descriptionFont = [UIFont fontWithName:kAvenirMedium size:13.0];
     

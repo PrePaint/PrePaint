@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FLAnimatedImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GMCPagingScrollView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,10 +19,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Toast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A79BA86DB198181905CBBFC1F1E6701</key>
+		<key>722C65740CEFD9CCE975751E3C0FBCC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C739069E68C904ED678117690EBEDFB4</key>
+		<key>AC7E43DCCC32C977D531E533B9312BA4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

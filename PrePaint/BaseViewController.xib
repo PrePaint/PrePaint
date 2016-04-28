@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseViewController">
             <connections>
+                <outlet property="backTouchView" destination="Aj3-2M-Ncg" id="PxN-5a-ggp"/>
                 <outlet property="contentView" destination="PnR-nn-mps" id="xM9-n8-iyk"/>
                 <outlet property="getItButton" destination="Enl-Nn-hJQ" id="6cT-zt-hnp"/>
                 <outlet property="neededButton" destination="xLS-YV-cc3" id="NIA-TM-4as"/>
@@ -120,6 +121,10 @@
                                     <exclude reference="JKC-8k-nka"/>
                                 </mask>
                             </variation>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aj3-2M-Ncg">
+                            <rect key="frame" x="20" y="15" width="160" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.21176470588235294" green="0.21176470588235294" blue="0.21176470588235294" alpha="0.5" colorSpace="calibratedRGB"/>

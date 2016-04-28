@@ -8,7 +8,6 @@
 
 #import "CombinationTutorialViewController.h"
 #import "PocketSVG.h"
-#import "FLAnimatedImage.h"
 
 #define animationDuration 5
 
@@ -773,39 +772,70 @@
 }
 
 - (IBAction)previousButtonAction:(id)sender {
-    NSInteger step = [self.stepNumberLabel.text integerValue];
-    if (step == 1) {
-        _isXuanPaperOnScreen = NO;
-        [self.fullPaperImageView removeFromSuperview];
-        [self.hintLabel setText:kCTStep1Text];
-        
-    }
-    else if (step == 2) {
-        [firstColorLayer removeFromSuperlayer];
-        [_firstLayer removeFromSuperlayer];
-        [self.hintLabel setText:kCTStep2Text];
-    }
-    else if (step == 3){
-        [secondColorLayer removeFromSuperlayer];
-        [_secondLayer removeFromSuperlayer];
-        [self.hintLabel setText:kCTStep3Text];
-    }
-    else if (step == 4){
-        [thirdColorLayer removeFromSuperlayer];
-        [self.hintLabel setText:kCTStep4Text];
-    }
-    else if (step == 5){
-        [fourthColorLayer removeFromSuperlayer];
-        [fifthColorLayer removeFromSuperlayer];
-        [self.hintLabel setText:kCTStep5Text];
-    }
-    if (step > 1) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step-1]];
-    }
+    
+    [self clearCanvas];
+//    NSInteger step = [self.stepNumberLabel.text integerValue];
+//    if (step == 1) {
+//        _isXuanPaperOnScreen = NO;
+//        [self.fullPaperImageView removeFromSuperview];
+//        [self.hintLabel setText:kCTStep1Text];
+//        
+//    }
+//    else if (step == 2) {
+//        [firstColorLayer removeFromSuperlayer];
+//        [_firstLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kCTStep2Text];
+//    }
+//    else if (step == 3){
+//        [secondColorLayer removeFromSuperlayer];
+//        [_secondLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kCTStep3Text];
+//    }
+//    else if (step == 4){
+//        [thirdColorLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kCTStep4Text];
+//    }
+//    else if (step == 5){
+//        [fourthColorLayer removeFromSuperlayer];
+//        [fifthColorLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kCTStep5Text];
+//    }
+//    if (step > 1) {
+//        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
+//    }
     
 }
 
+-(void)clearCanvas
+{
+    _tempImageView = nil;
+    _isXuanPaperOnScreen = NO;
+    [_firstLayer removeFromSuperlayer];
+    [_secondLayer removeFromSuperlayer];
+    [thirdColorLayer removeFromSuperlayer];
+    [fourthColorLayer removeFromSuperlayer];
+    [fifthColorLayer removeFromSuperlayer];
+    thirdColorLayer = nil;
+    _firstLayer = nil;
+    _secondLayer = nil;
+    fourthColorLayer = nil;
+    fifthColorLayer = nil;
+    [self.fullPaperImageView removeFromSuperview];
+    self.fullPaperImageView = nil;
+    [self.hintLabel setText:kCTStep1Text];
+    [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",1]];
+    [self enableImageView:self.xuanPaperImageView];
+    _isDragging = NO;
+    _draggedItem = nil;
+    _currentStep = 0;
+    [self.previousButton setEnabled:NO];
+}
+
+
+
+
 - (IBAction)nextButtonAction:(id)sender {
+
     NSInteger step = [self.stepNumberLabel.text integerValue];
     if (step == 1) {
         if (self.fullPaperImageView) {
@@ -839,7 +869,7 @@
          [self.fullPaperImageView.layer addSublayer:fifthColorLayer];
     }
     if (step <5) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step+1]];
+        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];
     }
 }
 

@@ -23,6 +23,8 @@
     [super viewDidLoad];
       UIImage *barImage = [[UIImage imageNamed:@"style_bottom_bg"] stretchableImageWithLeftCapWidth:724.0 topCapHeight:0];
     [self.bottomBGImageView setImage:barImage];
+    UIImage *buttonImage = [UIImage imageNamed:@"try_tool_1"];
+    [self.tryToolButtons setImage:buttonImage forState:UIControlStateNormal];
     [self setupTryToolButton];
     [self loadRightPanelViewData];
     [self loadStyles];
@@ -33,6 +35,18 @@
 {
     UIButton *firstButton = [self.styleButtonArray firstObject];
     [firstButton setSelected:YES];
+}
+
+-(void)selectSecondButton
+{
+    UIButton *secondButton = [self.styleButtonArray objectAtIndex:1];
+    [secondButton setSelected:YES];
+}
+
+-(void)selectThirdButton
+{
+    UIButton *thirdButton = [self.styleButtonArray lastObject];
+    [thirdButton setSelected:YES];
 }
 
 
@@ -63,12 +77,12 @@
 
 -(void)animateEveryThingIntoScreen
 {
+    self.topPanelConstraint.constant = 0;
+    self.bottomPanelConstraint.constant = 0;
+    self.rightPanelConstraint.constant = 0;
     [UIView animateWithDuration:0.75 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
-        self.topPanelConstraint.constant = 0;
-        self.bottomPanelConstraint.constant = 0;
-        self.rightPanelConstraint.constant = 0;
-        [self.view layoutIfNeeded];
+    [self.view layoutIfNeeded];
         
     } completion:^(BOOL finished) {
         
@@ -80,32 +94,38 @@
 {
     
     UIImage *bottomImage;
+    UIImage *buttonImage;
     
     switch (newPanelTag) {
         case 0:
         {
             bottomImage = [UIImage imageNamed:@"style_bottom_bg"];
+            buttonImage = [UIImage imageNamed:@"try_tool_1"];
         }
             break;
         case 1:
         {
             bottomImage = [UIImage imageNamed:@"style_bottom_bg_detail"];
+            buttonImage = [UIImage imageNamed:@"try_tool_2"];
         }
             break;
         case 2:
         {
             bottomImage = [UIImage imageNamed:@"style_bottom_bg_idea"];
+            buttonImage = [UIImage imageNamed:@"try_tool_3"];
         }
             break;
         case 3:
         {
             bottomImage = [UIImage imageNamed:@"style_bottom_bg_combination"];
+            buttonImage = [UIImage imageNamed:@"try_tool_4"];
         }
             break;
             
         default:
         {
             bottomImage = [UIImage imageNamed:@"style_bottom_bg"];
+            buttonImage = [UIImage imageNamed:@"try_tool_1"];
 
         }
             break;
@@ -120,6 +140,7 @@
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         [self loadRightPanelDataBasedOnTag:newPanelTag];
+        [self.tryToolButtons setImage:buttonImage forState:UIControlStateNormal];
         [self.bottomBGImageView setImage:bottomImage];
         [UIView animateWithDuration:0.75 delay:0.1 options:UIViewAnimationOptionCurveEaseOut animations:^{
             
@@ -164,7 +185,7 @@
         {
             [self.rightPanelView setStyleName:@"IDEA STYLE"];
             [self.rightPanelView setStyleIntro:@"In the Song Dyansty, many artists explored new ways to refine their art.Mo-Ku, is an expansion of Contour style, in which brushwork is manipulated to denote surfaces instead of contours of the subject."];
-            NSString *p1 = @"Artists do not sketch on the paper before starting to paint. Instead, brushwork is applied directly onto the paper, and the composition is adjusted during the painting process.";
+            NSString *p1 = @"Artists don't sketch on the paper before starting to paint. Instead, brushwork is applied directly onto the paper, composition is adjusted during the painting process.";
             NSString *p2 = @"the style focuses on impressionistic approach, so anatomic accuracy may sometimes be compromised.";
             [self.rightPanelView setStyleDescriptionArray:[NSMutableArray arrayWithObjects:p1,p2, nil]];
             [self.rightPanelView setNeedsDisplay];
@@ -264,7 +285,7 @@
             }
             else{
                 [styleButton setSelected:YES];
-                NSString *bgFileName = [NSString stringWithFormat:@"style_bg%ld",tag+1];
+                NSString *bgFileName = [NSString stringWithFormat:@"style_bg%d",tag+1];
                 
                 UIImage * toImage = [UIImage imageNamed:bgFileName];
                 [UIView transitionWithView:self.bgImageView
@@ -323,10 +344,10 @@
 
 -(void)setupTryToolButton
 {
-    [self.tryToolButtons setAlpha:1.0];
-    [self.tryToolButtons.layer setBorderColor:SelectedBlueColor.CGColor];
-    [self.tryToolButtons.layer setBorderWidth:1.5];
-    [self.tryToolButtons.layer setCornerRadius:3.0];
+//    [self.tryToolButtons setAlpha:1.0];
+//    [self.tryToolButtons.layer setBorderColor:SelectedBlueColor.CGColor];
+//    [self.tryToolButtons.layer setBorderWidth:1.5];
+//    [self.tryToolButtons.layer setCornerRadius:3.0];
 
 }
 

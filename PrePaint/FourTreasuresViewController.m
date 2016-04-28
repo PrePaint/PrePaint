@@ -49,6 +49,7 @@
 
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView
 {
+    [self.view setUserInteractionEnabled:NO];
     if (treasureView == self.selectedTreasure) {
         if (treasureView.buttonType == PPTreasureTypeBrush || treasureView.buttonType == PPTreasureTypeHolder) {
             [treasureView setBackgroundColor:[UIColor colorWithRed:242.0/255.0 green:242.0/255.0 blue:242.0/255.0 alpha:1.0]];
@@ -68,6 +69,7 @@
                 [self.inkTextView setAlpha:1.0];
             } completion:^(BOOL finished) {
                 self.selectedTreasure = nil;
+                 [self.view setUserInteractionEnabled:YES];
             }];
         }];
 
@@ -86,6 +88,7 @@
                     [self.view layoutIfNeeded];
                 } completion:^(BOOL finished) {
                     self.selectedTreasure = treasureView;
+                     [self.view setUserInteractionEnabled:YES];
                 }];
             }];
 
@@ -110,6 +113,7 @@
                 } completion:^(BOOL finished) {
 //                     [self.bottomBarTopConstraint setConstant:20];
                     self.selectedTreasure = treasureView;
+                     [self.view setUserInteractionEnabled:YES];
                 }];
             }];
         }
@@ -130,7 +134,7 @@
 
 -(void)handleTapOnBrushView:(UITapGestureRecognizer*)gesture
 {
-    [(BaseViewController*)self.baseVC brushViewSelected:gesture.view.tag];
+    [(BaseViewController*)self.baseVC brushViewSelected:(int)gesture.view.tag];
     [self moveSelection:gesture.view];
 }
 
@@ -178,6 +182,12 @@
 {
     [_selectionView removeFromSuperview];
     _selectionView = nil;
+}
+
+
+-(void)changeBottomImage
+{
+
 }
 
 -(void)dealloc

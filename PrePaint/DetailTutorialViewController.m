@@ -8,7 +8,7 @@
 
 #import "DetailTutorialViewController.h"
 #import "PocketSVG.h"
-#import "FLAnimatedImage.h"
+
 
 #define animationDuration 5
 
@@ -600,60 +600,88 @@
 }
 
 - (IBAction)previousButtonAction:(id)sender {
-    NSInteger step = [self.stepNumberLabel.text integerValue];
-    if (step == 1) {
-        _isXuanPaperOnScreen = NO;
-        [self.fullPaperImageView removeFromSuperview];
-        [self.hintLabel setText:kDTStep1Text];
-        
-    }
-    else if (step == 2) {
-        [_firstLayer removeFromSuperlayer];
-        [self.hintLabel setText:kDTStep2Text];
-    }
-    else if (step == 3){
-        [_secondLayer removeFromSuperlayer];
-        [self.hintLabel setText:kDTStep3Text];
-    }
-    else if (step == 4){
-        [_secondLayer removeFromSuperlayer];
-        [self.hintLabel setText:kDTStep3Text];
-    }
-    if (step > 1) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step-1]];
-    }
+    [self clearCanvas];
+//    NSInteger step = [self.stepNumberLabel.text integerValue];
+//    if (step == 1) {
+//        _isXuanPaperOnScreen = NO;
+//        [self.fullPaperImageView removeFromSuperview];
+//        [self.hintLabel setText:kDTStep1Text];
+//        [self enableImageView:self.xuanPaperImageView];
+//    }
+//    else if (step == 2) {
+//        [_firstLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kDTStep2Text];
+//         [self enableImageView:self.pencilImageView];
+//    }
+//    else if (step == 3){
+//        [_secondLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kDTStep3Text];
+//         [self enableImageView:self.goatBrushImageView];
+//    }
+//    else if (step == 4){
+//        [_secondLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kDTStep3Text];
+//         [self enableImageView:self.veinBrushImageView];
+//    }
+//    if (step > 1) {
+//        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
+//    }
     
 }
 
+-(void)clearCanvas
+{
+    _tempImageView = nil;
+    _isXuanPaperOnScreen = NO;
+    [_firstLayer removeFromSuperlayer];
+    [_secondLayer removeFromSuperlayer];
+    _firstLayer = nil;
+    _secondLayer = nil;
+    [self.fullPaperImageView removeFromSuperview];
+    self.fullPaperImageView = nil;
+    [self.hintLabel setText:kDTStep1Text];
+    [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",1]];
+    [self enableImageView:self.xuanPaperImageView];
+    _isDragging = NO;
+    _draggedItem = nil;
+    _currentStep = 0;
+    [self.previousButton setEnabled:NO];
+}
+
 - (IBAction)nextButtonAction:(id)sender {
+  
     NSInteger step = [self.stepNumberLabel.text integerValue];
     if (step == 1) {
         if (self.fullPaperImageView) {
             [self.view addSubview:self.fullPaperImageView];
             [self.fullPaperImageView setFrame:CGRectMake(27, CGRectGetMaxY(self.stepBarView.frame)+75, 854, 635)];
+             [self enableImageView:self.pencilImageView];
         }
         [self.hintLabel setText:kDTStep2Text];
     }
     else if (step == 2) {
         if (_firstLayer) {
             [self.fullPaperImageView.layer addSublayer:_firstLayer];
+             [self enableImageView:self.goatBrushImageView];
         }
         [self.hintLabel setText:kDTStep3Text];
     }
     else if (step == 3){
         if (_secondLayer) {
+             [self enableImageView:self.veinBrushImageView];
             [self.fullPaperImageView.layer addSublayer:_secondLayer];
         }
         
     }
     else if (step == 4){
+         [self enableImageView:nil];
 //        if (_secondLayer) {
 //            [self.fullPaperImageView.layer addSublayer:_secondLayer];
 //        }
         
     }
     if (step <4) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step+1]];
+        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];
     }
 }
 -(void)setupMaskImages

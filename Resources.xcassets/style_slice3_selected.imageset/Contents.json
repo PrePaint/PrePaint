@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Slice 3-y.jpg",
+      "filename" : "pic3_yes.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Slice 3-y@2x.jpg",
+      "filename" : "pic3_yes@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Slice 3-y@3x.jpg",
+      "filename" : "pic3_yes@3x.png",
       "scale" : "3x"
     }
   ],

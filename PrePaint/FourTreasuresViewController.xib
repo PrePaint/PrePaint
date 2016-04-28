@@ -513,11 +513,11 @@
     </objects>
     <resources>
         <image name="bottomBG" width="1024" height="110"/>
-        <image name="bottom_combinationBrush_text" width="81" height="52"/>
-        <image name="bottom_goatBrush_text" width="66" height="52"/>
-        <image name="bottom_lanscapeBrush_text" width="69" height="52"/>
-        <image name="bottom_veinBrush_text" width="61" height="50"/>
-        <image name="bottom_wolfBrush_text" width="62" height="50"/>
+        <image name="bottom_combinationBrush_text" width="80" height="57"/>
+        <image name="bottom_goatBrush_text" width="80" height="57"/>
+        <image name="bottom_lanscapeBrush_text" width="80" height="57"/>
+        <image name="bottom_veinBrush_text" width="80" height="57"/>
+        <image name="bottom_wolfBrush_text" width="80" height="57"/>
         <image name="bottomdotline" width="2" height="80"/>
         <image name="brush" width="34" height="82"/>
         <image name="combinationbrush" width="34" height="82"/>

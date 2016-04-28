@@ -15,7 +15,6 @@
                 <outlet property="backButton" destination="BHK-aY-vPo" id="wGC-Qz-WQH"/>
                 <outlet property="goatBrushImageView" destination="8kZ-mZ-22D" id="262-be-tzW"/>
                 <outlet property="hintLabel" destination="lV0-a3-FMi" id="ViM-dX-c9d"/>
-                <outlet property="nextButton" destination="uZ3-X3-QbN" id="8u3-ne-Mom"/>
                 <outlet property="pencilImageView" destination="m75-8U-H6R" id="VJh-iy-ghQ"/>
                 <outlet property="previousButton" destination="EOs-tU-DpB" id="mUY-2I-xz3"/>
                 <outlet property="rightPannel" destination="gqq-De-Ivi" id="gXf-bH-F7v"/>
@@ -56,10 +55,10 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place treated xuan paper on the table" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lV0-a3-FMi">
-                                    <rect key="frame" x="39" y="9" width="733" height="30"/>
+                                    <rect key="frame" x="39" y="7" width="733" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
-                                    <color key="textColor" red="0.56862745100000001" green="0.87450980389999999" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                    <color key="textColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -76,35 +75,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EOs-tU-DpB">
-                            <rect key="frame" x="894" y="24" width="35" height="35"/>
+                            <rect key="frame" x="889" y="32" width="110" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="tool_prev"/>
                             <connections>
                                 <action selector="previousButtonAction:" destination="-1" eventType="touchUpInside" id="QcH-t0-ahP"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uZ3-X3-QbN">
-                            <rect key="frame" x="964" y="24" width="35" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="tool_next"/>
-                            <connections>
-                                <action selector="nextButtonAction:" destination="-1" eventType="touchUpInside" id="XcZ-fg-zBI"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PREV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UjK-gn-zbm">
-                            <rect key="frame" x="891" y="54" width="42" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pnv-B4-YJ8">
-                            <rect key="frame" x="970" y="54" width="23.5" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -213,11 +190,10 @@
         <image name="tool_circle" width="54" height="54"/>
         <image name="tool_goatBrush" width="249" height="28"/>
         <image name="tool_goatbrush_text" width="95" height="46"/>
-        <image name="tool_next" width="40" height="41"/>
         <image name="tool_paper_text" width="95" height="46"/>
         <image name="tool_pencil" width="280" height="20"/>
         <image name="tool_pencil_text" width="95" height="46"/>
-        <image name="tool_prev" width="40" height="41"/>
+        <image name="tool_prev" width="110" height="31"/>
         <image name="tool_veinbrush_text" width="95" height="46"/>
         <image name="tool_xuan" width="114" height="85"/>
     </resources>

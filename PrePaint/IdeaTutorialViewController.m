@@ -8,7 +8,7 @@
 
 #import "IdeaTutorialViewController.h"
 #import "PocketSVG.h"
-#import "FLAnimatedImage.h"
+
 
 #define animationDuration 5
 
@@ -284,7 +284,7 @@
 
 -(void)drawWolfPath
 {
-    CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"plumPath3"];
+    CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"Tutorial3newPath3"];
     // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
@@ -332,7 +332,7 @@
 
 -(void)drawVeinBrushPath
 {
-    CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"plumPath2"];
+    CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"Tutorial3newPath2"];
     // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
@@ -380,7 +380,7 @@
 
 -(void)drawGoatBrushPath
 {
-    CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"plumPath1"];
+    CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"Tutorial3newPath1"];
     // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
@@ -397,10 +397,10 @@
     rect.origin.y += topBottomPadding;
     rect.size.width = 620;
     rect.size.height = 500;
+  
     
-    
-    CGAffineTransform translation = CGAffineTransformMakeTranslation(265,
-                                                                     204);
+    CGAffineTransform translation = CGAffineTransformMakeTranslation(235,
+                                                                     214);
     CGPathRef movedPath = CGPathCreateCopyByTransformingPath(myPath,
                                                              &translation);
     
@@ -412,7 +412,7 @@
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
-    anim.repeatCount = 2;
+//    anim.repeatCount = 2;
     
     //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.goatBrushImageView.layer addAnimation:anim forKey:@"goat"];
@@ -633,34 +633,59 @@
 }
 
 - (IBAction)previousButtonAction:(id)sender {
-    NSInteger step = [self.stepNumberLabel.text integerValue];
-    if (step == 1) {
-        _isXuanPaperOnScreen = NO;
-        [self.fullPaperImageView removeFromSuperview];
-        [self.hintLabel setText:kITStep1Text];
-        
-    }
-    else if (step == 2) {
-        [firstColorLayer removeFromSuperlayer];
-        [_firstLayer removeFromSuperlayer];
-        [self.hintLabel setText:kITStep2Text];
-    }
-    else if (step == 3){
-        [secondColorLayer removeFromSuperlayer];
-        [_secondLayer removeFromSuperlayer];
-        [self.hintLabel setText:kITStep3Text];
-    }
-    else if (step == 4){
-        [thirdColorLayer removeFromSuperlayer];
-        [self.hintLabel setText:kITStep4Text];
-    }
-    if (step > 1) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step-1]];
-    }
+    [self clearCanvas];
+//    NSInteger step = [self.stepNumberLabel.text integerValue];
+//    if (step == 1) {
+//        _isXuanPaperOnScreen = NO;
+//        [self.fullPaperImageView removeFromSuperview];
+//        [self.hintLabel setText:kITStep1Text];
+//         [self enableImageView:self.xuanPaperImageView];
+//    }
+//    else if (step == 2) {
+//        [firstColorLayer removeFromSuperlayer];
+//        [_firstLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kITStep2Text];
+//    }
+//    else if (step == 3){
+//        [secondColorLayer removeFromSuperlayer];
+//        [_secondLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kITStep3Text];
+//    }
+//    else if (step == 4){
+//        [thirdColorLayer removeFromSuperlayer];
+//        [self.hintLabel setText:kITStep4Text];
+//    }
+//    if (step > 1) {
+//        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
+//    }
+    
+}
+
+-(void)clearCanvas
+{
+    
+    _tempImageView = nil;
+    _isXuanPaperOnScreen = NO;
+    [_firstLayer removeFromSuperlayer];
+    [_secondLayer removeFromSuperlayer];
+    [thirdColorLayer removeFromSuperlayer];
+    thirdColorLayer = nil;
+    _firstLayer = nil;
+    _secondLayer = nil;
+    [self.fullPaperImageView removeFromSuperview];
+    self.fullPaperImageView = nil;
+    [self.hintLabel setText:kITStep1Text];
+    [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",1]];
+    [self enableImageView:self.xuanPaperImageView];
+    _isDragging = NO;
+    _draggedItem = nil;
+    _currentStep = 0;
+    [self.previousButton setEnabled:NO];
     
 }
 
 - (IBAction)nextButtonAction:(id)sender {
+
     NSInteger step = [self.stepNumberLabel.text integerValue];
     if (step == 1) {
         if (self.fullPaperImageView) {
@@ -688,7 +713,7 @@
         [self.fullPaperImageView.layer addSublayer:thirdColorLayer];
     }
     if (step <4) {
-        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%ld",step+1]];
+        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];
     }
 }
 
@@ -778,7 +803,7 @@
     [thirdColorLayer removeFromSuperlayer];
 
     _currentStep = 0;
-    [self.hintLabel setText:kCTStep1Text];
+    [self.hintLabel setText:kITStep2Text];
 }
 
 

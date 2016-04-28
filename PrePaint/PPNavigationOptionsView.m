@@ -30,28 +30,30 @@
         case PPNavationOptionTypeTools:
         {
             if (self.isSelected) {
-                buttonImage = [UIImage imageNamed:@"navi_brush_selected"];
-            }
-            else{
-                buttonImage = [UIImage imageNamed:@"navi_brush_unselected"];
-            }
-            
-            numberStr = @"2.";
-            buttonTitle = @" CHOOSE & TRY";
-           
-        }
-            break;
-        case PPNavationOptionTypeNeeded:
-        {
-            if (self.isSelected) {
                 buttonImage = [UIImage imageNamed:@"navi_heart_selected"];
             }
             else{
                 buttonImage = [UIImage imageNamed:@"navi_heart_unselected"];
             }
             
-            numberStr = @"1.";
-            buttonTitle = @" LEARN TOOLS";
+//            numberStr = @"2.";
+            buttonTitle = @"EXAMPLE";
+           
+        }
+            break;
+        case PPNavationOptionTypeNeeded:
+        {
+     
+            
+            if (self.isSelected) {
+                buttonImage = [UIImage imageNamed:@"navi_brush_selected"];
+            }
+            else{
+                buttonImage = [UIImage imageNamed:@"navi_brush_unselected"];
+            }
+            
+//            numberStr = @"1.";
+            buttonTitle = @"LEARN TOOLS";
         }
             break;
         case PPNavationOptionTypeGetIt:
@@ -63,8 +65,8 @@
                 buttonImage = [UIImage imageNamed:@"navi_navigation_unselected"];
             }
             
-            numberStr = @"3.";
-            buttonTitle = @" GET IT";
+//            numberStr = @"3.";
+            buttonTitle = @"GET TOOLS";
         }
             break;
         case PPNavationOptionTypeWishList:
@@ -90,14 +92,14 @@
                 buttonImage = [UIImage imageNamed:@"navi_brush_unselected"];
             }
             
-            numberStr = @"1.";
-            buttonTitle = @" TOOLS";
+//            numberStr = @"1.";
+            buttonTitle = @"LEARN TOOLS";
         }
             break;
     }
     
     if (self.isSelected) {
-        fontColor = SelectedBlueColor;
+        fontColor = [UIColor blackColor];
     }
     else{
         fontColor = UnSelectedGreyColor;
@@ -129,14 +131,14 @@
         CGRect titleRect = [buttonAttrStr boundingRectWithSize:CGSizeMake(120.0, 100.0) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
         
         titleRect.origin.x = CGRectGetMidX(rect)-titleRect.size.width/2.0;
-        titleRect.origin.y = CGRectGetMidY(rect)+10.0;
+        titleRect.origin.y = CGRectGetMidY(rect)+15.0;
         
         [buttonAttrStr drawInRect:titleRect];
     }
     else{
         NSDictionary *titleAttr = @{NSParagraphStyleAttributeName:style,
                                     NSFontAttributeName:titleFont,
-                                    NSForegroundColorAttributeName:SelectedBlueColor
+                                    NSForegroundColorAttributeName:fontColor
                                     };
         CGRect titleRect = [buttonTitle boundingRectWithSize:CGSizeMake(120, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:titleAttr context:nil];
         titleRect.origin.x = CGRectGetMidX(rect)-titleRect.size.width/2.0;
