@@ -35,8 +35,6 @@
             else{
                 buttonImage = [UIImage imageNamed:@"navi_heart_unselected"];
             }
-            
-//            numberStr = @"2.";
             buttonTitle = @"EXAMPLE";
            
         }
@@ -44,15 +42,12 @@
         case PPNavationOptionTypeNeeded:
         {
      
-            
             if (self.isSelected) {
                 buttonImage = [UIImage imageNamed:@"navi_brush_selected"];
             }
             else{
                 buttonImage = [UIImage imageNamed:@"navi_brush_unselected"];
             }
-            
-//            numberStr = @"1.";
             buttonTitle = @"LEARN TOOLS";
         }
             break;
@@ -65,7 +60,6 @@
                 buttonImage = [UIImage imageNamed:@"navi_navigation_unselected"];
             }
             
-//            numberStr = @"3.";
             buttonTitle = @"GET TOOLS";
         }
             break;
@@ -78,7 +72,6 @@
                 buttonImage = [UIImage imageNamed:@"navi_wishlist_unselected"];
             }
             
-           // numberStr = @"1.";
             buttonTitle = @" WISH LIST";
         }
             break;
@@ -92,7 +85,6 @@
                 buttonImage = [UIImage imageNamed:@"navi_brush_unselected"];
             }
             
-//            numberStr = @"1.";
             buttonTitle = @"LEARN TOOLS";
         }
             break;

@@ -35,20 +35,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    NSURL *imgPath = [[NSBundle mainBundle] URLForResource:@"test2" withExtension:@"gif"];
-//    NSString*stringPath = [imgPath absoluteString]; //this is correct
-//    
-//    //you can again use it in NSURL eg if you have async loading images and your mechanism
-//    //uses only url like mine (but sometimes i need local files to load)
-//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:stringPath]];
-//    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:data];
-//    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
-//    imageView.animatedImage = image;
-//    CGRect rect = self.toolBgImageView.bounds;
-//    rect.size.width -= 120.0;
-//    imageView.frame = rect;
-//    [self.toolBgImageView addSubview:imageView];
-    
     if ([self isNeedToShowTutorial]) {
         [self.tutorialBgView setHidden:NO];
     }
@@ -79,7 +65,7 @@
     
     UIImage *veinImage = self.veinBrushImageView.image;
     UIImage *veinImage_disabled = [self colorizeImage:veinImage withColor:kDisabledImageMaskColor];
-
+    
     
     _xuan = xuanImage;
     _xuanDisabled =xuanImage_disabled;
@@ -167,7 +153,6 @@
             _tempImageView = copiedImageView;
             CGRect rectInGlobalView = [self.view convertRect:gesture.view.frame fromView:gesture.view.superview];
             
-//            [gesture.view removeFromSuperview];
             [self.view addSubview:gesture.view];
             [gesture.view setFrame:rectInGlobalView];
             [self.view bringSubviewToFront:gesture.view];
@@ -222,7 +207,7 @@
             
             else if(gesture.view == self.pencilImageView){
                 
-               
+                
                 [UIView animateWithDuration:0.5 animations:^{
                     [gesture.view setAlpha:1.0];
                     
@@ -230,7 +215,7 @@
                     [self.previousButton setEnabled:NO];
                     [self.nextButton setEnabled:NO];
                     [self drawPencilPath];
-                  
+                    
                 }];
             }
             else{
@@ -241,11 +226,9 @@
                     [self.previousButton setEnabled:NO];
                     [self.nextButton setEnabled:NO];
                     [self drawVeinBrushPath];
-//                    self.veinBrushImageView = _tempImageView;
-//                    _tempImageView = nil;
                 }];
             }
-
+            
             
         }
             break;
@@ -280,10 +263,9 @@
 -(void)drawPencilPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"bigFlower"];
-   // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
-
+    
     myShapeLayer.strokeColor = [[UIColor darkGrayColor] CGColor];
     myShapeLayer.lineWidth = 1.0;
     myShapeLayer.lineCap = kCALineCapRound;
@@ -309,24 +291,22 @@
     colorAnimation.toValue = (id)[UIColor blackColor].CGColor;
     [colorAnimation setFillMode:kCAFillModeBoth];
     
-   
+    
     
     CGAffineTransform translation = CGAffineTransformMakeTranslation(265,
                                                                      204);
     CGPathRef movedPath = CGPathCreateCopyByTransformingPath(myShapeLayer.path,
                                                              &translation);
-
+    
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = 10.0;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
     _firstLayer = myShapeLayer;
-  //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.pencilImageView.layer addAnimation:anim forKey:@"pencil"];
 }
 
@@ -334,7 +314,6 @@
 -(void)drawVeinBrushPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"bigFlower"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -372,15 +351,13 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = 15.0;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
     _secondLayer = myShapeLayer;
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.veinBrushImageView.layer addAnimation:anim forKey:@"vein"];
 }
 
@@ -389,9 +366,9 @@
 
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-   
+    
     if (flag) {
-       
+        
         if (anim == [[self.pencilImageView layer] animationForKey:@"pencil"]) {
             [self.pencilImageView removeFromSuperview];
             self.pencilImageView = _tempImageView;
@@ -403,7 +380,7 @@
             [self.veinBrushImageView removeFromSuperview];
             self.veinBrushImageView = _tempImageView;
             _tempImageView = nil;
-             [self nextButtonAction:nil];
+            [self nextButtonAction:nil];
             [self enableImageView:nil];
             
             UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Tutorial Completed!"
@@ -423,34 +400,11 @@
             [alert addAction:cancelAction];
             [self presentViewController:alert animated:YES completion:nil];
             
-//            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Tutorial Completed!"
-//                                                                           message:@"Awesome, you have finished this tutorial, would you like to go back?"
-//                                                                    preferredStyle:UIAlertControllerStyleAlert];
-//            
-//            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault
-//                                                                  handler:^(UIAlertAction * action) {
-//                                                                      [self backButtonAction:nil];
-//                                                                  }];
-//            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
-//                                                                 handler:^(UIAlertAction * action) {
-//                                                                     
-//                                                                 }];
-//            
-//            [alert addAction:defaultAction];
-//            [alert addAction:cancelAction];
-//            [self presentViewController:alert animated:YES completion:nil];
         }
         [self.previousButton setEnabled:YES];
         [self.nextButton setEnabled:YES];
     }
 }
-
--(void)viewDidLayoutSubviews
-{
-//    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-//    NSLog(@"sdf");
-}
-
 
 -(CGPathRef)CGPath_NGCreateCopyByScalingPathAroundCentre:(CGPathRef)path scale:(float) scale
 {
@@ -487,7 +441,7 @@
 
 -(void)dealloc
 {
-
+    
 }
 
 - (IBAction)backButtonAction:(id)sender {
@@ -502,34 +456,11 @@
 
 -(void)changeStepText
 {
-  
+    
 }
 
 - (IBAction)previousButtonAction:(id)sender {
     [self clearCanvas];
-    
-    
-//    NSInteger step = [self.stepNumberLabel.text integerValue];
-//    if (step == 1) {
-//        _isXuanPaperOnScreen = NO;
-//        [self.fullPaperImageView removeFromSuperview];
-//        [self.hintLabel setText:kTTStep1Text];
-//        [self enableImageView:self.xuanPaperImageView];
-//    }
-//    else if (step == 2) {
-//        [_firstLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kTTStep2Text];
-//        [self enableImageView:self.pencilImageView];
-//    }
-//    else if (step == 3){
-//        [_secondLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kTTStep3Text];
-//        [self enableImageView:self.veinBrushImageView];
-//    }
-//    if (step > 1) {
-//         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
-//    }
-//    
 }
 
 -(void)clearCanvas
@@ -549,15 +480,15 @@
 }
 
 - (IBAction)nextButtonAction:(id)sender {
-   
+    
     NSInteger step = [self.stepNumberLabel.text integerValue];
     if (step == 1) {
         if (self.fullPaperImageView) {
             [self.view addSubview:self.fullPaperImageView];
             [self.fullPaperImageView setFrame:CGRectMake(27, CGRectGetMaxY(self.stepBarView.frame)+75, 854, 635)];
-                    [self enableImageView:self.pencilImageView];
+            [self enableImageView:self.pencilImageView];
         }
-
+        
         [self.hintLabel setText:kTTStep2Text];
     }
     else if (step == 2) {
@@ -570,9 +501,9 @@
     else if (step == 3){
         if (_secondLayer) {
             [self.fullPaperImageView.layer addSublayer:_secondLayer];
-             [self enableImageView:nil];
+            [self enableImageView:nil];
         }
-
+        
     }
     if (step <3) {
         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];

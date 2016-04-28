@@ -142,8 +142,6 @@
                     [self addGestureRecognizersForImageView:copiedImageView];
                     _tempImageView = copiedImageView;
                     CGRect rectInGlobalView = [self.view convertRect:gesture.view.frame fromView:gesture.view.superview];
-                    
-                    //            [gesture.view removeFromSuperview];
                     [self.view addSubview:gesture.view];
                     [gesture.view setFrame:rectInGlobalView];
                     [self.view bringSubviewToFront:gesture.view];
@@ -230,8 +228,6 @@
                         [self.nextButton setEnabled:NO];
                         [self drawVeinBrushPath];
                         [self applyColorAnimation2];
-                        //                    self.veinBrushImageView = _tempImageView;
-                        //                    _tempImageView = nil;
                     }];
                 }
                 else if(gesture.view == self.goatBrushImageView){
@@ -243,8 +239,6 @@
                         [self.nextButton setEnabled:NO];
                         [self drawGoatBrushPath];
                         [self applyColorAnimation1];
-                        //                    self.veinBrushImageView = _tempImageView;
-                        //                    _tempImageView = nil;
                     }];
                 }
             }
@@ -285,7 +279,6 @@
 -(void)drawWolfPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"Tutorial3newPath3"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -317,15 +310,13 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
     _firstLayer = myShapeLayer;
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.wolfImageView.layer addAnimation:anim forKey:@"wolf"];
 }
 
@@ -333,7 +324,6 @@
 -(void)drawVeinBrushPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"Tutorial3newPath2"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -365,15 +355,13 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
     _secondLayer = myShapeLayer;
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.veinBrushImageView.layer addAnimation:anim forKey:@"vein"];
 }
 
@@ -381,7 +369,6 @@
 -(void)drawGoatBrushPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"Tutorial3newPath1"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -397,7 +384,7 @@
     rect.origin.y += topBottomPadding;
     rect.size.width = 620;
     rect.size.height = 500;
-  
+    
     
     CGAffineTransform translation = CGAffineTransformMakeTranslation(235,
                                                                      214);
@@ -406,15 +393,11 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
-//    anim.repeatCount = 2;
-    
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.goatBrushImageView.layer addAnimation:anim forKey:@"goat"];
 }
 
@@ -561,7 +544,7 @@
             _currentStep = 2;
         }
         else if (anim == [firstColorLayer animationForKey:@"opacityIN"]){
-           
+            
         }
         else if (anim == [firstColorLayer animationForKey:@"opacityIN2"]){
             
@@ -571,13 +554,6 @@
         [self.nextButton setEnabled:YES];
     }
 }
-
--(void)viewDidLayoutSubviews
-{
-    //    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    //    NSLog(@"sdf");
-}
-
 
 -(CGPathRef)CGPath_NGCreateCopyByScalingPathAroundCentre:(CGPathRef)path scale:(float) scale
 {
@@ -634,31 +610,6 @@
 
 - (IBAction)previousButtonAction:(id)sender {
     [self clearCanvas];
-//    NSInteger step = [self.stepNumberLabel.text integerValue];
-//    if (step == 1) {
-//        _isXuanPaperOnScreen = NO;
-//        [self.fullPaperImageView removeFromSuperview];
-//        [self.hintLabel setText:kITStep1Text];
-//         [self enableImageView:self.xuanPaperImageView];
-//    }
-//    else if (step == 2) {
-//        [firstColorLayer removeFromSuperlayer];
-//        [_firstLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kITStep2Text];
-//    }
-//    else if (step == 3){
-//        [secondColorLayer removeFromSuperlayer];
-//        [_secondLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kITStep3Text];
-//    }
-//    else if (step == 4){
-//        [thirdColorLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kITStep4Text];
-//    }
-//    if (step > 1) {
-//        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
-//    }
-    
 }
 
 -(void)clearCanvas
@@ -685,7 +636,7 @@
 }
 
 - (IBAction)nextButtonAction:(id)sender {
-
+    
     NSInteger step = [self.stepNumberLabel.text integerValue];
     if (step == 1) {
         if (self.fullPaperImageView) {
@@ -706,10 +657,10 @@
             [self.fullPaperImageView.layer addSublayer:secondColorLayer];
             [self.fullPaperImageView.layer addSublayer:_secondLayer];
         }
-         [self.hintLabel setText:kITStep4Text];
+        [self.hintLabel setText:kITStep4Text];
     }
     else if (step == 4){
-
+        
         [self.fullPaperImageView.layer addSublayer:thirdColorLayer];
     }
     if (step <4) {
@@ -735,7 +686,7 @@
     _xuan = xuanImage;
     _xuanDisabled =xuanImage_disabled;
     
-
+    
     
     _vein = veinImage;
     _veinDisabled = veinImage_disabled;
@@ -751,37 +702,37 @@
 {
     if (imageView == self.xuanPaperImageView) {
         [self.xuanPaperImageView setImage:_xuan];
-     
+        
         [self.veinBrushImageView setImage:_veinDisabled];
         [self.goatBrushImageView setImage:_goatDisabled];
         [self.wolfImageView setImage:_wolfDisabled];
         
     }
-
+    
     else if (imageView == self.veinBrushImageView) {
         [self.xuanPaperImageView setImage:_xuanDisabled];
-    
+        
         [self.veinBrushImageView setImage:_vein];
         [self.goatBrushImageView setImage:_goatDisabled];
         [self.wolfImageView setImage:_wolfDisabled];
     }
     else if (imageView == self.goatBrushImageView) {
         [self.xuanPaperImageView setImage:_xuanDisabled];
-   
+        
         [self.veinBrushImageView setImage:_veinDisabled];
         [self.goatBrushImageView setImage:_goat];
         [self.wolfImageView setImage:_wolfDisabled];
     }
     else if (imageView == self.wolfImageView) {
         [self.xuanPaperImageView setImage:_xuanDisabled];
-       
+        
         [self.veinBrushImageView setImage:_veinDisabled];
         [self.goatBrushImageView setImage:_goatDisabled];
         [self.wolfImageView setImage:_wolf];
     }
     else{
         [self.xuanPaperImageView setImage:_xuanDisabled];
-     
+        
         [self.veinBrushImageView setImage:_veinDisabled];
         [self.goatBrushImageView setImage:_goatDisabled];
         [self.wolfImageView setImage:_wolfDisabled];
@@ -791,7 +742,7 @@
 -(void)enableAllImage
 {
     [self.xuanPaperImageView setImage:_xuan];
-   
+    
     [self.veinBrushImageView setImage:_vein];
     [self.goatBrushImageView setImage:_goat];
     [self.wolfImageView setImage:_wolf];
@@ -801,7 +752,7 @@
     [_firstLayer removeFromSuperlayer];
     [_secondLayer removeFromSuperlayer];
     [thirdColorLayer removeFromSuperlayer];
-
+    
     _currentStep = 0;
     [self.hintLabel setText:kITStep2Text];
 }

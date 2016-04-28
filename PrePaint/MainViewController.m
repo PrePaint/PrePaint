@@ -50,11 +50,11 @@
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:0.5 animations:^{
                 [self.startButton setAlpha:1.0];
-                } completion:^(BOOL finished) {
+            } completion:^(BOOL finished) {
             }];
         }];
     }];
-
+    
 }
 
 - (IBAction)startButtonAction:(UIButton *)sender {
@@ -68,20 +68,7 @@
                         [self.navigationController pushViewController:optionVC animated:NO];
                     }
                     completion:nil];
-    
-//    CATransition* transition = [CATransition animation];
-//    
-//    transition.duration = 1.0;
-//    transition.type = kCATransitionFade;
-//    
-//    [[self navigationController].view.layer addAnimation:transition forKey:kCATransition];
-//    [[self navigationController] pushViewController:optionVC animated:NO];
 }
-
-//- (IBAction)startButtonAction:(UIButton *)sender {
-//    BaseViewController *baseVC = [[BaseViewController alloc] init];
-//    [self.navigationController pushViewController:baseVC animated:YES];
-//}
 
 
 @end

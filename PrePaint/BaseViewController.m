@@ -28,7 +28,7 @@
         case 1:
         {
             [self loadPaintingStyleVC];
-           
+            
         }
             break;
         case 2:
@@ -55,8 +55,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-   
-//    [self.paintingStyleVC animateEveryThingIntoScreen];
+    
 }
 
 
@@ -78,13 +77,6 @@
 
 -(void)loadInitialVC
 {
-//    PPStyleViewController *styleVC = [[PPStyleViewController alloc] init];
-//    CGRect frame = [self.contentView bounds];
-//    [styleVC.view setFrame:frame];
-//    [self.contentView addSubview:styleVC.view];
-//    self.paintingStyleVC = styleVC;
-//    [self addChildViewController:self.paintingStyleVC];
-//    self.currentViewController = self.paintingStyleVC;
     FourTreasuresViewController *ftVC = [[FourTreasuresViewController alloc] init];
     CGRect frame = [self.contentView bounds];
     [ftVC.view setFrame:frame];
@@ -125,7 +117,7 @@
         [self.toolsButton setIsSelected:NO];
         [self.neededButton setIsSelected:YES];
         [self.getItButton setIsSelected:NO];
-  
+        
         [UIView animateWithDuration:0.5 animations:^{
             [self.paintingStyleVC.view setFrame:rect];
             [self.fourTreasuresVC.view setFrame:frame];
@@ -160,7 +152,7 @@
         [self.toolsButton setIsSelected:YES];
         [self.neededButton setIsSelected:NO];
         [self.getItButton setIsSelected:NO];
-       
+        
         [self.paintingStyleVC.rightIntroPanel setHidden:YES];
         
         [UIView animateWithDuration:0.5 animations:^{
@@ -198,8 +190,6 @@
         [self.toolsButton setIsSelected:NO];
         [self.neededButton setIsSelected:NO];
         [self.getItButton setIsSelected:YES];
-       
-//        [self.paintingStyleVC.rightIntroPanel setHidden:YES];
         
         [UIView animateWithDuration:0.5 animations:^{
             [self.getitVC.view setFrame:frame];
@@ -210,7 +200,7 @@
             self.fourTreasuresVC = nil;
             self.paintingStyleVC = nil;
             self.currentViewController = self.getitVC;
-       
+            
         }];
     }
 }
@@ -241,14 +231,14 @@
         else{
             rect.origin.x = -rect.size.width;
         }
-       
+        
         frame.origin.x = 0;
         
         [self.toolsButton setIsSelected:YES];
         [self.neededButton setIsSelected:NO];
         [self.getItButton setIsSelected:NO];
         
-               [self.paintingStyleVC.rightIntroPanel setHidden:YES];
+        [self.paintingStyleVC.rightIntroPanel setHidden:YES];
         
         [UIView animateWithDuration:0.5 animations:^{
             [self.paintingStyleVC.view setFrame:frame];
@@ -274,9 +264,9 @@
         
         FourTreasuresViewController *styleVC = [[FourTreasuresViewController alloc] init];
         CGRect frame = [self.contentView bounds];
-       
-            frame.origin.x = -frame.size.width;
-
+        
+        frame.origin.x = -frame.size.width;
+        
         
         
         [styleVC.view setFrame:frame];
@@ -286,16 +276,16 @@
         [self addChildViewController:self.fourTreasuresVC];
         [self.contentView bringSubviewToFront:styleVC.view];
         CGRect rect = self.currentViewController.view.frame;
-
+        
         rect.origin.x = rect.size.width;
-      
+        
         
         frame.origin.x = 0;
         
         [self.toolsButton setIsSelected:NO];
         [self.neededButton setIsSelected:YES];
         [self.getItButton setIsSelected:NO];
-     
+        
         [UIView animateWithDuration:0.5 animations:^{
             [self.fourTreasuresVC.view setFrame:frame];
             [self.currentViewController.view setFrame:rect];
@@ -305,7 +295,7 @@
             self.paintingStyleVC = nil;
             self.getitVC = nil;
             self.currentViewController = self.fourTreasuresVC;
-     
+            
         }];
     }
 }
@@ -332,19 +322,14 @@
         [self.neededButton setIsSelected:NO];
         [self.getItButton setIsSelected:YES];
         
-        //        [self.paintingStyleVC.rightIntroPanel setHidden:YES];
+        [self.getitVC.view setFrame:frame];
+        [self.currentViewController.view setFrame:rect];
+        [self.currentViewController removeFromParentViewController];
+        [self.currentViewController.view removeFromSuperview];
+        self.fourTreasuresVC = nil;
+        self.paintingStyleVC = nil;
+        self.currentViewController = self.getitVC;
         
-//        [UIView animateWithDuration:0.5 animations:^{
-            [self.getitVC.view setFrame:frame];
-            [self.currentViewController.view setFrame:rect];
-//        } completion:^(BOOL finished) {
-            [self.currentViewController removeFromParentViewController];
-            [self.currentViewController.view removeFromSuperview];
-            self.fourTreasuresVC = nil;
-            self.paintingStyleVC = nil;
-            self.currentViewController = self.getitVC;
-            
-//        }];
     }
 }
 
@@ -383,19 +368,16 @@
         
         [self.paintingStyleVC.rightIntroPanel setHidden:YES];
         
-//        [UIView animateWithDuration:0.5 animations:^{
-            [self.paintingStyleVC.view setFrame:frame];
-            [self.currentViewController.view setFrame:rect];
-//        } completion:^(BOOL finished) {
-            [self.currentViewController removeFromParentViewController];
-            [self.currentViewController.view removeFromSuperview];
-            self.fourTreasuresVC = nil;
-            self.getitVC = nil;
-            self.currentViewController = self.paintingStyleVC;
-            [self.paintingStyleVC.rightIntroPanel setHidden:NO];
-            [self.paintingStyleVC selectFirstButton];
-            [self.paintingStyleVC animateEveryThingIntoScreen];
-//        }];
+        [self.paintingStyleVC.view setFrame:frame];
+        [self.currentViewController.view setFrame:rect];
+        [self.currentViewController removeFromParentViewController];
+        [self.currentViewController.view removeFromSuperview];
+        self.fourTreasuresVC = nil;
+        self.getitVC = nil;
+        self.currentViewController = self.paintingStyleVC;
+        [self.paintingStyleVC.rightIntroPanel setHidden:NO];
+        [self.paintingStyleVC selectFirstButton];
+        [self.paintingStyleVC animateEveryThingIntoScreen];
     }
 }
 
@@ -429,121 +411,28 @@
         [self.neededButton setIsSelected:YES];
         [self.getItButton setIsSelected:NO];
         
-//        [UIView animateWithDuration:0.5 animations:^{
-            [self.fourTreasuresVC.view setFrame:frame];
-            [self.currentViewController.view setFrame:rect];
-//        } completion:^(BOOL finished) {
-            [self.currentViewController removeFromParentViewController];
-            [self.currentViewController.view removeFromSuperview];
-            self.paintingStyleVC = nil;
-            self.getitVC = nil;
-            self.currentViewController = self.fourTreasuresVC;
-            
-//        }];
+        [self.fourTreasuresVC.view setFrame:frame];
+        [self.currentViewController.view setFrame:rect];
+        [self.currentViewController removeFromParentViewController];
+        [self.currentViewController.view removeFromSuperview];
+        self.paintingStyleVC = nil;
+        self.getitVC = nil;
+        self.currentViewController = self.fourTreasuresVC;
     }
 }
-
-
-
-//-(void)removeStyleVCAndloadFourTreasureVC
-//{
-//    if (self.currentViewController == self.paintingStyleVC) {
-//        
-//
-//    FourTreasuresViewController *ftVC = [[FourTreasuresViewController alloc] init];
-//    [ftVC setBaseVC:self];
-//    CGRect frame = [self.contentView bounds];
-//    frame.origin.x = self.contentView.bounds.size.width;
-//    [ftVC.view setFrame:frame];
-//    [self.contentView addSubview:ftVC.view];
-//    self.fourTreasuresVC = ftVC;
-//    frame.origin.x = self.contentView.bounds.origin.x;
-//    CGRect rect = self.paintingStyleVC.view.frame;
-//    rect.origin.x = -rect.size.width;
-//    [self addChildViewController:self.fourTreasuresVC];
-//        [self.contentView bringSubviewToFront:ftVC.view];
-//    [self.toolsButton setIsSelected:NO];
-//    [self.neededButton setIsSelected:YES];
-//    [self.getItButton setIsSelected:NO];
-//    [self.wishlistButton setIsSelected:NO];
-//    
-//    [UIView animateWithDuration:0.5 animations:^{
-//        [self.paintingStyleVC.view setFrame:rect];
-//        [self.fourTreasuresVC.view setFrame:frame];
-//    } completion:^(BOOL finished) {
-//        [self.paintingStyleVC removeFromParentViewController];
-//        [self.paintingStyleVC.view removeFromSuperview];
-//        self.paintingStyleVC = nil;
-//        [self optionSelected:self.neededButton];
-//        self.currentViewController = self.fourTreasuresVC;
-//        
-//
-//    }];
-//  }
-//}
-//
-//-(void)removeFourTreasureVCAndloadStyleVC
-//{
-//    if (self.currentViewController == self.fourTreasuresVC) {
-//        
-//   
-//    PPStyleViewController *styleVC = [[PPStyleViewController alloc] init];
-//    CGRect frame = [self.contentView bounds];
-//    frame.origin.x = -frame.size.width;
-//    [styleVC.view setFrame:frame];
-//    [self.contentView addSubview:styleVC.view];
-//    self.paintingStyleVC = styleVC;
-//    [self addChildViewController:self.paintingStyleVC];
-//    [self.contentView bringSubviewToFront:styleVC.view];
-//    CGRect rect = self.fourTreasuresVC.view.frame;
-//    rect.origin.x = rect.size.width;
-//    frame.origin.x = 0;
-//    
-//    [self.toolsButton setIsSelected:YES];
-//    [self.neededButton setIsSelected:NO];
-//    [self.getItButton setIsSelected:NO];
-//    [self.wishlistButton setIsSelected:NO];
-//    [self.paintingStyleVC.rightIntroPanel setHidden:YES];
-//    
-//    [UIView animateWithDuration:0.5 animations:^{
-//        [self.paintingStyleVC.view setFrame:frame];
-//        [self.fourTreasuresVC.view setFrame:rect];
-//    } completion:^(BOOL finished) {
-//        [self.fourTreasuresVC removeFromParentViewController];
-//        [self.fourTreasuresVC.view removeFromSuperview];
-//        self.fourTreasuresVC = nil;
-//        self.currentViewController = self.paintingStyleVC;
-//        [self.paintingStyleVC.rightIntroPanel setHidden:NO];
-//        [self.paintingStyleVC selectFirstButton];
-//        [self.paintingStyleVC animateEveryThingIntoScreen];
-//    }];
-//   }
-//}
 
 //options delegate
 -(void)optionSelected:(PPNavigationOptionsView*)optionView
 {
     if (optionView == self.toolsButton) {
-//        [self.toolsButton setIsSelected:YES];
-//        [self.neededButton setIsSelected:NO];
-//        [self.getItButton setIsSelected:NO];
         [self removeCurrentVCAndloadStyleVC];
-//        [self removeFourTreasureVCAndloadStyleVC];
     }
     else if (optionView == self.neededButton) {
-//        [self.toolsButton setIsSelected:NO];
-//        [self.neededButton setIsSelected:YES];
-//        [self.getItButton setIsSelected:NO];
         [self removeCurrentVCAndloadFourTreasuresVC];
-//        [self removeStyleVCAndloadFourTreasureVC];
     }
     else if (optionView == self.getItButton) {
-//        [self.toolsButton setIsSelected:NO];
-//        [self.neededButton setIsSelected:NO];
-//        [self.getItButton setIsSelected:YES];
         [self removeCurrentVCAndloadGetItVC];
     }
-
 }
 
 
@@ -553,8 +442,8 @@
     switch (tutorialTag) {
         case 0:
         {
-          ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
-                vc = ttVC;
+            ToolTutorialViewController *ttVC = [[ToolTutorialViewController alloc] init];
+            vc = ttVC;
         }
             break;
         case 1:
@@ -580,7 +469,7 @@
             break;
     }
     
-  
+    
     [UIView transitionWithView:self.navigationController.view
                       duration:0.75
                        options:UIViewAnimationOptionTransitionFlipFromRight
@@ -588,8 +477,8 @@
                         [self.navigationController pushViewController:vc animated:NO];
                     }
                     completion:nil];
-
- 
+    
+    
 }
 
 
@@ -598,7 +487,7 @@
     if (!self.slideShowVC) {
         SlideShowViewController *slideVC = [[SlideShowViewController alloc] init];
         self.slideShowVC = slideVC;
-     
+        
         [slideVC setCurrentTreasureType:type];
         [self.slideShowVC setResponseDelegate:self];
         CGRect rect = CGRectMake(0, -kSlideShowViewHeight, self.view.bounds.size.width, kSlideShowViewHeight);
@@ -610,13 +499,13 @@
         [UIView animateWithDuration:0.5 animations:^{
             [slideVC.view setFrame:targetRect];
         } completion:^(BOOL finished) {
-       
+            
         }];
     }
     else{
         [self.slideShowVC selectedBrush:tag-1];
     }
-
+    
 }
 
 -(void)closeSlideView
@@ -632,7 +521,7 @@
             self.slideShowVC = nil;
         }];
     }
-   
+    
 }
 
 -(void)didScrollToBrush:(NSInteger)tag
@@ -660,18 +549,18 @@
 
 - (BOOL)prefersStatusBarHidden
 {
-    return YES; 
+    return YES;
 }
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

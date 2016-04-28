@@ -46,7 +46,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self.titleStyleLabel setText:@"DETAIL STYLE"];
     [self.titleFlowerLabel setText:@"Green Leaf"];
     _currentStep = 0;
@@ -125,39 +125,33 @@
                 else if (gesture.view == self.veinBrushImageView&&_currentStep==3) {
                     isRightStep =YES;
                 }
- 
                 
                 if (isRightStep) {
-                    
-                
-        
-            _isDragging = YES;
-            _initialFrameOfObject = gesture.view.frame;
-            UIImageView *copiedImageView = [[UIImageView alloc] initWithFrame:_initialFrameOfObject];
-            [copiedImageView setImage:[(UIImageView*)gesture.view image]];
-            [copiedImageView setContentMode:[(UIImageView*)gesture.view contentMode]];
-            [gesture.view.superview addSubview:copiedImageView];
-            [gesture.view.superview sendSubviewToBack:copiedImageView];
-            [self addGestureRecognizersForImageView:copiedImageView];
-            _tempImageView = copiedImageView;
-            CGRect rectInGlobalView = [self.view convertRect:gesture.view.frame fromView:gesture.view.superview];
-            
-            //            [gesture.view removeFromSuperview];
-            [self.view addSubview:gesture.view];
-            [gesture.view setFrame:rectInGlobalView];
-            [self.view bringSubviewToFront:gesture.view];
-            _draggedItem = gesture.view;
-            [UIView animateWithDuration:0.5 animations:^{
-                [gesture.view setAlpha:0.5];
-                [gesture.view setCenter:[gesture locationInView:self.view]];
-                if (gesture.view == self.pencilImageView || gesture.view == self.veinBrushImageView||gesture.view == self.goatBrushImageView) {
-                    gesture.view.transform = CGAffineTransformMakeRotation(-M_PI_4);
+                    _isDragging = YES;
+                    _initialFrameOfObject = gesture.view.frame;
+                    UIImageView *copiedImageView = [[UIImageView alloc] initWithFrame:_initialFrameOfObject];
+                    [copiedImageView setImage:[(UIImageView*)gesture.view image]];
+                    [copiedImageView setContentMode:[(UIImageView*)gesture.view contentMode]];
+                    [gesture.view.superview addSubview:copiedImageView];
+                    [gesture.view.superview sendSubviewToBack:copiedImageView];
+                    [self addGestureRecognizersForImageView:copiedImageView];
+                    _tempImageView = copiedImageView;
+                    CGRect rectInGlobalView = [self.view convertRect:gesture.view.frame fromView:gesture.view.superview];
+                    [self.view addSubview:gesture.view];
+                    [gesture.view setFrame:rectInGlobalView];
+                    [self.view bringSubviewToFront:gesture.view];
+                    _draggedItem = gesture.view;
+                    [UIView animateWithDuration:0.5 animations:^{
+                        [gesture.view setAlpha:0.5];
+                        [gesture.view setCenter:[gesture locationInView:self.view]];
+                        if (gesture.view == self.pencilImageView || gesture.view == self.veinBrushImageView||gesture.view == self.goatBrushImageView) {
+                            gesture.view.transform = CGAffineTransformMakeRotation(-M_PI_4);
+                        }
+                    } completion:^(BOOL finished) {
+                        
+                    }];
                 }
-            } completion:^(BOOL finished) {
-               
-            }];
-                    }
-                }
+            }
             else{
                 _draggedItem = nil;
                 _isDragging = NO;
@@ -216,7 +210,7 @@
                         [self.previousButton setEnabled:NO];
                         [self.nextButton setEnabled:NO];
                         [self drawPencilPath];
-                
+                        
                     }];
                 }
                 else if(gesture.view == self.veinBrushImageView){
@@ -227,8 +221,6 @@
                         [self.previousButton setEnabled:NO];
                         [self.nextButton setEnabled:NO];
                         [self drawVeinBrushPath];
-                        //                    self.veinBrushImageView = _tempImageView;
-                        //                    _tempImageView = nil;
                     }];
                 }
                 else if(gesture.view == self.goatBrushImageView){
@@ -240,13 +232,11 @@
                         [self.nextButton setEnabled:NO];
                         [self drawGoatBrushPath];
                         [self applyColorAnimation];
-                        //                    self.veinBrushImageView = _tempImageView;
-                        //                    _tempImageView = nil;
                     }];
                 }
             }
             
-  
+            
             
             
         }
@@ -282,7 +272,6 @@
 -(void)drawPencilPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"leafPath"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -314,15 +303,13 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
     _firstLayer = myShapeLayer;
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.pencilImageView.layer addAnimation:anim forKey:@"pencil"];
 }
 
@@ -330,7 +317,6 @@
 -(void)drawVeinBrushPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"leafPath"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -362,15 +348,13 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
     _secondLayer = myShapeLayer;
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.veinBrushImageView.layer addAnimation:anim forKey:@"vein"];
 }
 
@@ -378,7 +362,6 @@
 -(void)drawGoatBrushPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"pathGuide"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -394,7 +377,7 @@
     rect.origin.y += topBottomPadding;
     rect.size.width = 214;
     rect.size.height = 266;
-
+    
     
     CGAffineTransform translation = CGAffineTransformMakeTranslation(265,
                                                                      204);
@@ -403,15 +386,12 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     anim.repeatCount = 2;
-
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.goatBrushImageView.layer addAnimation:anim forKey:@"goat"];
 }
 
@@ -441,9 +421,6 @@
     animation.additive = NO;
     animation.delegate = self;
     [colorLayer addAnimation:animation forKey:@"opacityIN"];
-    
-    
-    
 }
 
 
@@ -510,7 +487,7 @@
             rect.origin.y += topBottomPadding;
             rect.size.width = 214;
             rect.size.height = 266;
-
+            
             CALayer *colorLayerDeep = [CALayer layer];
             [colorLayerDeep setFrame:rect];
             UIImage *colorImage = [UIImage imageNamed:@"leaf_color2"];
@@ -531,7 +508,7 @@
             [colorLayerDeep addAnimation:animation forKey:@"opacityIN2"];
         }
         else if (anim == [firstColorLayer animationForKey:@"opacityIN2"]){
-
+            
             _isDragging = NO;
         }
         [self.previousButton setEnabled:YES];
@@ -539,11 +516,6 @@
     }
 }
 
--(void)viewDidLayoutSubviews
-{
-    //    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    //    NSLog(@"sdf");
-}
 
 
 -(CGPathRef)CGPath_NGCreateCopyByScalingPathAroundCentre:(CGPathRef)path scale:(float) scale
@@ -601,32 +573,6 @@
 
 - (IBAction)previousButtonAction:(id)sender {
     [self clearCanvas];
-//    NSInteger step = [self.stepNumberLabel.text integerValue];
-//    if (step == 1) {
-//        _isXuanPaperOnScreen = NO;
-//        [self.fullPaperImageView removeFromSuperview];
-//        [self.hintLabel setText:kDTStep1Text];
-//        [self enableImageView:self.xuanPaperImageView];
-//    }
-//    else if (step == 2) {
-//        [_firstLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kDTStep2Text];
-//         [self enableImageView:self.pencilImageView];
-//    }
-//    else if (step == 3){
-//        [_secondLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kDTStep3Text];
-//         [self enableImageView:self.goatBrushImageView];
-//    }
-//    else if (step == 4){
-//        [_secondLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kDTStep3Text];
-//         [self enableImageView:self.veinBrushImageView];
-//    }
-//    if (step > 1) {
-//        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
-//    }
-    
 }
 
 -(void)clearCanvas
@@ -649,36 +595,32 @@
 }
 
 - (IBAction)nextButtonAction:(id)sender {
-  
+    
     NSInteger step = [self.stepNumberLabel.text integerValue];
     if (step == 1) {
         if (self.fullPaperImageView) {
             [self.view addSubview:self.fullPaperImageView];
             [self.fullPaperImageView setFrame:CGRectMake(27, CGRectGetMaxY(self.stepBarView.frame)+75, 854, 635)];
-             [self enableImageView:self.pencilImageView];
+            [self enableImageView:self.pencilImageView];
         }
         [self.hintLabel setText:kDTStep2Text];
     }
     else if (step == 2) {
         if (_firstLayer) {
             [self.fullPaperImageView.layer addSublayer:_firstLayer];
-             [self enableImageView:self.goatBrushImageView];
+            [self enableImageView:self.goatBrushImageView];
         }
         [self.hintLabel setText:kDTStep3Text];
     }
     else if (step == 3){
         if (_secondLayer) {
-             [self enableImageView:self.veinBrushImageView];
+            [self enableImageView:self.veinBrushImageView];
             [self.fullPaperImageView.layer addSublayer:_secondLayer];
         }
         
     }
     else if (step == 4){
-         [self enableImageView:nil];
-//        if (_secondLayer) {
-//            [self.fullPaperImageView.layer addSublayer:_secondLayer];
-//        }
-        
+        [self enableImageView:nil];
     }
     if (step <4) {
         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];
@@ -698,7 +640,7 @@
     UIImage *goatImage = self.goatBrushImageView.image;
     UIImage *goatImage_disabled = [self colorizeImage:goatImage withColor:kDisabledImageMaskColor];
     
-
+    
     
     _xuan = xuanImage;
     _xuanDisabled =xuanImage_disabled;
@@ -712,7 +654,7 @@
     _goat = goatImage;
     _goatDisabled = goatImage_disabled;
     
- 
+    
 }
 
 -(void)enableImageView:(UIImageView*)imageView
@@ -722,7 +664,7 @@
         [self.pencilImageView setImage:_pencilDisabled];
         [self.veinBrushImageView setImage:_veinDisabled];
         [self.goatBrushImageView setImage:_goatDisabled];
-
+        
         
     }
     else if (imageView == self.pencilImageView) {
@@ -730,29 +672,29 @@
         [self.pencilImageView setImage:_pencil];
         [self.veinBrushImageView setImage:_veinDisabled];
         [self.goatBrushImageView setImage:_goatDisabled];
- 
+        
     }
     else if (imageView == self.veinBrushImageView) {
         [self.xuanPaperImageView setImage:_xuanDisabled];
         [self.pencilImageView setImage:_pencilDisabled];
         [self.veinBrushImageView setImage:_vein];
         [self.goatBrushImageView setImage:_goatDisabled];
-      
+        
     }
     else if (imageView == self.goatBrushImageView) {
         [self.xuanPaperImageView setImage:_xuanDisabled];
         [self.pencilImageView setImage:_pencilDisabled];
         [self.veinBrushImageView setImage:_veinDisabled];
         [self.goatBrushImageView setImage:_goat];
-      
+        
     }
-
+    
     else{
         [self.xuanPaperImageView setImage:_xuanDisabled];
         [self.pencilImageView setImage:_pencilDisabled];
         [self.veinBrushImageView setImage:_veinDisabled];
         [self.goatBrushImageView setImage:_goatDisabled];
-     
+        
     }
 }
 
@@ -762,13 +704,13 @@
     [self.pencilImageView setImage:_pencil];
     [self.veinBrushImageView setImage:_vein];
     [self.goatBrushImageView setImage:_goat];
- 
+    
     
     _isXuanPaperOnScreen = NO;
     [self.fullPaperImageView removeFromSuperview];
     [_firstLayer removeFromSuperlayer];
     [_secondLayer removeFromSuperlayer];
-
+    
     _currentStep = 0;
     [self.hintLabel setText:kCTStep1Text];
 }

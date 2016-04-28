@@ -75,10 +75,10 @@
                 [self.inkTextView setAlpha:1.0];
             } completion:^(BOOL finished) {
                 self.selectedTreasure = nil;
-                 [self.view setUserInteractionEnabled:YES];
+                [self.view setUserInteractionEnabled:YES];
             }];
         }];
-
+        
     }
     else{
         if (self.selectedTreasure == nil) {
@@ -117,10 +117,10 @@
                     [self.view layoutIfNeeded];
                 } completion:^(BOOL finished) {
                     self.selectedTreasure = treasureView;
-                     [self.view setUserInteractionEnabled:YES];
+                    [self.view setUserInteractionEnabled:YES];
                 }];
             }];
-
+            
         }
         else{
             if (self.selectedTreasure.buttonType == PPTreasureTypeBrush || self.selectedTreasure.buttonType == PPTreasureTypeHolder) {
@@ -131,7 +131,7 @@
             }
             [treasureView setBackgroundColor:SelectedBlueColor];
             [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-               
+                
                 [self.bottomBarTopConstraint setConstant:190];
                 [self.view layoutIfNeeded];
             } completion:^(BOOL finished) {
@@ -154,13 +154,13 @@
                 [self.bottomSlideView addSubview:view];
                 currentBottomContentView = view;
                 [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-
+                    
                     [self.bottomBarTopConstraint setConstant:20];
                     [self.view layoutIfNeeded];
                 } completion:^(BOOL finished) {
-
+                    
                     self.selectedTreasure = treasureView;
-                     [self.view setUserInteractionEnabled:YES];
+                    [self.view setUserInteractionEnabled:YES];
                 }];
             }];
         }
@@ -172,10 +172,9 @@
     
     for (PPBrushesView *brushView in self.brushViews) {
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapOnBrushView:)];
-//        [brushView setTag:[self.brushViews indexOfObject:brushView]];
         [brushView addGestureRecognizer:tapGesture];
     }
- 
+    
 }
 
 
@@ -212,7 +211,7 @@
                 break;
             }
         }
-
+        
     }
     else if(self.selectedTreasure.buttonType == PPTreasureTypeInk){
         for (PPBrushesView *colorView in self.colorViews) {
@@ -222,7 +221,7 @@
             }
         }
     }
- 
+    
     [self moveSelection:view];
 }
 
@@ -251,7 +250,7 @@
         [view addSubview:_selectionView];
         [view sendSubviewToBack:_selectionView];
     }
-
+    
 }
 
 -(void)removeSelection
@@ -263,7 +262,7 @@
 
 -(void)changeBottomImage
 {
-
+    
 }
 
 -(void)dealloc
@@ -278,13 +277,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

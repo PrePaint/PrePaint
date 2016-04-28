@@ -31,8 +31,6 @@
 		133606B01CCA0A1E00E8A966 /* GetItViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133606AE1CCA0A1E00E8A966 /* GetItViewController.xib */; };
 		133606BC1CCF474200E8A966 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133606BA1CCF474200E8A966 /* OptionsViewController.m */; };
 		133606BD1CCF474200E8A966 /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133606BB1CCF474200E8A966 /* OptionsViewController.xib */; };
-		133CC7331CB22A6000FCD1E6 /* flowerBaby.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7321CB22A6000FCD1E6 /* flowerBaby.svg */; };
-		133CC7351CB22FD300FCD1E6 /* flowerBaby2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7341CB22FD300FCD1E6 /* flowerBaby2.svg */; };
 		133CC7371CB2365C00FCD1E6 /* bigFlower.svg in Resources */ = {isa = PBXBuildFile; fileRef = 133CC7361CB2365C00FCD1E6 /* bigFlower.svg */; };
 		1352A2D31CD0BACB00FA579E /* Tutorial3newPath1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1352A2D01CD0BACB00FA579E /* Tutorial3newPath1.svg */; };
 		1352A2D41CD0BACB00FA579E /* Tutorial3newPath2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1352A2D11CD0BACB00FA579E /* Tutorial3newPath2.svg */; };
@@ -109,8 +107,6 @@
 		133606B91CCF474200E8A966 /* OptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsViewController.h; sourceTree = "<group>"; };
 		133606BA1CCF474200E8A966 /* OptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsViewController.m; sourceTree = "<group>"; };
 		133606BB1CCF474200E8A966 /* OptionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
-		133CC7321CB22A6000FCD1E6 /* flowerBaby.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = flowerBaby.svg; sourceTree = "<group>"; };
-		133CC7341CB22FD300FCD1E6 /* flowerBaby2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = flowerBaby2.svg; sourceTree = "<group>"; };
 		133CC7361CB2365C00FCD1E6 /* bigFlower.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bigFlower.svg; sourceTree = "<group>"; };
 		1352A2D01CD0BACB00FA579E /* Tutorial3newPath1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tutorial3newPath1.svg; sourceTree = "<group>"; };
 		1352A2D11CD0BACB00FA579E /* Tutorial3newPath2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tutorial3newPath2.svg; sourceTree = "<group>"; };
@@ -321,11 +317,9 @@
 				1318FB831CBF6CC8002BF442 /* orangePath2.svg */,
 				1318FB841CBF6CC8002BF442 /* orangePath3.svg */,
 				1318FB851CBF6CC8002BF442 /* orangePath4.svg */,
-				133CC7321CB22A6000FCD1E6 /* flowerBaby.svg */,
 				133CC7361CB2365C00FCD1E6 /* bigFlower.svg */,
 				1318FB641CBB6D70002BF442 /* leafPath.svg */,
 				1318FB661CBB7FEF002BF442 /* pathGuide.svg */,
-				133CC7341CB22FD300FCD1E6 /* flowerBaby2.svg */,
 			);
 			name = SVG;
 			sourceTree = "<group>";
@@ -445,7 +439,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133CC7351CB22FD300FCD1E6 /* flowerBaby2.svg in Resources */,
 				13890AB41C8D69A600A8A0C7 /* Resources.xcassets in Resources */,
 				1352A2D41CD0BACB00FA579E /* Tutorial3newPath2.svg in Resources */,
 				1318FB591CBB640B002BF442 /* DetailTutorialViewController.xib in Resources */,
@@ -474,7 +467,6 @@
 				133CC7371CB2365C00FCD1E6 /* bigFlower.svg in Resources */,
 				1318FB811CBF4DCE002BF442 /* plumPath3.svg in Resources */,
 				13890A4C1C8353EC00A8A0C7 /* Assets.xcassets in Resources */,
-				133CC7331CB22A6000FCD1E6 /* flowerBaby.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

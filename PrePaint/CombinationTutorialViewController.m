@@ -150,7 +150,6 @@
                     _tempImageView = copiedImageView;
                     CGRect rectInGlobalView = [self.view convertRect:gesture.view.frame fromView:gesture.view.superview];
                     
-                    //            [gesture.view removeFromSuperview];
                     [self.view addSubview:gesture.view];
                     [gesture.view setFrame:rectInGlobalView];
                     [self.view bringSubviewToFront:gesture.view];
@@ -237,8 +236,7 @@
                         [self.nextButton setEnabled:NO];
                         [self drawVeinBrushPath];
                         [self applyColorAnimation3];
-                        //                    self.veinBrushImageView = _tempImageView;
-                        //                    _tempImageView = nil;
+                        
                     }];
                 }
                 else if(gesture.view == self.goatBrushImageView){
@@ -250,8 +248,7 @@
                         [self.nextButton setEnabled:NO];
                         [self drawGoatBrushPath];
                         [self applyColorAnimation1];
-                        //                    self.veinBrushImageView = _tempImageView;
-                        //                    _tempImageView = nil;
+                        
                     }];
                 }
                 else if(gesture.view == self.pencilImageView){
@@ -262,16 +259,10 @@
                         [self.previousButton setEnabled:NO];
                         [self.nextButton setEnabled:NO];
                         [self drawPencilPath];
-                  
-                       
-                        //                    self.veinBrushImageView = _tempImageView;
-                        //                    _tempImageView = nil;
+                        
                     }];
                 }
             }
-            
-            
-            
             
         }
             break;
@@ -306,7 +297,6 @@
 -(void)drawWolfPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"orangePath4"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -338,15 +328,13 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
     _firstLayer = myShapeLayer;
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.wolfImageView.layer addAnimation:anim forKey:@"wolf"];
 }
 
@@ -354,7 +342,6 @@
 -(void)drawVeinBrushPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"orangePath1"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -387,14 +374,12 @@
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
     anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
     _secondLayer = myShapeLayer;
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.veinBrushImageView.layer addAnimation:anim forKey:@"vein"];
 }
 
@@ -402,7 +387,6 @@
 -(void)drawGoatBrushPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"orangePath2"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -427,22 +411,17 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = animationDuration;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
- 
-    
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.goatBrushImageView.layer addAnimation:anim forKey:@"goat"];
 }
 
 -(void)drawPencilPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"orangePath1"];
-    // myPath = [self CGPath_NGCreateCopyByScalingPathAroundCentre:myPath scale:0.5];
     CAShapeLayer *myShapeLayer = [CAShapeLayer layer];
     myShapeLayer.path = myPath;
     
@@ -473,16 +452,14 @@
     
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     anim.path = movedPath;
-    anim.calculationMode = kCAAnimationPaced;//kCAAnimationPaced;
-    //[anim setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    anim.calculationMode = kCAAnimationPaced;
     anim.duration = 2.0;
     anim.delegate = self;
     anim.fillMode = kCAFillModeForwards;
     anim.removedOnCompletion = NO;
-
+    
     _firstLayer = myShapeLayer;
     [myShapeLayer addAnimation:pathAnimation forKey:@"strokeAnime"];
-    //  [myShapeLayer addAnimation:colorAnimation forKey:@"colorAnime"];
     [self.pencilImageView.layer addAnimation:anim forKey:@"pencil"];
 }
 
@@ -700,7 +677,7 @@
             [self applyColorAnimation2];
         }
         else if (anim == [fourthColorLayer animationForKey:@"orangeLeafLines"]){
-             [self applyColorAnimation5];
+            [self applyColorAnimation5];
         }
         else if (anim == [firstColorLayer animationForKey:@"opacityIN2"]){
             
@@ -711,11 +688,6 @@
     }
 }
 
--(void)viewDidLayoutSubviews
-{
-    //    [self.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    //    NSLog(@"sdf");
-}
 
 
 -(CGPathRef)CGPath_NGCreateCopyByScalingPathAroundCentre:(CGPathRef)path scale:(float) scale
@@ -766,44 +738,9 @@
                     completion:nil];
 }
 
--(void)changeStepText
-{
-    
-}
 
 - (IBAction)previousButtonAction:(id)sender {
-    
     [self clearCanvas];
-//    NSInteger step = [self.stepNumberLabel.text integerValue];
-//    if (step == 1) {
-//        _isXuanPaperOnScreen = NO;
-//        [self.fullPaperImageView removeFromSuperview];
-//        [self.hintLabel setText:kCTStep1Text];
-//        
-//    }
-//    else if (step == 2) {
-//        [firstColorLayer removeFromSuperlayer];
-//        [_firstLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kCTStep2Text];
-//    }
-//    else if (step == 3){
-//        [secondColorLayer removeFromSuperlayer];
-//        [_secondLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kCTStep3Text];
-//    }
-//    else if (step == 4){
-//        [thirdColorLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kCTStep4Text];
-//    }
-//    else if (step == 5){
-//        [fourthColorLayer removeFromSuperlayer];
-//        [fifthColorLayer removeFromSuperlayer];
-//        [self.hintLabel setText:kCTStep5Text];
-//    }
-//    if (step > 1) {
-//        [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step-1]];
-//    }
-    
 }
 
 -(void)clearCanvas
@@ -835,7 +772,7 @@
 
 
 - (IBAction)nextButtonAction:(id)sender {
-
+    
     NSInteger step = [self.stepNumberLabel.text integerValue];
     if (step == 1) {
         if (self.fullPaperImageView) {
@@ -860,13 +797,13 @@
     }
     else if (step == 4){
         
-         [self.fullPaperImageView.layer addSublayer:thirdColorLayer];
-         [self.hintLabel setText:kCTStep5Text];
+        [self.fullPaperImageView.layer addSublayer:thirdColorLayer];
+        [self.hintLabel setText:kCTStep5Text];
     }
     else if (step == 5){
         
         [self.fullPaperImageView.layer addSublayer:fourthColorLayer];
-         [self.fullPaperImageView.layer addSublayer:fifthColorLayer];
+        [self.fullPaperImageView.layer addSublayer:fifthColorLayer];
     }
     if (step <5) {
         [self.stepNumberLabel setText:[NSString stringWithFormat:@"%d",step+1]];

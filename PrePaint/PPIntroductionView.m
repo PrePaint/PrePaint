@@ -20,22 +20,21 @@
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
     UIFont *titleFont = [UIFont fontWithName:kAvenirRoman size:20.0];
-   
+    
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     [style setAlignment:NSTextAlignmentLeft];
     NSDictionary *attr = @{NSParagraphStyleAttributeName:style,
-                                 NSFontAttributeName:titleFont
-                               //  NSForegroundColorAttributeName:fontColor
-                                 };
+                           NSFontAttributeName:titleFont
+                           };
     
-    CGFloat horizontalPadding = 35.0;//20.0;
+    CGFloat horizontalPadding = 35.0;
     
     
     //draw style title
     CGRect titleRect = [self.styleName boundingRectWithSize:CGSizeMake(rect.size.width-horizontalPadding*2.0, 45.0) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
     
     titleRect.origin.x = horizontalPadding;
-    titleRect.origin.y = 20.0;//horizontalPadding/2.0;
+    titleRect.origin.y = 20.0;
     
     [self.styleName drawInRect:titleRect withAttributes:attr];
     
@@ -47,14 +46,13 @@
     UIFont *introFont = [UIFont fontWithName:kAvenirLight size:14.0];
     
     attr = @{NSParagraphStyleAttributeName:style,
-                           NSFontAttributeName:introFont
-                           //NSForegroundColorAttributeName:fontColor
-                           };
+             NSFontAttributeName:introFont
+             };
     
     CGRect introRect = [self.styleIntro boundingRectWithSize:CGSizeMake(rect.size.width-horizontalPadding*2.0, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil];
     
     introRect.origin.x = horizontalPadding;
-    introRect.origin.y = CGRectGetMaxY(titleRect)+10.0+15.0;//CGRectGetMaxY(titleRect)+20.0;
+    introRect.origin.y = CGRectGetMaxY(titleRect)+10.0+15.0;
     
     [self.styleIntro drawInRect:introRect withAttributes:attr];
     
@@ -64,7 +62,6 @@
     
     attr = @{NSParagraphStyleAttributeName:style,
              NSFontAttributeName:descriptionFont
-             //NSForegroundColorAttributeName:fontColor
              };
     
     for (NSString *detailIntro in self.styleDescriptionArray) {
@@ -79,12 +76,6 @@
         baseY += currentRect.size.height+15.0;
         
     }
-
-    
-    
-    
-    
-
 }
 
 

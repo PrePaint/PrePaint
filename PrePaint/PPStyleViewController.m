@@ -21,11 +21,10 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-      UIImage *barImage = [[UIImage imageNamed:@"style_bottom_bg"] stretchableImageWithLeftCapWidth:724.0 topCapHeight:0];
+    UIImage *barImage = [[UIImage imageNamed:@"style_bottom_bg"] stretchableImageWithLeftCapWidth:724.0 topCapHeight:0];
     [self.bottomBGImageView setImage:barImage];
     UIImage *buttonImage = [UIImage imageNamed:@"try_tool_1"];
     [self.tryToolButtons setImage:buttonImage forState:UIControlStateNormal];
-    [self setupTryToolButton];
     [self loadRightPanelViewData];
     [self loadStyles];
     [self putEveryThingOutOfScreen];
@@ -82,12 +81,12 @@
     self.rightPanelConstraint.constant = 0;
     [UIView animateWithDuration:0.75 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
         
-    [self.view layoutIfNeeded];
+        [self.view layoutIfNeeded];
         
     } completion:^(BOOL finished) {
         
     }];
-
+    
 }
 
 -(void)animateRightPanel:(NSInteger)newPanelTag
@@ -126,7 +125,7 @@
         {
             bottomImage = [UIImage imageNamed:@"style_bottom_bg"];
             buttonImage = [UIImage imageNamed:@"try_tool_1"];
-
+            
         }
             break;
     }
@@ -151,7 +150,7 @@
         } completion:^(BOOL finished) {
             
         }];
-
+        
         
     }];
 }
@@ -175,12 +174,12 @@
             [self.rightPanelView setStyleIntro:@"Detail style is known as “Meticulous style”. because of the laborious drawing and thin washes requried to create the rich hues and intense colors. The process is time-cosuming and requires a lot of patience."];
             NSString *p1 = @"Layers of color washed are added to a Contour style painting to build up the colors of the finished art work.";
             NSString *p2 = @" This slow building of colors enhances the transparency of light in the subject and builds up the radiance of the colors.";
-
+            
             
             [self.rightPanelView setStyleDescriptionArray:[NSMutableArray arrayWithObjects:p1,p2, nil]];
             [self.rightPanelView setNeedsDisplay];
         }
-        break;
+            break;
         case PPPaintingStyleCombination:
         {
             [self.rightPanelView setStyleName:@"IDEA STYLE"];
@@ -190,7 +189,7 @@
             [self.rightPanelView setStyleDescriptionArray:[NSMutableArray arrayWithObjects:p1,p2, nil]];
             [self.rightPanelView setNeedsDisplay];
         }
-        break;
+            break;
         case PPPaintingStyleIForgot:
         {
             [self.rightPanelView setStyleName:@"COMBINATION STYLE"];
@@ -201,13 +200,13 @@
             [self.rightPanelView setStyleDescriptionArray:[NSMutableArray arrayWithObjects:p1,p2,p3, nil]];
             [self.rightPanelView setNeedsDisplay];
         }
-        break;
+            break;
             
         default:
             break;
     }
     
-
+    
 }
 
 -(void)loadStyles
@@ -232,28 +231,10 @@
         [styleImageButton addTarget:self action:@selector(styleTapped:) forControlEvents:UIControlEventTouchUpInside];
         [styleImageButton setSelected:NO];
         
-//        CGRect textFrame = holderView.bounds;
-//        textFrame.size.height = 20.0;
-//        textFrame.size.width = holderView.bounds.size.width-10.0/2.0;
-//        textFrame.origin.x = CGRectGetMaxX(holderView.bounds)-textFrame.size.width-10.0;
-//        textFrame.origin.y = CGRectGetMidY(holderView.bounds)+30.0;
-//        UILabel *label = [[UILabel alloc] initWithFrame:textFrame];
-//        [label setTextAlignment:NSTextAlignmentRight];
-//        [label setText:@"COMBINATION"];
-//        [label setTextColor:[UIColor whiteColor]];
-//        [label setFont:[UIFont fontWithName:kHelveticaNeueBold size:17.0]];
-//        
         [self.styleButtonArray addObject:styleImageButton];
         [self.styleScrollView addSubview:holderView];
         
         [holderView addSubview:styleImageButton];
-//        [holderView addSubview:label];
-        
-
-//        [holderView.layer setShadowColor:[UIColor blackColor].CGColor];
-//        [holderView.layer setShadowOffset:CGSizeMake(5.0, 0.0)];
-//        [holderView.layer setShadowRadius:10.0];
-//        [holderView.layer setShadowOpacity:1.0];
         [self.styleScrollView sendSubviewToBack:holderView];
         
         
@@ -273,7 +254,7 @@
 
 -(void)styleTapped:(UIButton*)button
 {
-   
+    
     if (!button.isSelected) {
         NSInteger tag = button.tag;
         self.selectedTag = tag;
@@ -294,19 +275,6 @@
                                 animations:^{
                                     self.bgImageView.image = toImage;
                                 } completion:nil];
-                
-//                [UIView animateWithDuration:0.5 animations:^{
-//                    [self.bgImageView setAlpha:0.0];
-//                } completion:^(BOOL finished) {
-//                    [self.bgImageView setImage:[UIImage imageNamed:bgFileName]];
-//                    [UIView animateWithDuration:0.5 animations:^{
-//                        [self.bgImageView setAlpha:1.0];
-//                    } completion:^(BOOL finished) {
-//                        
-//                    }];
-//                }];
-                
-//                [self.bgImageView setImage:[UIImage imageNamed:bgFileName]];
             }
         }
     }
@@ -324,31 +292,15 @@
     [self.rightIntroPanel setBackgroundColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0  blue:255.0/255.0  alpha:1.0]];
     [self.rightPanelView setBackgroundColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0  blue:255.0/255.0  alpha:1.0]];
     [self setupRightPanelShadow];
-//    [self.rightPanelView.layer setShadowColor:[UIColor blackColor].CGColor];
-//    [self.rightPanelView.layer setShadowOffset:CGSizeMake(-1.0, 0.0)];
-//    //[self.rightPanelView.layer setShadowRadius:10.0];
-//    [self.rightPanelView.layer setShadowOpacity:1.0];
-//    [self.rightIntroPanel setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.5]];
 }
 
 -(void)setupRightPanelShadow
 {
     [self.rightPanelView.layer setShadowColor:[UIColor blackColor].CGColor];
-    //[self.rightPanelView.layer setShadowOffset:CGSizeMake(-1.0, 0.0)];
     CGRect shadowRect = self.rightPanelView.bounds;
     shadowRect.size.width = 1.0;
     self.rightPanelView.layer.shadowPath = [UIBezierPath bezierPathWithRect:shadowRect].CGPath;
-    //[self.rightPanelView.layer setShadowRadius:10.0];
     [self.rightPanelView.layer setShadowOpacity:1.0];
-}
-
--(void)setupTryToolButton
-{
-//    [self.tryToolButtons setAlpha:1.0];
-//    [self.tryToolButtons.layer setBorderColor:SelectedBlueColor.CGColor];
-//    [self.tryToolButtons.layer setBorderWidth:1.5];
-//    [self.tryToolButtons.layer setCornerRadius:3.0];
-
 }
 
 - (IBAction)tryToolButtonAction:(UIButton *)sender {
@@ -358,11 +310,11 @@
 
 -(void)didReceiveMemoryWarning
 {
-
+    
 }
 
 -(void)dealloc
 {
-
+    
 }
 @end

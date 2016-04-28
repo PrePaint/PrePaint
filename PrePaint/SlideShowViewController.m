@@ -30,7 +30,7 @@ static NSString * const kPageIdentifier = @"Page";
     self.pagingScrollView.delegate = self;
     self.pagingScrollView.infiniteScroll = YES;
     self.pagingScrollView.interpageSpacing = 0;
-     [self.view addSubview:self.pagingScrollView];
+    [self.view addSubview:self.pagingScrollView];
     [self.view sendSubviewToBack:self.pagingScrollView];
     [self.pagingScrollView registerClass:[UIView class] forReuseIdentifier:kPageIdentifier];
     [self.pagingScrollView reloadData];
@@ -70,116 +70,116 @@ static NSString * const kPageIdentifier = @"Page";
 - (UIView *)pagingScrollView:(GMCPagingScrollView *)pagingScrollView pageForIndex:(NSUInteger)index {
     UIView *page = [pagingScrollView dequeueReusablePageWithIdentifier:kPageIdentifier];
     if (self.currentTreasureType == PPTreasureTypeBrush) {
-      switch (index) {
-        case 0:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"goat_page_1"]];
+        switch (index) {
+            case 0:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_1"]];
+            }
+                break;
+            case 1:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_2"]];
+            }
+                break;
+            case 2:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_3"]];
+            }
+                break;
+                
+            case 3:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_1"]];
+            }
+                break;
+            case 4:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_2"]];
+            }
+                break;
+            case 5:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_3"]];
+            }
+                break;
+                
+            case 6:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"wolf_page_1"]];
+            }
+                break;
+            case 7:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"wolf_page_2"]];
+            }
+                break;
+            case 8:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"wolf_page_3"]];
+            }
+                break;
+                
+            case 9:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"combination_page_1"]];
+            }
+                break;
+            case 10:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"combination_page_2"]];
+            }
+                break;
+            case 11:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"combination_page_3"]];
+            }
+                break;
+            case 12:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"landscape_page_1"]];
+            }
+                break;
+            case 13:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"landscape_page_2"]];
+            }
+                break;
+            case 14:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"landscape_page_3"]];
+            }
+                break;
         }
-            break;
-        case 1:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"goat_page_2"]];
-        }
-            break;
-        case 2:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"goat_page_3"]];
-        }
-            break;
-            
-        case 3:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"vein_page_1"]];
-        }
-            break;
-        case 4:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"vein_page_2"]];
-        }
-            break;
-        case 5:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"vein_page_3"]];
-        }
-            break;
-            
-        case 6:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"wolf_page_1"]];
-        }
-            break;
-        case 7:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"wolf_page_2"]];
-        }
-            break;
-        case 8:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"wolf_page_3"]];
-        }
-            break;
-            
-        case 9:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"combination_page_1"]];
-        }
-            break;
-        case 10:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"combination_page_2"]];
-        }
-            break;
-        case 11:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"combination_page_3"]];
-        }
-            break;
-        case 12:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"landscape_page_1"]];
-        }
-            break;
-        case 13:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"landscape_page_2"]];
-        }
-            break;
-        case 14:
-        {
-            UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
-            [page addSubview:imageView];
-            [imageView setImage:[UIImage imageNamed:@"landscape_page_3"]];
-        }
-            break;
-    }
     }
     else if (self.currentTreasureType == PPTreasureTypePaper) {
         switch (index) {
@@ -226,7 +226,7 @@ static NSString * const kPageIdentifier = @"Page";
                 [imageView setImage:[UIImage imageNamed:@"vein_page_3"]];
             }
                 break;
-                default:
+            default:
                 break;
         }
     }
@@ -352,20 +352,20 @@ static NSString * const kPageIdentifier = @"Page";
         }
     }
     else{
-    
+        
     }
     return page;
 }
 
 -(void)pagingScrollView:(GMCPagingScrollView *)pagingScrollView layoutPageAtIndex:(NSUInteger)index
 {
-
+    
 }
 
 -(void)pagingScrollViewDidFinishScrolling:(GMCPagingScrollView *)pagingScrollView
 {
-   [self.pageControl setCurrentPage:pagingScrollView.currentPageIndex%3];
-   [(BaseViewController*)self.responseDelegate didScrollToBrush:pagingScrollView.currentPageIndex/3];
+    [self.pageControl setCurrentPage:pagingScrollView.currentPageIndex%3];
+    [(BaseViewController*)self.responseDelegate didScrollToBrush:pagingScrollView.currentPageIndex/3];
 }
 
 -(void)pagingScrollView:(GMCPagingScrollView *)pagingScrollView didEndDisplayingPage:(UIView *)page atIndex:(NSUInteger)index
@@ -375,14 +375,14 @@ static NSString * const kPageIdentifier = @"Page";
 
 -(void)pagingScrollView:(GMCPagingScrollView *)pagingScrollView didScrollToPageAtIndex:(NSUInteger)index
 {
-//         [self.pageControl setCurrentPage:pagingScrollView.currentPageIndex%3];
+    
 }
 
 -(void)selectedBrush:(NSInteger)brushTag
 {
     UIView *pageOut = [self.pagingScrollView pageAtIndex:self.pagingScrollView.currentPageIndex];
     
-   
+    
     [UIView animateWithDuration:0.5 animations:^{
         [pageOut setAlpha:0.0];
         
@@ -397,14 +397,13 @@ static NSString * const kPageIdentifier = @"Page";
         } completion:^(BOOL finished) {
             [pageOut setAlpha:1.0];
         }];
-
+        
     }];
     
     
 }
 
 - (IBAction)pageDidSelected:(UIPageControl *)sender {
-//      int index = sender.currentPage;
     
 }
 
