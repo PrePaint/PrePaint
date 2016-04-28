@@ -9,7 +9,7 @@
 #import "SlideShowViewController.h"
 #import "BaseViewController.h"
 
-#define kTotoalPageNumber 15
+
 
 
 static NSString * const kPageIdentifier = @"Page";
@@ -39,13 +39,38 @@ static NSString * const kPageIdentifier = @"Page";
 }
 
 - (NSUInteger)numberOfPagesInPagingScrollView:(GMCPagingScrollView *)pagingScrollView {
-    return kTotoalPageNumber;
+    switch (self.currentTreasureType) {
+        case PPTreasureTypeBrush:
+        {
+            return kTotoalPageNumberBrush;
+        }
+            break;
+        case PPTreasureTypePaper:
+        {
+            return kTotoalPageNumberPaper;
+        }
+            break;
+        case PPTreasureTypeHolder:
+        {
+            return kTotoalPageNumberInk;
+        }
+            break;
+        case PPTreasureTypeInk:
+        {
+            return kTotoalPageNumberColor;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
 }
 
 - (UIView *)pagingScrollView:(GMCPagingScrollView *)pagingScrollView pageForIndex:(NSUInteger)index {
     UIView *page = [pagingScrollView dequeueReusablePageWithIdentifier:kPageIdentifier];
-    
-    switch (index) {
+    if (self.currentTreasureType == PPTreasureTypeBrush) {
+      switch (index) {
         case 0:
         {
             UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
@@ -155,7 +180,180 @@ static NSString * const kPageIdentifier = @"Page";
         }
             break;
     }
+    }
+    else if (self.currentTreasureType == PPTreasureTypePaper) {
+        switch (index) {
+            case 0:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_1"]];
+            }
+                break;
+            case 1:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_2"]];
+            }
+                break;
+            case 2:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_3"]];
+            }
+                break;
+                
+            case 3:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_1"]];
+            }
+                break;
+            case 4:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_2"]];
+            }
+                break;
+            case 5:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_3"]];
+            }
+                break;
+                default:
+                break;
+        }
+    }
+    else if (self.currentTreasureType == PPTreasureTypeHolder) {
+        switch (index) {
+            case 0:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_1"]];
+            }
+                break;
+            case 1:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_2"]];
+            }
+                break;
+            case 2:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_3"]];
+            }
+                break;
+                
+            case 3:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_1"]];
+            }
+                break;
+            case 4:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_2"]];
+            }
+                break;
+            case 5:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_3"]];
+            }
+                break;
+                
+            case 6:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"wolf_page_1"]];
+            }
+                break;
+            case 7:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"wolf_page_2"]];
+            }
+                break;
+            case 8:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"wolf_page_3"]];
+            }
+                break;
+            default:
+                break;
+        }
+        
+    }
+    else if (self.currentTreasureType == PPTreasureTypeInk) {
+        switch (index) {
+            case 0:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_1"]];
+            }
+                break;
+            case 1:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_2"]];
+            }
+                break;
+            case 2:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"goat_page_3"]];
+            }
+                break;
+                
+            case 3:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_1"]];
+            }
+                break;
+            case 4:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_2"]];
+            }
+                break;
+            case 5:
+            {
+                UIImageView *imageView =[[UIImageView alloc] initWithFrame:page.bounds];
+                [page addSubview:imageView];
+                [imageView setImage:[UIImage imageNamed:@"vein_page_3"]];
+            }
+                break;
+            default:
+                break;
+        }
+    }
+    else{
     
+    }
     return page;
 }
 

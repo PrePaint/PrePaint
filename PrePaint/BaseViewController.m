@@ -593,11 +593,13 @@
 }
 
 
--(void)brushViewSelected:(int)tag
+-(void)brushViewSelected:(int)tag withTreasureType:(PPTreasureType)type
 {
     if (!self.slideShowVC) {
         SlideShowViewController *slideVC = [[SlideShowViewController alloc] init];
         self.slideShowVC = slideVC;
+     
+        [slideVC setCurrentTreasureType:type];
         [self.slideShowVC setResponseDelegate:self];
         CGRect rect = CGRectMake(0, -kSlideShowViewHeight, self.view.bounds.size.width, kSlideShowViewHeight);
         CGRect targetRect = CGRectMake(0, 0, self.view.bounds.size.width, kSlideShowViewHeight);

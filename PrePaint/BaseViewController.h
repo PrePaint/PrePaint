@@ -37,7 +37,7 @@
 -(void)optionSelected:(PPNavigationOptionsView*)optionView;
 -(void)removeStyleVCAndloadFourTreasureVC;
 -(void)flipToToolTutorialPage:(NSInteger)tutorialTag;
--(void)brushViewSelected:(int)tag;
+-(void)brushViewSelected:(int)tag withTreasureType:(PPTreasureType)type;
 -(void)closeSlideView;
 -(void)didScrollToBrush:(NSInteger)tag;
 @end

@@ -23,9 +23,21 @@
 @property (strong, nonatomic) id baseVC;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *PPTreasureViewHeightContraint;
-@property (strong, nonatomic) IBOutlet UIImageView *bottomBarImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomBarImageViewBrush;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomBarImageViewPaper;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomBarImageViewHolder;
+@property (strong, nonatomic) IBOutlet UIImageView *bottomBarImageViewInk;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomBarTopConstraint;
 @property (strong, nonatomic) IBOutletCollection(PPBrushesView) NSArray *brushViews;
+@property (strong, nonatomic) IBOutlet UIView *paperContentView;
+@property (strong, nonatomic) IBOutlet UIView *inkContentView;
+@property (strong, nonatomic) IBOutlet UIView *colorContentView;
+@property (strong, nonatomic) IBOutlet UIView *brushContentView;
+@property (strong, nonatomic) IBOutletCollection(PPBrushesView) NSArray *brushToolViews;
+
+@property (strong, nonatomic) IBOutletCollection(PPBrushesView) NSArray *paperViews;
+@property (strong, nonatomic) IBOutletCollection(PPBrushesView) NSArray *inkViews;
+@property (strong, nonatomic) IBOutletCollection(PPBrushesView) NSArray *colorViews;
 
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView;
 -(void)scrollDidMoveToTag:(NSInteger)tag;

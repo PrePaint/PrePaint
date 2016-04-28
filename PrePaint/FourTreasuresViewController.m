@@ -11,6 +11,7 @@
 
 @interface FourTreasuresViewController (){
     UIImageView *_selectionView;
+    UIView *currentBottomContentView;
 }
 @property (strong, nonatomic) PPFourTreasuresView *selectedTreasure;
 
@@ -39,12 +40,17 @@
     
     [self.inkView setButtonType:PPTreasureTypeInk];
     [self.inkView setResponseDelegate:self];
+    
+    
 }
 
 -(void)setupBottomBar
 {
     UIImage *barImage = [[UIImage imageNamed:@"bottomGradientBar"] stretchableImageWithLeftCapWidth:10.0 topCapHeight:0];
-    [self.bottomBarImageView setImage:barImage];
+    [self.bottomBarImageViewBrush setImage:barImage];
+    [self.bottomBarImageViewPaper setImage:barImage];
+    [self.bottomBarImageViewHolder setImage:barImage];
+    [self.bottomBarImageViewInk setImage:barImage];
 }
 
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView
@@ -83,7 +89,30 @@
                 [self.holderTextView setAlpha:0.0];
                 [self.inkTextView setAlpha:0.0];
             } completion:^(BOOL finished) {
+                [currentBottomContentView removeFromSuperview];
+                CGRect rect = self.bottomSlideView.bounds;
+                UIView *view;
+                if (treasureView.buttonType == PPTreasureTypeBrush) {
+                    view = self.brushContentView;
+                }
+                else if (treasureView.buttonType == PPTreasureTypePaper) {
+                    view = self.paperContentView;
+                }
+                else if (treasureView.buttonType == PPTreasureTypeHolder) {
+                    view = self.inkContentView;
+                }
+                else{
+                    view = self.colorContentView;
+                }
+                [view setFrame:rect];
+                [self.bottomSlideView addSubview:view];
+                currentBottomContentView = view;
+                
+                
+                
                 [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+                    
+                    
                     [self.PPTreasureViewHeightContraint setConstant:treasureView.frame.size.height-self.bottomSlideView.frame.size.height - 20.0];
                     [self.view layoutIfNeeded];
                 } completion:^(BOOL finished) {
@@ -102,16 +131,34 @@
             }
             [treasureView setBackgroundColor:SelectedBlueColor];
             [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-                //[self.PPTreasureViewHeightContraint setConstant:443];
+               
                 [self.bottomBarTopConstraint setConstant:190];
                 [self.view layoutIfNeeded];
             } completion:^(BOOL finished) {
+                [currentBottomContentView removeFromSuperview];
+                CGRect rect = self.bottomSlideView.bounds;
+                UIView *view;
+                if (treasureView.buttonType == PPTreasureTypeBrush) {
+                    view = self.brushContentView;
+                }
+                else if (treasureView.buttonType == PPTreasureTypePaper) {
+                    view = self.paperContentView;
+                }
+                else if (treasureView.buttonType == PPTreasureTypeHolder) {
+                    view = self.inkContentView;
+                }
+                else{
+                    view = self.colorContentView;
+                }
+                [view setFrame:rect];
+                [self.bottomSlideView addSubview:view];
+                currentBottomContentView = view;
                 [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-//                    [self.PPTreasureViewHeightContraint setConstant:treasureView.frame.size.height-self.bottomSlideView.frame.size.height - 20.0];
+
                     [self.bottomBarTopConstraint setConstant:20];
                     [self.view layoutIfNeeded];
                 } completion:^(BOOL finished) {
-//                     [self.bottomBarTopConstraint setConstant:20];
+
                     self.selectedTreasure = treasureView;
                      [self.view setUserInteractionEnabled:YES];
                 }];
@@ -134,19 +181,48 @@
 
 -(void)handleTapOnBrushView:(UITapGestureRecognizer*)gesture
 {
-    [(BaseViewController*)self.baseVC brushViewSelected:(int)gesture.view.tag];
+    [(BaseViewController*)self.baseVC brushViewSelected:(int)gesture.view.tag withTreasureType:self.selectedTreasure.buttonType];
     [self moveSelection:gesture.view];
 }
 
 -(void)scrollDidMoveToTag:(NSInteger)tag
 {
     UIView *view;
-    for (PPBrushesView *brushView in self.brushViews) {
-        if (brushView.tag == tag) {
-            view = brushView;
-            break;
+    if (self.selectedTreasure.buttonType == PPTreasureTypeBrush) {
+        for (PPBrushesView *brushView in self.brushToolViews) {
+            if (brushView.tag == tag) {
+                view = brushView;
+                break;
+            }
         }
     }
+    else if(self.selectedTreasure.buttonType == PPTreasureTypePaper){
+        for (PPBrushesView *paperView in self.paperViews) {
+            if (paperView.tag == tag) {
+                view = paperView;
+                break;
+            }
+        }
+    }
+    
+    else if(self.selectedTreasure.buttonType == PPTreasureTypeHolder){
+        for (PPBrushesView *inkView in self.inkViews) {
+            if (inkView.tag == tag) {
+                view = inkView;
+                break;
+            }
+        }
+
+    }
+    else if(self.selectedTreasure.buttonType == PPTreasureTypeInk){
+        for (PPBrushesView *colorView in self.colorViews) {
+            if (colorView.tag == tag) {
+                view = colorView;
+                break;
+            }
+        }
+    }
+ 
     [self moveSelection:view];
 }
 

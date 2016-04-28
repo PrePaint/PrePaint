@@ -83,8 +83,14 @@ static NSString *kCTStep3Text = @"Drag the goat brush to the untreated xuan pape
 static NSString *kCTStep4Text = @"Drag the vein brush to the untreated xuan paper";
 static NSString *kCTStep5Text = @"Drag the wolf brush to the untreated xuan paper";
 
-//------------------------- size -------------------------/
+//------------------------- size -------------------------//
 #define kSlideShowViewHeight 624.0
+
+//-------------------------- macro values -----------------//
+#define kTotoalPageNumberBrush 15
+#define kTotoalPageNumberPaper 6
+#define kTotoalPageNumberInk 9
+#define kTotoalPageNumberColor 6
 
 
 
