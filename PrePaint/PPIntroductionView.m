@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//自制的STYLE页右侧文字视图，由于IOS没有前面的段落绿点， 所以必须自制。
+
 #import "PPIntroductionView.h"
 
 @implementation PPIntroductionView

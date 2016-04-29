@@ -6,6 +6,7 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//IDEA EXAMPLE页
 #import "IdeaTutorialViewController.h"
 #import "PocketSVG.h"
 

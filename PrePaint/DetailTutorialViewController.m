@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//DETAIL EXAMPLE页
+
 #import "DetailTutorialViewController.h"
 #import "PocketSVG.h"
 

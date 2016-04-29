@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//APP的第一个VIEW CONTROLLER， 初始页
+
 #import "MainViewController.h"
 #import "BaseViewController.h"
 #import "OptionsViewController.h"
@@ -38,6 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//动画移动LOGO和START BUTTON
 -(void)animateLogo
 {
     [UIView animateWithDuration:1.0 delay:1.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -57,6 +60,7 @@
     
 }
 
+//当START按钮按下后调用， 读取选择页并且淡入
 - (IBAction)startButtonAction:(UIButton *)sender {
     OptionsViewController *optionVC = [[OptionsViewController alloc] init];
     

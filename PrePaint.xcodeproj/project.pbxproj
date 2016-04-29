@@ -25,8 +25,6 @@
 		1318FB8B1CBF86BF002BF442 /* orangePath5.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB8A1CBF86BF002BF442 /* orangePath5.svg */; };
 		1318FB8F1CC4BA3C002BF442 /* SlideShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1318FB8D1CC4BA3C002BF442 /* SlideShowViewController.m */; };
 		1318FB901CC4BA3C002BF442 /* SlideShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1318FB8E1CC4BA3C002BF442 /* SlideShowViewController.xib */; };
-		133606AA1CC8CB9C00E8A966 /* DoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133606A81CC8CB9C00E8A966 /* DoneViewController.m */; };
-		133606AB1CC8CB9C00E8A966 /* DoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133606A91CC8CB9C00E8A966 /* DoneViewController.xib */; };
 		133606AF1CCA0A1E00E8A966 /* GetItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133606AD1CCA0A1E00E8A966 /* GetItViewController.m */; };
 		133606B01CCA0A1E00E8A966 /* GetItViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133606AE1CCA0A1E00E8A966 /* GetItViewController.xib */; };
 		133606BC1CCF474200E8A966 /* OptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 133606BA1CCF474200E8A966 /* OptionsViewController.m */; };
@@ -35,6 +33,7 @@
 		1352A2D31CD0BACB00FA579E /* Tutorial3newPath1.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1352A2D01CD0BACB00FA579E /* Tutorial3newPath1.svg */; };
 		1352A2D41CD0BACB00FA579E /* Tutorial3newPath2.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1352A2D11CD0BACB00FA579E /* Tutorial3newPath2.svg */; };
 		1352A2D51CD0BACB00FA579E /* Tutorial3newPath3.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1352A2D21CD0BACB00FA579E /* Tutorial3newPath3.svg */; };
+		1370FDC91CD3465600E0218F /* Reference.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1370FDC81CD3465600E0218F /* Reference.plist */; };
 		13890A411C8353EC00A8A0C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890A401C8353EC00A8A0C7 /* main.m */; };
 		13890A441C8353EC00A8A0C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13890A431C8353EC00A8A0C7 /* AppDelegate.m */; };
 		13890A4C1C8353EC00A8A0C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13890A4B1C8353EC00A8A0C7 /* Assets.xcassets */; };
@@ -98,9 +97,6 @@
 		1318FB8C1CC4BA3C002BF442 /* SlideShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideShowViewController.h; sourceTree = "<group>"; };
 		1318FB8D1CC4BA3C002BF442 /* SlideShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideShowViewController.m; sourceTree = "<group>"; };
 		1318FB8E1CC4BA3C002BF442 /* SlideShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideShowViewController.xib; sourceTree = "<group>"; };
-		133606A71CC8CB9C00E8A966 /* DoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneViewController.h; sourceTree = "<group>"; };
-		133606A81CC8CB9C00E8A966 /* DoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneViewController.m; sourceTree = "<group>"; };
-		133606A91CC8CB9C00E8A966 /* DoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoneViewController.xib; sourceTree = "<group>"; };
 		133606AC1CCA0A1E00E8A966 /* GetItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetItViewController.h; sourceTree = "<group>"; };
 		133606AD1CCA0A1E00E8A966 /* GetItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetItViewController.m; sourceTree = "<group>"; };
 		133606AE1CCA0A1E00E8A966 /* GetItViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GetItViewController.xib; sourceTree = "<group>"; };
@@ -111,6 +107,7 @@
 		1352A2D01CD0BACB00FA579E /* Tutorial3newPath1.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tutorial3newPath1.svg; sourceTree = "<group>"; };
 		1352A2D11CD0BACB00FA579E /* Tutorial3newPath2.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tutorial3newPath2.svg; sourceTree = "<group>"; };
 		1352A2D21CD0BACB00FA579E /* Tutorial3newPath3.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Tutorial3newPath3.svg; sourceTree = "<group>"; };
+		1370FDC81CD3465600E0218F /* Reference.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Reference.plist; sourceTree = "<group>"; };
 		13890A3C1C8353EC00A8A0C7 /* PrePaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrePaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13890A401C8353EC00A8A0C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13890A421C8353EC00A8A0C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -250,13 +247,11 @@
 				1318FB8C1CC4BA3C002BF442 /* SlideShowViewController.h */,
 				1318FB8D1CC4BA3C002BF442 /* SlideShowViewController.m */,
 				1318FB8E1CC4BA3C002BF442 /* SlideShowViewController.xib */,
-				133606A71CC8CB9C00E8A966 /* DoneViewController.h */,
-				133606A81CC8CB9C00E8A966 /* DoneViewController.m */,
-				133606A91CC8CB9C00E8A966 /* DoneViewController.xib */,
 				133606AC1CCA0A1E00E8A966 /* GetItViewController.h */,
 				133606AD1CCA0A1E00E8A966 /* GetItViewController.m */,
 				133606AE1CCA0A1E00E8A966 /* GetItViewController.xib */,
 				13890AC31C8D945B00A8A0C7 /* AppConstants.h */,
+				1370FDC81CD3465600E0218F /* Reference.plist */,
 				13890A3F1C8353EC00A8A0C7 /* Supporting Files */,
 			);
 			path = PrePaint;
@@ -442,6 +437,7 @@
 				13890AB41C8D69A600A8A0C7 /* Resources.xcassets in Resources */,
 				1352A2D41CD0BACB00FA579E /* Tutorial3newPath2.svg in Resources */,
 				1318FB591CBB640B002BF442 /* DetailTutorialViewController.xib in Resources */,
+				1370FDC91CD3465600E0218F /* Reference.plist in Resources */,
 				1318FB861CBF6CC8002BF442 /* orangePath1.svg in Resources */,
 				13F91BAB1CAB80B600D411E4 /* ToolTutorialViewController.xib in Resources */,
 				1318FB891CBF6CC8002BF442 /* orangePath4.svg in Resources */,
@@ -457,7 +453,6 @@
 				1318FB5E1CBB641F002BF442 /* IdeaTutorialViewController.xib in Resources */,
 				133606B01CCA0A1E00E8A966 /* GetItViewController.xib in Resources */,
 				1318FB871CBF6CC8002BF442 /* orangePath2.svg in Resources */,
-				133606AB1CC8CB9C00E8A966 /* DoneViewController.xib in Resources */,
 				1352A2D51CD0BACB00FA579E /* Tutorial3newPath3.svg in Resources */,
 				1318FB7F1CBF4DCE002BF442 /* plumPath1.svg in Resources */,
 				1318FB881CBF6CC8002BF442 /* orangePath3.svg in Resources */,
@@ -544,7 +539,6 @@
 				13890ACE1C8FFDAC00A8A0C7 /* PPBrushesView.m in Sources */,
 				133606AF1CCA0A1E00E8A966 /* GetItViewController.m in Sources */,
 				13A81B2D1C99357A00309E17 /* PPStyleViewController.m in Sources */,
-				133606AA1CC8CB9C00E8A966 /* DoneViewController.m in Sources */,
 				13890AC21C8D941B00A8A0C7 /* PPNavigationOptionsView.m in Sources */,
 				13890ABD1C8D85CE00A8A0C7 /* BaseViewController.m in Sources */,
 				1318FB8F1CC4BA3C002BF442 /* SlideShowViewController.m in Sources */,

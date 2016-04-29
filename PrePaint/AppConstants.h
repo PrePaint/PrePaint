@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//APP所用到的所有常量
+
 #ifndef AppConstants_h
 #define AppConstants_h
 

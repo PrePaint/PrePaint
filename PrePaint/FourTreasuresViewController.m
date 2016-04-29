@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//STEP 1 页， 文房四宝
+
 #import "FourTreasuresViewController.h"
 #import "BaseViewController.h"
 
@@ -27,6 +29,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+//设置文房四宝的类型 以便以后使用
 -(void)setupTreasureViews
 {
     [self.brushView setButtonType:PPTreasureTypeBrush];
@@ -44,6 +47,7 @@
     
 }
 
+//配置最下面的BAR背景
 -(void)setupBottomBar
 {
     UIImage *barImage = [[UIImage imageNamed:@"bottomGradientBar"] stretchableImageWithLeftCapWidth:10.0 topCapHeight:0];
@@ -53,6 +57,8 @@
     [self.bottomBarImageViewInk setImage:barImage];
 }
 
+//当文房四宝中的某一个被选取时调用，作用是添加图像伸缩的动画， 字淡入淡出效果， 并且将最底下的BAR移动到页面上，
+//四宝某个再次被选中时 也调用本方法， 作用类似，只不过相反的动作
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView
 {
     [self.view setUserInteractionEnabled:NO];
@@ -167,6 +173,7 @@
     }
 }
 
+//为所有的笔视图添加手势识别器
 -(void)addTapGestureForBrushViews
 {
     
@@ -177,13 +184,14 @@
     
 }
 
-
+//当用户点某个笔后调用。
 -(void)handleTapOnBrushView:(UITapGestureRecognizer*)gesture
 {
     [(BaseViewController*)self.baseVC brushViewSelected:(int)gesture.view.tag withTreasureType:self.selectedTreasure.buttonType];
     [self moveSelection:gesture.view];
 }
 
+//当SCROLLVIEW滚动到某页时调用， 作用是调用移动下面的白色半圆方法
 -(void)scrollDidMoveToTag:(NSInteger)tag
 {
     UIView *view;
@@ -225,6 +233,7 @@
     [self moveSelection:view];
 }
 
+//移动白色半圆
 -(void)moveSelection:(UIView*)view
 {
     if (_selectionView == nil) {
@@ -253,6 +262,7 @@
     
 }
 
+//去除白色半圆
 -(void)removeSelection
 {
     [_selectionView removeFromSuperview];
@@ -260,14 +270,10 @@
 }
 
 
--(void)changeBottomImage
-{
-    
-}
 
 -(void)dealloc
 {
-    NSLog(@"4treasuresVC dealloc");
+   
 }
 
 

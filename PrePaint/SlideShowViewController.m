@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//SLIDE SHOW 页面， 当用户选择笔的教程后显示
+
 #import "SlideShowViewController.h"
 #import "BaseViewController.h"
 
@@ -22,6 +24,8 @@ static NSString * const kPageIdentifier = @"Page";
 
 @implementation SlideShowViewController
 
+
+//pagingScrollView是第三方库GMCPagingScrollView的滑动页
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.pagingScrollView = [[GMCPagingScrollView alloc] initWithFrame:self.view.bounds];
@@ -38,6 +42,7 @@ static NSString * const kPageIdentifier = @"Page";
     // Do any additional setup after loading the view from its nib.
 }
 
+//总页数， 根据用户选择的文房四宝， 页数会有不同
 - (NSUInteger)numberOfPagesInPagingScrollView:(GMCPagingScrollView *)pagingScrollView {
     switch (self.currentTreasureType) {
         case PPTreasureTypeBrush:
@@ -67,6 +72,7 @@ static NSString * const kPageIdentifier = @"Page";
     
 }
 
+//按页数读去不同的页面
 - (UIView *)pagingScrollView:(GMCPagingScrollView *)pagingScrollView pageForIndex:(NSUInteger)index {
     UIView *page = [pagingScrollView dequeueReusablePageWithIdentifier:kPageIdentifier];
     if (self.currentTreasureType == PPTreasureTypeBrush) {
@@ -362,6 +368,7 @@ static NSString * const kPageIdentifier = @"Page";
     
 }
 
+//用户滑动页面后调用，作用是调整下方三个点的当前选择点
 -(void)pagingScrollViewDidFinishScrolling:(GMCPagingScrollView *)pagingScrollView
 {
     [self.pageControl setCurrentPage:pagingScrollView.currentPageIndex%3];
@@ -378,6 +385,7 @@ static NSString * const kPageIdentifier = @"Page";
     
 }
 
+//当用户点下方刷子时候调用，目的是淡入淡出并且直接跳到选择页
 -(void)selectedBrush:(NSInteger)brushTag
 {
     UIView *pageOut = [self.pagingScrollView pageAtIndex:self.pagingScrollView.currentPageIndex];
@@ -424,6 +432,7 @@ static NSString * const kPageIdentifier = @"Page";
 - (IBAction)rightButtonAction:(id)sender {
 }
 
+//用户关闭本页时调用
 - (IBAction)cancelButtonAction:(id)sender {
     
     [(BaseViewController*)self.responseDelegate closeSlideView];

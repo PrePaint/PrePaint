@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//主程序入口
+
 #import "AppDelegate.h"
 #import "MainViewController.h"
 
@@ -16,6 +18,7 @@
 @implementation AppDelegate
 
 
+//最开始被调用的方法， 当APP打开后， 第一个调用的方法，目的是读取初始页
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//自制的文房四宝图标
+
 #import "PPFourTreasuresView.h"
 #import "FourTreasuresViewController.h"
 
@@ -27,7 +29,7 @@
     
 }
 
-
+//TOUCH后调用的方法， 让responseDelegate 也就是文房四宝页CONTROLLER的treasureSelected方法被调用，详见FourTreasuresViewController.m里的treasureSelected方法， GET IT页也用到本方法
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     if ([self.responseDelegate respondsToSelector:@selector(treasureSelected:)]) {

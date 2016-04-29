@@ -6,6 +6,8 @@
 //  Copyright © 2016 JingTang. All rights reserved.
 //
 
+//自制的视图（CUSTOMIZED VIEW）， 右上角的3个STEP按钮
+
 #import "PPNavigationOptionsView.h"
 #import "BaseViewController.h"
 
@@ -157,7 +159,7 @@
 
 }
 
-
+//TOUCH后调用的方法， 让responseDelegate 也就是文房四宝页CONTROLLER的optionSelected方法被调用，详见FourTreasuresViewController.m里的optionSelected方法。
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     if ([self.responseDelegate respondsToSelector:@selector(optionSelected:)]) {

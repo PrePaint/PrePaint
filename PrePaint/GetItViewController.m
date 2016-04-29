@@ -8,7 +8,7 @@
 
 #import "GetItViewController.h"
 #import "UIView+Toast.h"
-
+//Email user the list based on selection
 @interface GetItViewController ()
 {
     
@@ -26,7 +26,7 @@
     [self setupStyleViews];
     // Do any additional setup after loading the view from its nib.
 }
-
+//把四个STYLE 放在VIEW上
 -(void)setupStyleViews
 {
     [self.contourView setButtonType:PPTreasureTypeBrush];
@@ -42,7 +42,7 @@
     [self.combinationView setResponseDelegate:self];
 }
 
-
+//当用户选择某个STYLE时候调用
 -(void)treasureSelected:(PPFourTreasuresView*)treasureView
 {
     if (treasureView == self.selectedTreasure) {
@@ -83,6 +83,7 @@
  }
  */
 
+//用户点了GET IT按钮后调用， 根据用户当前选择的STYLE生成HTML STRING， 并放入IOS默认的EMAIL CONTROLLER里显示
 - (IBAction)shareAction:(id)sender {
     if ([MFMailComposeViewController canSendMail]) {
         
@@ -158,6 +159,7 @@
     
 }
 
+//用户按SEND或者CANCEL后， 如果SEND则把当前选择的STYLE清除
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     
@@ -185,9 +187,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+//将IMAGE转为HTML可认的字符
 -(NSString *)dataStringFromImage:(UIImage *)image
 {
-    NSData *imgData = UIImageJPEGRepresentation(image, 1);
+    NSData *imgData = UIImagePNGRepresentation(image);
     return [imgData base64EncodedStringWithOptions:kNilOptions];
 }
 

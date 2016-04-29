@@ -5,6 +5,7 @@
 //  Created by Jing Tang on 3/16/16.
 //  Copyright © 2016 JingTang. All rights reserved.
 //
+//STEP 2 STYLE页
 
 #import "PPStyleViewController.h"
 #import "BaseViewController.h"
@@ -50,7 +51,7 @@
 
 
 
-
+//初始状态将上、下、右的PANEL放到视图外
 -(void)putEveryThingOutOfScreen
 {
     self.topPanelConstraint.constant = -317;
@@ -59,6 +60,7 @@
     [self.view layoutIfNeeded];
 }
 
+//将上、下、右的PANEL添加移动到视图外的动画
 -(void)animateEveryThingOutOfScreen
 {
     [UIView animateWithDuration:1.0 delay:0.2 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -73,7 +75,7 @@
 }
 
 
-
+//将上、下、右的PANEL添加移动到视图内的动画
 -(void)animateEveryThingIntoScreen
 {
     self.topPanelConstraint.constant = 0;
@@ -89,6 +91,7 @@
     
 }
 
+//移动并且转换右边PANEL的内容， 当用户选择不同STYLE后调用
 -(void)animateRightPanel:(NSInteger)newPanelTag
 {
     
@@ -155,6 +158,7 @@
     }];
 }
 
+//按用户选择的STYLE不同， 读取里面文字内容
 -(void)loadRightPanelDataBasedOnTag:(NSInteger)tag
 {
     switch (tag) {
@@ -209,6 +213,7 @@
     
 }
 
+//将4个STYLE读取到上面的PANEL
 -(void)loadStyles
 {
     self.stylesArray = [NSMutableArray arrayWithObjects:@"style_slice1",@"style_slice2",@"style_slice3",@"style_slice4", nil];
@@ -251,7 +256,7 @@
 }
 
 
-
+//当用户选去STYLE后调用
 -(void)styleTapped:(UIButton*)button
 {
     
@@ -281,6 +286,7 @@
     
 }
 
+//初始状态 默认读取CONTOUR STYLE的数据
 -(void)loadRightPanelViewData
 {
     [self.rightPanelView setStyleName:@"CONTOUR STYLE"];
@@ -294,6 +300,7 @@
     [self setupRightPanelShadow];
 }
 
+//为右PANEL的左边添加阴影效果
 -(void)setupRightPanelShadow
 {
     [self.rightPanelView.layer setShadowColor:[UIColor blackColor].CGColor];
@@ -303,6 +310,7 @@
     [self.rightPanelView.layer setShadowOpacity:1.0];
 }
 
+//TRY TOOL按钮按下后调用
 - (IBAction)tryToolButtonAction:(UIButton *)sender {
     
     [(BaseViewController*)self.parentViewController flipToToolTutorialPage:self.selectedTag];

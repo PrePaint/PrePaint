@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GetIt页（Step 3）</key>
+	<string>GetItVIewController</string>
+	<key>Slide页</key>
+	<string>SlideShowViewController</string>
+	<key>Combination绘画页</key>
+	<string>CombinationTutorialViewController</string>
+	<key>Idea绘画页</key>
+	<string>IdeaTutorialViewController</string>
+	<key>Detail绘画页</key>
+	<string>DetailTutorialViewController</string>
+	<key>Contour绘画页</key>
+	<string>ToolTutorialViewController</string>
+	<key>文房四宝页(Step 1)</key>
+	<string>FourTreasuresViewController</string>
+	<key>STYLE页(Step 2)</key>
+	<string>PPStyleViewController</string>
+	<key>3个STEP的共用页</key>
+	<string>BaseViewController</string>
+	<key>选择页</key>
+	<string>OptionsViewController</string>
+	<key>初始页</key>
+	<string>MainViewController</string>
+	<key>主程序入口</key>
+	<string>AppDelegate</string>
+</dict>
+</plist>

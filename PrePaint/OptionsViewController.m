@@ -9,6 +9,8 @@
 #import "OptionsViewController.h"
 #import "BaseViewController.h"
 
+//选择页
+
 @interface OptionsViewController ()
 
 @end
@@ -35,18 +37,21 @@
  }
  */
 
+//用户点STEP 1 文房四宝按钮后调用
 - (IBAction)learnButtonAction:(id)sender {
     BaseViewController *baseVC = [[BaseViewController alloc] init];
     [baseVC setIntialVCTag:0];
     [self.navigationController pushViewController:baseVC animated:YES];
 }
 
+//用户点STEP 2 STYLE按钮后调用
 - (IBAction)exampleButtonAction:(id)sender {
     BaseViewController *baseVC = [[BaseViewController alloc] init];
     [baseVC setIntialVCTag:1];
     [self.navigationController pushViewController:baseVC animated:YES];
 }
 
+//用户点STEP 3 GET IT按钮后调用
 - (IBAction)getToolButtonAction:(id)sender {
     BaseViewController *baseVC = [[BaseViewController alloc] init];
     [baseVC setIntialVCTag:2];

@@ -10,6 +10,8 @@
 #import "PocketSVG.h"
 
 
+//CONTOUR 页
+
 @interface ToolTutorialViewController (){
     CGRect _initialFrameOfObject;
     UIImageView *_tempImageView;
@@ -55,6 +57,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+//LOAD 灰色和正常色的 纸笔图标
 -(void)setupMaskImages
 {
     UIImage *xuanImage = self.xuanPaperImageView.image;
@@ -77,6 +80,7 @@
     _veinDisabled = veinImage_disabled;
 }
 
+//根据当前步骤 将传入元素变灰或者变成正常色
 -(void)enableImageView:(UIImageView*)imageView
 {
     if (imageView == self.xuanPaperImageView) {
@@ -102,7 +106,7 @@
 }
 
 
-
+//第一次的TUTORIAL MODAL， GOT IT按钮按下后调用，作用是移除TUTORIAL图层
 -(IBAction)gotitButtonAction:(UIButton*)sender
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -112,6 +116,7 @@
     [self.tutorialBgView removeFromSuperview];
 }
 
+//根据NSUserDefaults 里存取的值 判断是否是首次安装APP
 -(BOOL)isNeedToShowTutorial
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -127,6 +132,7 @@
     _isXuanPaperOnScreen = NO;
 }
 
+//为传入的视图添加拖拽手势识别器（Gesture recognizer）
 -(void)addGestureRecognizersForImageView:(UIImageView*)view
 {
     
@@ -137,6 +143,7 @@
     [view addGestureRecognizer:longGesture];
 }
 
+//当用户长按，拖拽， 并且松手时调用。 根据这三种动作的不同 进行不同操作
 -(void)longPressGestureHandler:(UILongPressGestureRecognizer *)gesture
 {
     switch (gesture.state) {
@@ -249,6 +256,7 @@
     }
 }
 
+//如果宣纸没有在页面上并且传入的视图是宣纸， 则允许手势识别器识别
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer.view == self.xuanPaperImageView) {
@@ -260,6 +268,7 @@
     return YES;
 }
 
+//利用第三方库PocketSVG将SVG图像转成IOS可用的路径，画出铅笔的图像 并且按照路径控制铅笔本身的动作
 -(void)drawPencilPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"bigFlower"];
@@ -310,7 +319,7 @@
     [self.pencilImageView.layer addAnimation:anim forKey:@"pencil"];
 }
 
-
+//利用第三方库PocketSVG将SVG图像转成IOS可用的路径，画出VEIN的图像 并且按照路径控制VEIN笔本身的动作
 -(void)drawVeinBrushPath
 {
     CGPathRef myPath = [PocketSVG pathFromSVGFileNamed:@"bigFlower"];
@@ -363,7 +372,7 @@
 
 
 
-
+//当画图动画结束时调用， 作用是清理画图后的一些数值，改变（增加）STEP的步数， 如果是最后一步则跳出ALERT。
 -(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     
@@ -406,6 +415,7 @@
     }
 }
 
+//拉伸路径图（由SVG转化后的）
 -(CGPathRef)CGPath_NGCreateCopyByScalingPathAroundCentre:(CGPathRef)path scale:(float) scale
 {
     CGRect bounding = CGPathGetPathBoundingBox(path);
@@ -428,12 +438,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+//电池那行TOP BAR的STYLE
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
 }
 
+//隐藏电池那个BAR
 - (BOOL)prefersStatusBarHidden
 {
     return YES;
@@ -454,15 +465,12 @@
                     completion:nil];
 }
 
--(void)changeStepText
-{
-    
-}
-
+//当用户点清除画布后调用
 - (IBAction)previousButtonAction:(id)sender {
     [self clearCanvas];
 }
 
+//清除画布上所有原素， 将所有值重设回默认
 -(void)clearCanvas
 {
     _tempImageView = nil;
@@ -479,6 +487,7 @@
     [self.previousButton setEnabled:NO];
 }
 
+//改变STEP LABEL的步数，按步骤让其它笔变灰
 - (IBAction)nextButtonAction:(id)sender {
     
     NSInteger step = [self.stepNumberLabel.text integerValue];
@@ -510,6 +519,7 @@
     }
 }
 
+//将传入的图像变成灰色
 - (UIImage *)colorizeImage:(UIImage *)image withColor:(UIColor *)color {
     CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, image.scale);
